@@ -1,14 +1,19 @@
 <template>
-  <Header />
-  <main>
-     <router-view />
-    <Footer />
-  </main>
+  <Loader v-if="!componentsReady"/>
+  <div v-else>
+    <Header />
+    <main>
+      <router-view />
+      <Footer />
+    </main>
+  </div>
 </template>
 
 <script>
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
+import Loader from "./components/loader";
+
 
 
 export default {
@@ -16,9 +21,17 @@ export default {
   components: {
     Header,
     Footer,
+    Loader,
+  },
+  data() {
+    return {
+      componentsReady: false,
+    };
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.componentsReady = true;
+    });
   },
 };
-
-
 </script>
-
