@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Xamarin Developer",
+    "lastname": "titi",
+    "responsibilities": [
+      "Analyze requirements and create an appropriate software design, in conjunction with other Developers, according to best practice and organizational initiatives and objectives.",
+      "Collaborate with senior colleagues in creating and maintaining the team’s SDLC.",
+      "Develop and release software as per the team standards and processes to meet the defined specifications or requirements within the agreed time.",
+      "Provide technical leadership in understanding the project complexity, scope and risk for your products.",
+      "Test your software as per the team’s software quality charter.",
+      "Make sure your software does what it supposed to do as per the defined specification.",
+      "Provide support for product related issues in production with appropriate urgency.",
+      "Proactively share knowledge within the team and with key stakeholders."
+    ]
+  },
+  {
+    "firstname": "toto2",
+    "lastname": "titi2",
+    "responsibilities": [
+        "Analyze requirements and create an appropriate software design, in conjunction with other Developers, according to best practice and organizational initiatives and objectives.",
+        "Collaborate with senior colleagues in creating and maintaining the team’s SDLC.",
+        "Develop and release software as per the team standards and processes to meet the defined specifications or requirements within the agreed time.",
+        "Provide technical leadership in understanding the project complexity, scope and risk for your products.",
+        "Test your software as per the team’s software quality charter.",
+        "Make sure your software does what it supposed to do as per the defined specification.",
+        "Provide support for product related issues in production with appropriate urgency.",
+        "Proactively share knowledge within the team and with key stakeholders."
+      ]
+  }
+]
