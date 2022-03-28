@@ -1,26 +1,20 @@
 <template>
-  <Loader v-if="!componentsReady"/>
+  <Loader v-if="!componentsReady" />
   <div v-else>
-    <Header />
-    <main>
-      <router-view />
-      <Footer />
-    </main>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
+// import Header from "./components/layout/header";
+// import Footer from "./components/layout/footer";
 import Loader from "./components/loader";
-
-
 
 export default {
   name: "App",
   components: {
-    Header,
-    Footer,
+    // Header,
+    // Footer,
     Loader,
   },
   data() {

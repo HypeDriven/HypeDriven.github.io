@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "../view/home";
-import CareersPage from "../view/careers";
+import CareerPage from "../view/career";
 
 const routes = [
   {
@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: "/careers",
-    name: "CareersPage",
-    component: CareersPage,
+    name: "CareerPage",
+    component: CareerPage,
   },
 ];
 
