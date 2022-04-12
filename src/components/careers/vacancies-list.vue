@@ -1,101 +1,89 @@
 <template>
-  <section class="vacancy">
+  <section class="vacancy mt-5">
     <div class="container">
       <!--dropdown start-->
       <template v-for="(vacancyData, index) in vacancyJson" :key="index">
-        <div
-          id="xamarin-developer"
-          class="dropdown wow flipInX center"
-          data-wow-duration="1.2s"
-        >
+        <div class="bg-white shadow-lg">
           <div
-            class="vacancy__item dropdown-item display-flex align-center justify-space-between"
+            class="px-4 py-5 sm:px-6 bg-gray-50 cursor-pointer flex justify-between"
+            @click="toggleSelection(index)"
           >
-            <a href="#xamarin-developer">
-              <h4 class="like-h4">{{ vacancyData?.title }}</h4>
-            </a>
-            <div class="icon">
-              <span>+</span>
-              <span class="hide">−</span>
+            <div>
+              <h3 class="text-lg leading-6 font-medium text-gray-900">
+                {{ vacancyData?.title }}
+              </h3>
+              <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                {{ vacancyData?.subtitle }}
+              </p>
             </div>
+            <div>+</div>
           </div>
-          <div class="dropdown__open" style="display: block">
-            <div class="vacancy__information">
-              <p class="title">Responsibilities</p>
-              <ul class="list">
-                <li
-                  class="list__item"
-                  v-for="(
-                    responsibilities_data, responsibilities_index
-                  ) in vacancyData?.responsibilities"
-                  :key="responsibilities_index"
+          <div class="border-t border-gray-200" v-show="selected == index">
+            <dl>
+              <div
+                class="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+              >
+                <dt class="text-sm font-medium text-gray-500">Email Address</dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  {{ vacancyData?.email }}
+                </dd>
+              </div>
+              <div
+                class="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+              >
+                <dt class="text-sm font-medium text-gray-500">
+                  Responsibilities
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <ul style="list-style-type: disc">
+                    <template
+                      v-for="(
+                        responsibility, responsibility_index
+                      ) in vacancyData.responsibilities"
+                      :key="responsibility_index"
+                    >
+                      <li>{{ responsibility }}</li>
+                    </template>
+                  </ul>
+                </dd>
+              </div>
+              <div
+                class="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+              >
+                <dt class="text-sm font-medium text-gray-500">Requirements</dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <ul style="list-style-type: disc">
+                    <template
+                      v-for="(
+                        requirement, requirements_index
+                      ) in vacancyData.requirements"
+                      :key="requirements_index"
+                    >
+                      <li>{{ requirement }}</li>
+                    </template>
+                  </ul>
+                </dd>
+              </div>
+              <div
+                class="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+              >
+                <dt class="text-sm font-medium text-gray-500">Desctiption</dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  {{ vacancyData?.desctiption }}
+                </dd>
+              </div>
+              <div class="bg-white-50 px-4 py-5">
+                <div
+                  class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 flex justify-end"
                 >
-                  {{ responsibilities_data }}
-                </li>
-              </ul>
-              <p class="title">Requirements</p>
-              <ul class="list">
-                <li class="list__item">
-                  3+ years experience in software development
-                </li>
-                <li class="list__item">Excellent knowledge of .NET</li>
-                <li class="list__item">
-                  Experience with Xamarin or other mobile development
-                </li>
-                <li class="list__item">
-                  Strong technical and troubleshooting skills
-                </li>
-                <li class="list__item">
-                  Experience working extensively with design patterns in
-                  architecting solutions, Knowledge/Experience with SOA
-                </li>
-              </ul>
-              <!--form-->
-              <div class="dropdown-form display-flex justify-center wrap">
-                <div class="apply button button_primary">
-                  Apply for this position
-                </div>
-                <div class="dropdown-form__open" style="display: none">
-                  <form
-                    class="form form_dark"
-                    action="https://formspree.io/career@ukrainiansoftware.com"
-                    method="POST"
+                  <button
+                    class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
                   >
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      class="form__item input"
-                      required
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your E-mail Address"
-                      required
-                      class="form__item input"
-                    />
-                    <input
-                      type="text"
-                      name="link"
-                      placeholder="Link to Resume or LinkedIn Profile"
-                      class="form__item input"
-                    />
-                    <textarea
-                      name="letter"
-                      placeholder="Cover Letter (optional)"
-                      class="form__item textarea"
-                      rows="3"
-                    ></textarea>
-                    <input
-                      type="submit"
-                      value="Click to apply"
-                      class="form__item button button_dark"
-                    />
-                  </form>
+                    Apply Now
+                  </button>
                 </div>
               </div>
-            </div>
+            </dl>
           </div>
         </div>
       </template>
@@ -111,7 +99,17 @@ export default {
   data() {
     return {
       vacancyJson: vacancyJson,
+      selected: -1,
     };
+  },
+  methods: {
+    toggleSelection(current) {
+      if (this.selected == current) {
+        this.selected = -1;
+      } else {
+        this.selected = current;
+      }
+    },
   },
 };
 </script>
