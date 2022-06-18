@@ -4,44 +4,28 @@
       <Header />
       <Hero class="flex-1" />
     </div>
-    <main class="flex flex-col gap-2">
-      <Section class="flex-col gap-6 bg-white">
-        <div class="text-black h-fit m-auto text-4xl max-w-xl px-2 text-center">
-          Lorem Ipsum is simply dummy.
-        </div>
-        <div class="text-black h-fit m-auto text-2xl max-w-3xl px-2 text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem
-        </div>
-        <div class="flex">
-          <Button class="mx-auto" />
-        </div>
-      </Section>
-      <Section class="flex-col gap-6 bg-gray-body">
-        <div class="text-black h-fit m-auto text-4xl max-w-xl px-2 text-center">
-          Lorem Ipsum is simply dummy.
-        </div>
-        <div class="text-black h-fit m-auto text-2xl max-w-3xl px-2 text-center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem
-        </div>
-      </Section>
+    <main class="flex flex-col">
+      <ServicesSection />
+      <IndustriesSection />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "../components/header";
+import Footer from "../components/footer";
 import Hero from "../components/hero";
-import Section from "../components/sections";
-import Button from "../components/buttons";
+import ServicesSection from "../components/sections/services";
+import IndustriesSection from "../components/sections/industries";
 export default {
   name: "HomePage",
   components: {
     Header,
+    Footer,
     Hero,
-    Section,
-    Button,
+    ServicesSection,
+    IndustriesSection
   },
 };
 </script>

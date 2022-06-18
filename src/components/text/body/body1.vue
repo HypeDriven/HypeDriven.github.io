@@ -1,13 +1,12 @@
 <template>
-  <section class="flex px-16 py-24">
+ <div class="text-header-text">
     <slot></slot>
-  </section>
+ </div>
 </template>
-
 <script>
 export default {
-  name: "SectionComponent",
-    data: function() {
+  name: "BodyText",
+  data: function () {
     return {
 
     };
