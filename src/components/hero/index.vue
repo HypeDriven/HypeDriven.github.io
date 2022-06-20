@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="flex flex-col gap-6 justify-center">
-        <Socials/>
+        <Socials />
       </div>
     </div>
     <div class="justify-end text-center my-10 z-10">
@@ -23,7 +23,7 @@
       </div>
       <div class="text-white mt-8">Scroll down</div>
     </div>
-      <img id="image" class="absolute top-0 right-0 z-0 w-1/2" :src="image" />
+    <img id="image" class="absolute top-0 right-0 md:-right-32 z-0 w-full md:w-4/6 h-screen" :src="image" />
 
   </div>
 </template>
@@ -32,7 +32,7 @@
 import Button from "../buttons";
 import Header1 from "../text/header/header_1.vue";
 import BodyText from "../text/body/body.vue";
-import image from "../../assets/img/home-hero-bg.svg";
+import image from "../../assets/img/home-page-hero-bg.svg";
 import SlideUnlock from "../slide/slide-unlock";
 import Socials from "../socials/index.vue";
 
@@ -56,18 +56,28 @@ export default {
 <style>
 @keyframes rot {
   0% {
+    transform: rotate(45deg);
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+  }
+
+  50% {
     transform: rotate(0deg);
+    filter: blur(60px);
+    -webkit-filter: blur(60px);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: rotate(45deg);
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
   }
 }
 
 #image {
   transform-origin: 50% 50%;
-  animation: rot infinite 15s ease-in-out;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  animation: rot infinite 15s linear;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
 }
 </style>
