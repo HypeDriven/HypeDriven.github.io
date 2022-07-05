@@ -7,6 +7,7 @@
     <main class="flex flex-col">
       <ServicesSection />
       <IndustriesSection />
+      <TestimonialSection/>
     </main>
     <Footer />
   </div>
@@ -18,6 +19,7 @@ import Footer from "../components/footer";
 import Hero from "../components/hero";
 import ServicesSection from "../components/sections/services";
 import IndustriesSection from "../components/sections/industries";
+import TestimonialSection from "../components/sections/testimonial";
 export default {
   name: "HomePage",
   components: {
@@ -25,7 +27,8 @@ export default {
     Footer,
     Hero,
     ServicesSection,
-    IndustriesSection
+    IndustriesSection,
+    TestimonialSection
   },
 };
 </script>

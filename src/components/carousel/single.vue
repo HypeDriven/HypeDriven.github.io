@@ -1,5 +1,5 @@
 <template>
-    <Carousel :items-to-show="6" :wrap-around="true">
+    <Carousel :items-to-show="1" :wrap-around="true">
         <Slide v-for="(slideData, index) in items" :key="index">
             <slot :data="slideData"></slot>
         </Slide>

@@ -13,9 +13,8 @@
     "jquery": "^3.6.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.12",
-    "vue-slick-carousel": "^1.0.6",
     "vue-slide-unlock": "^0.3.0",
-    "vue-split-carousel": "^2.2.3"
+    "vue3-carousel": "^0.1.40"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
