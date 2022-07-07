@@ -76,7 +76,7 @@ export default {
 
 #image {
   transform-origin: 50% 50%;
-  animation: rot infinite 15s linear;
+  animation: rot infinite 60s linear;
   filter: blur(20px);
   -webkit-filter: blur(20px);
 }
