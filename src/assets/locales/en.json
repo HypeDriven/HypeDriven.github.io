@@ -1,0 +1,50 @@
+{
+  "button": { "learnmore": "Learn More", "scrolldown": "Scroll down" },
+  "homepage": {
+    "hero": {
+      "title": "Software development company",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "We are passionate about what we are doing that’s why we are striving to ensure the high quality of the solutions we develop",
+      "outsourcedServices": "Outsourced IT Services",
+      "webDev": "Web Dev",
+      "uxDesign": "UI/UX Design",
+      "itSecurityManagement": "IT Security Management",
+      "projectManagement": "Project Management",
+      "businessAnalysis": "Business Analysis",
+      "qualityAssurance": "Quality Assurance",
+      "mobileDev": "Mobile Dev",
+      "applicationMaintenance": "Application maintenance",
+      "solutionArchitecture": "Solution Architecture",
+      "supportServices": " Support Services"
+    },
+    "industries": {
+      "subtitle": "We bring our expertise to many industries",
+      "logistics": "Logistics",
+      "telecom": "Telecom",
+      "automotive": "Automotive",
+      "bankingCapitalMarkets": "Banking and Capital Markets",
+      "gaming": "Gaming",
+      "eCommerce": "eCommerce",
+      "manufacturing": "Manufacturing",
+      "realEstate": "Real Estate",
+      "enterprise": "Enterprise",
+      "healthcare": "Healthcare",
+      "hospitality": "Hospitality",
+      "travel": " Travel"
+    },
+    "clients": {
+      "title": "Our Clients"
+    },
+    "testimonial": {
+      "title": "Testimonial",
+      "danielBarrero": {
+        "message": "Albert is a really smart programmer, he is a very hard working individual with an very inquisitive mind that fuels his curiosity to keep up to date on any programming, math and science related knowledge.  He is a great asset for any team that lucky enough to have him.",
+        "fullName": "Daniel Barrero Graphics",
+        "position": "programmer, Relic Entertainment"
+      }
+    }
+  }
+}

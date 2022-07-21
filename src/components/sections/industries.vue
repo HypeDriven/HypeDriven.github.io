@@ -2,16 +2,16 @@
     <SectionContainer>
         <div class="flex flex-col gap-8 max-w-lg m-auto">
             <SectionTitle class="text-white h-fit m-auto text-4xl max-w-full px-2 text-center">
-                We bring our expertise to many industries
+                {{$t('homepage.industries.subtitle')}}
             </SectionTitle>
         </div>
         <div>
-            <Carousel :items="services" v-slot="{ data }">
+            <Carousel :items="industries" v-slot="{ data }">
                 <IndustryCard :img="data?.img" :title="data?.title">
                     <div class="flex flex-col gap-5 card-content">
                         <img :src="data?.img" class="h-10 w-10 m-auto" />
                         <div>
-                            {{ data?.title }}
+                            {{$t(`homepage.industries.${data?.title}`)}}
                         </div>
 
                     </div>
@@ -27,7 +27,7 @@ import SectionContainer from "./container";
 import SectionTitle from "./title";
 import Carousel from "../carousel";
 export default {
-    name: "ServicesSectionComponent",
+    name: "IndustriesSectionComponent",
     components: {
         SectionContainer,
         SectionTitle,
@@ -36,25 +36,25 @@ export default {
     },
     data: function () {
         return {
-            services: [
+            industries: [
                 {
-                    title: 'Logistics',
+                    title: 'logistics',
                     img: require('../../assets/img/images/logistics.png')
                 },
                 {
-                    title: 'Telecom',
+                    title: 'telecom',
                     img: require('../../assets/img/images/telecom.png')
                 },
                 {
-                    title: 'Automotive',
+                    title: 'automotive',
                     img: require('../../assets/img/images/automotive.png')
                 },
                 {
-                    title: 'Banking and Capital Markets',
+                    title: 'bankingCapitalMarkets',
                     img: require('../../assets/img/images/banking.png')
                 },
                 {
-                    title: 'Gaming',
+                    title: 'gaming',
                     img: require('../../assets/img/images/gaming.png')
                 },
                 {
@@ -62,11 +62,11 @@ export default {
                     img: require('../../assets/img/images/ecommerce.png')
                 },
                 {
-                    title: 'Manufacturing',
+                    title: 'manufacturing',
                     img: require('../../assets/img/images/manufacturing.png')
                 },
                 {
-                    title: 'Real Estate',
+                    title: 'realEstate',
                     img: require('../../assets/img/images/realstate.png')
                 },
                 {
@@ -74,15 +74,15 @@ export default {
                     img: require('../../assets/img/images/enterprise.png')
                 },
                 {
-                    title: 'Healthcare',
+                    title: 'healthcare',
                     img: require('../../assets/img/images/healthcare.png')
                 },
                 {
-                    title: 'Hospitality',
+                    title: 'hospitality',
                     img: require('../../assets/img/images/hospitality.png')
                 },
                 {
-                    title: ' Travel',
+                    title: ' travel',
                     img: require('../../assets/img/images/travel.png')
                 }
             ]

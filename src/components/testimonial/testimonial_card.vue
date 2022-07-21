@@ -1,6 +1,6 @@
 <template>
     <v-card elevation="4"
-        class="w-full h-80 testimony_card flex justify-center text-black items-center flex-col gap-10 px-20 relative">
+        class="w-full h-auto md:h-80 testimony_card flex justify-center text-black items-center flex-col gap-10 px-20 relative">
         <img :src="quoteImg" class="absolute top-5 left-5"/>
         <v-card-text class="text-2xl">
             {{ message }}

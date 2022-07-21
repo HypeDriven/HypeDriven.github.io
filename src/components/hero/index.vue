@@ -1,16 +1,15 @@
 <template>
   <div class="bg-primary-bg bg-cover bg-no-repeat flex flex-col relative">
-    <div class="my-auto flex justify-between md:px-16 lg:px-28 xl:px-28 w-full z-10">
+    <div class="my-auto flex justify-between px-3 md:px-16 lg:px-28 xl:px-28 w-full z-10">
       <div class="flex flex-col gap-6 max-w-xl">
         <Header1 class="text-white">
-          Software development company
+          {{$t('homepage.hero.title')}}
         </Header1>
         <BodyText class="text-white">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever
+          {{$t('homepage.hero.subtitle')}}
         </BodyText>
         <div>
-          <Button>Learn More</Button>
+          <Button>{{$t('button.learnmore')}}</Button>
         </div>
       </div>
       <div class="flex flex-col gap-6 justify-center">
@@ -21,7 +20,7 @@
       <div class="flex justify-center">
         <SlideUnlock />
       </div>
-      <div class="text-white mt-8">Scroll down</div>
+      <div class="text-white mt-8">{{$t('button.scrolldown')}}</div>
     </div>
     <img id="image" class="absolute top-0 right-0 md:-right-32 z-0 w-full md:w-4/6 h-screen" :src="image" />
 

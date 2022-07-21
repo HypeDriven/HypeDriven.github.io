@@ -2,12 +2,10 @@
     <SectionContainer>
         <div class="flex flex-col gap-8 max-w-lg m-auto">
             <SectionTitle class="text-white h-fit m-auto text-4xl max-w-xl px-2 text-center">
-                Services
+                {{$t('homepage.services.title')}}
             </SectionTitle>
             <SectionSubTitle class="text-accent-orange h-fit m-auto text-2xl max-w-3xl px-2 text-center">
-                We are passionate about what we are doing
-                that’s why we are striving to ensure the high quality
-                of the solutions we develop
+                {{$t('homepage.services.subtitle')}}
             </SectionSubTitle>
         </div>
         <div>
@@ -16,9 +14,8 @@
                     <div class="flex flex-col gap-5 card-content">
                         <img :src="data?.img" class="h-10 w-10 m-auto" />
                         <div>
-                            {{ data?.title }}
+                            {{$t(`homepage.services.${data?.title}`)}}
                         </div>
-
                     </div>
                 </ServiceCard>
             </Carousel>
@@ -45,47 +42,47 @@ export default {
         return {
             services: [
                 {
-                    title: 'Outsourced IT Services',
+                    title: 'outsourcedServices',
                     img: require("../../assets/img/icons/it.svg")
                 },
                 {
-                    title: 'Web Dev',
+                    title: 'webDev',
                     img: require("../../assets/img/icons/optimization.svg")
                 },
                 {
-                    title: 'UI/UX Design',
+                    title: 'uxDesign',
                     img: require("../../assets/img/icons/ui.svg")
                 },
                 {
-                    title: 'IT Security Management',
+                    title: 'itSecurityManagement',
                     img: require("../../assets/img/icons/management-(2).svg")
                 },
                 {
-                    title: 'Project Management',
+                    title: 'projectManagement',
                     img: require("../../assets/img/icons/management-(1).svg")
                 },
                 {
-                    title: 'Business Analysis',
+                    title: 'businessAnalysis',
                     img: require("../../assets/img/icons/analysis.svg")
                 },
                 {
-                    title: 'Quality Assurance',
+                    title: 'qualityAssurance',
                     img: require("../../assets/img/icons/quality-assurance.svg")
                 },
                 {
-                    title: 'Mobile Dev',
+                    title: 'mobileDev',
                     img: require("../../assets/img/icons/app-development.svg")
                 },
                 {
-                    title: 'Application maintenance',
+                    title: 'applicationMaintenance',
                     img: require("../../assets/img/icons/repair 1.svg")
                 },
                 {
-                    title: 'Solution Architecture',
+                    title: 'solutionArchitecture',
                     img: require("../../assets/img/icons/solution.svg")
                 },
                 {
-                    title: ' Support Services',
+                    title: 'supportServices',
                     img: require("../../assets/img/icons/technical-support.svg")
                 }
             ]
