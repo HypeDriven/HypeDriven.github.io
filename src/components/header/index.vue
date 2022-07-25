@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="z-10 flex items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 fixed w-full">
+        <nav class="z-20 flex items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 fixed w-full">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <span class="font-semibold text-xl tracking-tight">
                     <img :src="logo" alt="Logo"/>

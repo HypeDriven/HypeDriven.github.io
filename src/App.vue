@@ -1,6 +1,6 @@
 <template>
   <Loader v-if="!componentsReady" />
-  <div v-else>
+  <div v-else class="root">
     <router-view />
   </div>
 </template>

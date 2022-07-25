@@ -4,13 +4,13 @@
         <div class="flex justify-between w-full">
             <div class="flex flex-col gap-10">
                 <div class="text-white">
-                    <img :src="logo" alt="Logo"/>
+                    <img :src="logo" alt="Logo" />
                 </div>
                 <div class="text-white">
                     Software development company
                 </div>
             </div>
-            <div class="m-auto">
+            <div class="mx-auto">
                 <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
                     <div class="hidden md:flex-grow md:flex justify-end gap-6">
                         <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
@@ -21,9 +21,16 @@
                     </div>
                 </div>
             </div>
-            <div class="flex gap-4">
-                <Socials />
+            <div class="flex flex-col gap-4 flex-wrap">
+                <div class="flex gap-4">
+                    <Socials />
+                </div>
+                <div class="text-white flex gap-1">
+                    <img :src="mapIcon" />
+                    <span>Canada</span>
+                </div>
             </div>
+
         </div>
         <div class="text-white">
             @2022 Hypedriven. All rights reserved.
@@ -33,6 +40,7 @@
 
 <script>
 import logo from "../../assets/img/logo.svg";
+import mapIcon from "../../assets/img/icons/map-pin.svg";
 import Socials from "../socials/index.vue";
 export default {
     name: "FooterComponent",
@@ -41,7 +49,8 @@ export default {
     },
     data: function () {
         return {
-            logo:logo,
+            mapIcon: mapIcon,
+            logo: logo,
             menus: [
                 {
                     name: "Home",

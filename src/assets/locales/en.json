@@ -1,5 +1,5 @@
 {
-  "button": { "learnmore": "Learn More", "scrolldown": "Scroll down" },
+  "button": { "learnmore": "Learn More", "scrolldown": "Scroll down", "contactus": "Contact us", "searchjob":"Search jobs" },
   "homepage": {
     "hero": {
       "title": "Software development company",
@@ -38,6 +38,12 @@
     "clients": {
       "title": "Our Clients"
     },
+    "aboutus":{
+      "title": "About us",
+      "subtitle": "Great companies are a product of great people.",
+      "location": "Hypedriven is a development company based in Canada with branches in Kyiv, Dubai and Turkey.",
+      "team":"At Hypedriven, the most valuable asset we have is the relationship we hold within our team."
+    },
     "testimonial": {
       "title": "Testimonial",
       "danielBarrero": {
@@ -45,6 +51,14 @@
         "fullName": "Daniel Barrero Graphics",
         "position": "programmer, Relic Entertainment"
       }
+    },
+    "hiring": {
+      "title": "We are hiring!",
+      "subtitle": "At Hypedriven, we are making sure that our future employees are safe and secure.\nWe are hiring at full speed for our secured projects run for global industry leaders."
+    },
+    "contactus" :{
+      "title": "Interested in working with us?",
+      "subtitle": "Enable your digital advantage with Hypedriven"
     }
   }
 }
