@@ -32,8 +32,8 @@
             </div>
 
         </div>
-        <div class="text-white">
-            @2022 Hypedriven. All rights reserved.
+        <div class="text-white mt-6">
+            © 2022 hypedriven
         </div>
     </footer>
 </template>
