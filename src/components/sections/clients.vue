@@ -5,7 +5,7 @@
                 {{ $t('homepage.clients.title') }}
             </SectionTitle>
         </div>
-        <div class="flex gap-10 flex-wrap justify-between">
+        <div class="flex gap-10 flex-wrap justify-evenly">
             <div v-for="(client, i) in clients" :key="i">
                 <img :src="client.url" alt="" class="image-content">
             </div>
@@ -25,12 +25,6 @@ export default {
     data: function () {
         return {
             clients: [
-                {
-                    url: require('../../assets/img/icons/client.svg')
-                },
-                {
-                    url: require('../../assets/img/icons/client.svg')
-                },
                 {
                     url: require('../../assets/img/icons/client.svg')
                 },

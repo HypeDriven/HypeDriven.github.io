@@ -1,6 +1,6 @@
 <template>
     <SectionContainer class="relative">
-        <v-card elevation="4" class="card flex gap-8 p-6 sm:p-20 justify-center flex-col card-bg">
+        <v-card elevation="4" class="card flex gap-8 p-6 sm:p-16 lg:p-36 justify-center flex-col card-bg">
             <SectionTitle class="text-white h-fit m-auto text-4xl max-w-xl px-2 text-center">
                 {{ $t('homepage.contactus.title') }}
             </SectionTitle>

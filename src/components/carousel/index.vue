@@ -1,14 +1,14 @@
 <template>
-    <Carousel :items-to-show="6" :wrap-around="true">
-        <Slide v-for="(slideData, index) in items" :key="index">
-            <slot :data="slideData"></slot>
-        </Slide>
+        <Carousel :items-to-show="itemsCount" :wrap-around="true">
+            <Slide v-for="(slideData, index) in items" :key="index">
+                <slot ref="carouselContent" :data="slideData"></slot>
+            </Slide>
 
-        <template #addons>
-            <Navigation />
-            <Pagination />
-        </template>
-    </Carousel>
+            <template #addons>
+                <Navigation />
+                <Pagination />
+            </template>
+        </Carousel>
 </template>
 
 <script>
@@ -24,12 +24,30 @@ export default {
         Navigation,
         Pagination
     },
-    props: ['items']
+    props: ['items'],
+    data: function () {
+        return {
+            itemsCount: 6
+        };
+    },
+    created() {
+        window.addEventListener("resize", this.resizeEventHandler);
+    },
+    methods: {
+        resizeEventHandler() {
+            // this.$refs.carouselContent.clientWidth
+            let count = document.documentElement.clientWidth / 400;
+            if (count < 1)
+                count = 1;
+            else if (count > 6)
+                count = 6;
+            this.itemsCount = count;
+        }
+    }
 }
 </script>
 
 <style>
-
 .carousel__prev,
 .carousel__next {
     background-color: transparent;

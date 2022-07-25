@@ -1,5 +1,5 @@
 <template>
-    <Header2>
+    <Header2 class="font-extrabold">
         <slot></slot>
     </Header2>
 </template>
