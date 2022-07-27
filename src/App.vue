@@ -1,6 +1,5 @@
 <template>
-  <Loader v-if="!componentsReady" />
-  <div v-else class="root">
+  <div class="root">
     <router-view />
   </div>
 </template>
@@ -8,24 +7,19 @@
 <script>
 // import Header from "./components/layout/header";
 // import Footer from "./components/layout/footer";
-import Loader from "./components/loader";
+// import Loader from "./components/loader";
 
 export default {
   name: "App",
   components: {
     // Header,
     // Footer,
-    Loader,
+    // Loader,
   },
   data() {
     return {
-      componentsReady: false,
     };
   },
-  mounted() {
-    this.$nextTick(() => {
-      this.componentsReady = true;
-    });
-  },
+
 };
 </script>
