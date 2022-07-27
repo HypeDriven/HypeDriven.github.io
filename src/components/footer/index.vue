@@ -13,15 +13,16 @@
             <div class="mx-auto">
                 <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
                     <div class="hidden md:flex-grow md:flex justify-end gap-6">
-                        <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
-                            <a class="text-white uppercase" v-show="menu?.id == 'contactus'" :href="`mailto:${$t('info.email')}`">
-                                {{ menu?.name }}
-                            </a>
-                            <router-link v-show="menu?.id != 'contactus'" :to="{ path: menu.link, query: { id: menu.id } }"
-                                :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
-                                {{ menu?.name }}
-                            </router-link>
-                        </template>
+                    <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
+                        <router-link :to="{ path: menu.link, query: { id: menu.id } }"
+                            :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
+                            {{ menu?.name }}
+                        </router-link>
+                    </template>
+                    <a class="text-white uppercase"
+                        :href="`mailto:${$t('info.email')}`">
+                        Contact us
+                    </a>
                     </div>
                 </div>
             </div>
@@ -73,11 +74,6 @@ export default {
                     name: "Careers",
                     link: "/",
                     id: "careers"
-                },
-                {
-                    name: "Contact us",
-                    link: "/",
-                    id: "contactus"
                 }
             ]
         };
