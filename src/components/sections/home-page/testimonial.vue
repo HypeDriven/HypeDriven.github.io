@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import TestimonialCard from "../testimonial/testimonial_card";
-import SectionContainer from "./container";
-import SectionTitle from "./title";
-import Carousel from "../carousel/single";
+import TestimonialCard from "../../testimonial/testimonial_card";
+import SectionContainer from "../container";
+import SectionTitle from "../title";
+import Carousel from "../../carousel/single";
 export default {
     name: "TestimonialSectionComponent",
     components: {

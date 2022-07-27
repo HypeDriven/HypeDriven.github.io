@@ -9,8 +9,11 @@
                     <BodyText class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
                         {{ $t('homepage.hiring.subtitle') }}
                     </BodyText>
-                    <div>
-                        <Button>{{ $t('button.searchjob') }}</Button>
+                    <div @click="changeShowEmail">
+                        <Button v-if="!showEmail">{{ $t('button.searchjob') }}</Button>
+                        <BodyText v-else class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
+                            {{ $t('info.emailus') }} <span class="text-violet-700">{{ $t('info.email') }}</span>
+                        </BodyText>
                     </div>
                 </div>
             </Card>
@@ -19,11 +22,11 @@
 </template>
 
 <script>
-import SectionContainer from "./container";
-import Card from "../card/";
-import Button from "../buttons";
-import Header1 from "../text/header/header_1.vue";
-import BodyText from "../text/body/body.vue";
+import SectionContainer from "../container";
+import Card from "../../card/";
+import Button from "../../buttons";
+import Header1 from "../../text/header/header_1.vue";
+import BodyText from "../../text/body/body.vue";
 export default {
     name: "HiringSectionComponent",
     components: {
@@ -35,8 +38,14 @@ export default {
     },
     data: function () {
         return {
-            cardUrl: require('../../assets/img/images/hiring-image.png')
+            showEmail: false,
+            cardUrl: require('../../../assets/img/images/hiring-image.png')
         };
+    },
+    methods: {
+        changeShowEmail() {
+            this.showEmail = !this.showEmail;
+        }
     }
 };
 </script>

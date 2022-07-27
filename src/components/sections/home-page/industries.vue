@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import IndustryCard from "../industries/industries_card";
-import SectionContainer from "./container";
-import SectionTitle from "./title";
-import Carousel from "../carousel";
+import IndustryCard from "../../industries/industries_card";
+import SectionContainer from "../container";
+import SectionTitle from "../title";
+import Carousel from "../../carousel";
 export default {
     name: "IndustriesSectionComponent",
     components: {
@@ -39,51 +39,51 @@ export default {
             industries: [
                 {
                     title: 'logistics',
-                    img: require('../../assets/img/images/logistics.png')
+                    img: require('../../../assets/img/images/logistics.png')
                 },
                 {
                     title: 'telecom',
-                    img: require('../../assets/img/images/telecom.png')
+                    img: require('../../../assets/img/images/telecom.png')
                 },
                 {
                     title: 'automotive',
-                    img: require('../../assets/img/images/automotive.png')
+                    img: require('../../../assets/img/images/automotive.png')
                 },
                 {
                     title: 'bankingCapitalMarkets',
-                    img: require('../../assets/img/images/banking.png')
+                    img: require('../../../assets/img/images/banking.png')
                 },
                 {
                     title: 'gaming',
-                    img: require('../../assets/img/images/gaming.png')
+                    img: require('../../../assets/img/images/gaming.png')
                 },
                 {
                     title: 'eCommerce',
-                    img: require('../../assets/img/images/ecommerce.png')
+                    img: require('../../../assets/img/images/ecommerce.png')
                 },
                 {
                     title: 'manufacturing',
-                    img: require('../../assets/img/images/manufacturing.png')
+                    img: require('../../../assets/img/images/manufacturing.png')
                 },
                 {
                     title: 'realEstate',
-                    img: require('../../assets/img/images/realstate.png')
+                    img: require('../../../assets/img/images/realstate.png')
                 },
                 {
                     title: 'Enterprise',
-                    img: require('../../assets/img/images/enterprise.png')
+                    img: require('../../../assets/img/images/enterprise.png')
                 },
                 {
                     title: 'healthcare',
-                    img: require('../../assets/img/images/healthcare.png')
+                    img: require('../../../assets/img/images/healthcare.png')
                 },
                 {
                     title: 'hospitality',
-                    img: require('../../assets/img/images/hospitality.png')
+                    img: require('../../../assets/img/images/hospitality.png')
                 },
                 {
                     title: ' travel',
-                    img: require('../../assets/img/images/travel.png')
+                    img: require('../../../assets/img/images/travel.png')
                 }
             ]
         };

@@ -24,7 +24,9 @@
                         </div>
                     </div>
                     <div>
-                        <Button>{{ $t('button.learnmore') }}</Button>
+                        <router-link to="/about-us">
+                            <Button>{{ $t('button.learnmore') }}</Button>
+                        </router-link>
                     </div>
                 </div>
             </Card>
@@ -33,13 +35,13 @@
 </template>
 
 <script>
-import SectionContainer from "./container";
-import Card from "../card/";
-import Button from "../buttons";
-import Header1 from "../text/header/header_1.vue";
-import BodyText from "../text/body/body.vue";
-import mapIcon from "../../assets/img/icons/map-pin.svg";
-import usersIcon from "../../assets/img/icons/users.svg";
+import SectionContainer from "../container";
+import Card from "../../card/";
+import Button from "../../buttons";
+import Header1 from "../../text/header/header_1.vue";
+import BodyText from "../../text/body/body.vue";
+import mapIcon from "../../../assets/img/icons/map-pin.svg";
+import usersIcon from "../../../assets/img/icons/users.svg";
 export default {
     name: "AboutUsSectionComponent",
     components: {
@@ -53,7 +55,7 @@ export default {
         return {
             mapIcon: mapIcon,
             usersIcon: usersIcon,
-            cardUrl: require('../../assets/img/images/banking.png')
+            cardUrl: require('../../../assets/img/images/banking.png')
         };
     }
 };

@@ -1,9 +1,18 @@
 {
-  "button": { "learnmore": "Learn More", "scrolldown": "Scroll down", "contactus": "Contact us", "searchjob":"Search jobs" },
+  "button": {
+    "learnmore": "Learn More",
+    "scrolldown": "Scroll down",
+    "contactus": "Contact us",
+    "searchjob": "Contact us"
+  },
+  "info":{
+    "emailus": "Email us via: ",
+    "email": "albert.meyburgh@hypedriven.com"
+  },
   "homepage": {
     "hero": {
       "title": "Software development company",
-      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
+      "subtitle": "We can help you with your software development outstaffing needs."
     },
     "services": {
       "title": "Services",
@@ -38,11 +47,11 @@
     "clients": {
       "title": "Our Clients"
     },
-    "aboutus":{
+    "aboutus": {
       "title": "About us",
       "subtitle": "Great companies are a product of great people.",
-      "location": "Hypedriven is a development company based in Canada with branches in Kyiv, Dubai and Turkey.",
-      "team":"At Hypedriven, the most valuable asset we have is the relationship we hold within our team."
+      "location": "Hypedriven is a development company with developers all over the world.",
+      "team": "At Hypedriven, the most valuable asset we have is the relationship we hold within our team."
     },
     "testimonial": {
       "title": "Testimonial",
@@ -56,9 +65,40 @@
       "title": "We are hiring!",
       "subtitle": "At Hypedriven, we are making sure that our future employees are safe and secure.\nWe are hiring at full speed for our secured projects run for global industry leaders."
     },
-    "contactus" :{
+    "contactus": {
       "title": "Interested in working with us?",
       "subtitle": "Enable your digital advantage with Hypedriven"
+    }
+  },
+  "aboutpage": {
+    "hero": {
+      "title": "",
+      "subtitle": ""
+    },
+    "mission": {
+      "title": "Our mission",
+      "content": "To find clever technological solutions for complex business problems of our clients,encouraging innovations in business and society, increasing income of our clients, business partners, team and company creators."
+    },
+    "weare": {
+      "header": "Who we are",
+      "title": "We are a remote-first company",
+      "subtitle": "Our team works around the world from different countries.",
+      "curiousexplorers": {
+        "title": "Curious explorers",
+        "description": "We are intuitive discoverers, engaging curiosity to discover new things through experience and participation."
+      },
+      "innovators": {
+        "title": "Innovators",
+        "description": "We invent new ideas, products, methods and also new iterations on existing products."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Honesty is in our DNA, we consistently exhibit strong moral and ethical principles and values."
+      }
+    },
+    "jobs": {
+      "title": "Join Us!",
+      "subtitle": "We’re always looking for experts to join our team and create great products together."
     }
   }
 }

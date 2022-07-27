@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import SectionContainer from "./container";
-import SectionTitle from "./title";
+import SectionContainer from "../container";
+import SectionTitle from "../title";
 export default {
     name: "ClientsSectionComponent",
     components: {
@@ -26,19 +26,19 @@ export default {
         return {
             clients: [
                 {
-                    url: require('../../assets/img/icons/client.svg')
+                    url: require('../../../assets/img/icons/client.svg')
                 },
                 {
-                    url: require('../../assets/img/icons/client.svg')
+                    url: require('../../../assets/img/icons/client.svg')
                 },
                 {
-                    url: require('../../assets/img/icons/client.svg')
+                    url: require('../../../assets/img/icons/client.svg')
                 },
                 {
-                    url: require('../../assets/img/icons/client.svg')
+                    url: require('../../../assets/img/icons/client.svg')
                 },
                 {
-                    url: require('../../assets/img/icons/client.svg')
+                    url: require('../../../assets/img/icons/client.svg')
                 }
             ]
         };

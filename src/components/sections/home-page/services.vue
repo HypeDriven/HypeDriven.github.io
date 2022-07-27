@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import ServiceCard from "../services/service_card";
-import SectionContainer from "./container";
-import SectionTitle from "./title";
-import SectionSubTitle from "./sub-title";
-import Carousel from "../carousel";
+import ServiceCard from "../../services/service_card";
+import SectionContainer from "../container";
+import SectionTitle from "../title";
+import SectionSubTitle from "../sub-title";
+import Carousel from "../../carousel";
 export default {
     name: "ServicesSectionComponent",
     components: {
@@ -43,47 +43,47 @@ export default {
             services: [
                 {
                     title: 'outsourcedServices',
-                    img: require("../../assets/img/icons/it.svg")
+                    img: require("../../../assets/img/icons/it.svg")
                 },
                 {
                     title: 'webDev',
-                    img: require("../../assets/img/icons/optimization.svg")
+                    img: require("../../../assets/img/icons/optimization.svg")
                 },
                 {
                     title: 'uxDesign',
-                    img: require("../../assets/img/icons/ui.svg")
+                    img: require("../../../assets/img/icons/ui.svg")
                 },
                 {
                     title: 'itSecurityManagement',
-                    img: require("../../assets/img/icons/management-(2).svg")
+                    img: require("../../../assets/img/icons/management-(2).svg")
                 },
                 {
                     title: 'projectManagement',
-                    img: require("../../assets/img/icons/management-(1).svg")
+                    img: require("../../../assets/img/icons/management-(1).svg")
                 },
                 {
                     title: 'businessAnalysis',
-                    img: require("../../assets/img/icons/analysis.svg")
+                    img: require("../../../assets/img/icons/analysis.svg")
                 },
                 {
                     title: 'qualityAssurance',
-                    img: require("../../assets/img/icons/quality-assurance.svg")
+                    img: require("../../../assets/img/icons/quality-assurance.svg")
                 },
                 {
                     title: 'mobileDev',
-                    img: require("../../assets/img/icons/app-development.svg")
+                    img: require("../../../assets/img/icons/app-development.svg")
                 },
                 {
                     title: 'applicationMaintenance',
-                    img: require("../../assets/img/icons/repair 1.svg")
+                    img: require("../../../assets/img/icons/repair 1.svg")
                 },
                 {
                     title: 'solutionArchitecture',
-                    img: require("../../assets/img/icons/solution.svg")
+                    img: require("../../../assets/img/icons/solution.svg")
                 },
                 {
                     title: 'supportServices',
-                    img: require("../../assets/img/icons/technical-support.svg")
+                    img: require("../../../assets/img/icons/technical-support.svg")
                 }
             ]
         };

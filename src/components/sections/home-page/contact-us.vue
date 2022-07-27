@@ -7,7 +7,7 @@
             <SectionSubTitle class="text-white h-fit m-auto max-w-3xl px-2 text-center">
                 {{ $t('homepage.contactus.subtitle') }}
             </SectionSubTitle>
-            <div class="m-auto">
+            <div class="m-auto hidden">
                 <Button>{{ $t('button.contactus') }}</Button>
             </div>
         </v-card>
@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import SectionContainer from "./container";
-import SectionTitle from "./title";
-import Button from "../buttons";
+import SectionContainer from "../container";
+import SectionTitle from "../title";
+import Button from "../../buttons";
 export default {
     name: "ContactUsSectionComponent",
     components: {
@@ -27,15 +27,15 @@ export default {
     },
     data: function () {
         return {
-            cardUrl: require('../../assets/img/images/banking.png')
+            cardUrl: require('../../../assets/img/images/banking.png')
         };
     }
 };
 </script>
 
-<style>
+<style scoped>
 .card-bg {
-    background-image: url('../../assets/img/images/contact-us-bg.png');
+    background-image: url('../../../assets/img/images/contact-us-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

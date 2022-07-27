@@ -3,24 +3,26 @@
     <div class="my-auto flex justify-between px-3 md:px-16 lg:px-28 xl:px-28 w-full z-10">
       <div class="flex flex-col gap-6 max-w-xl">
         <Header1 class="text-white">
-          {{$t('homepage.hero.title')}}
+          {{ $t('homepage.hero.title') }}
         </Header1>
         <BodyText class="text-white">
-          {{$t('homepage.hero.subtitle')}}
+          {{ $t('homepage.hero.subtitle') }}
         </BodyText>
         <div>
-          <Button>{{$t('button.learnmore')}}</Button>
+          <router-link to="/about-us">
+            <Button>{{ $t('button.learnmore') }}</Button>
+          </router-link>
         </div>
       </div>
-      <div class="flex flex-col gap-6 justify-center">
+      <div class="flex-col gap-6 justify-center hidden">
         <Socials />
       </div>
     </div>
-    <div class="justify-end text-center my-10 z-10">
+    <div class="justify-end text-center my-10 z-10" @click="godown">
       <div class="flex justify-center">
         <SlideUnlock />
       </div>
-      <div class="text-white mt-8">{{$t('button.scrolldown')}}</div>
+      <div class="text-white mt-8">{{ $t('button.scrolldown') }}</div>
     </div>
     <img id="image" class="absolute top-0 right-0 md:-right-32 z-0 w-full md:w-4/6 h-screen" :src="image" />
 
@@ -48,6 +50,13 @@ export default {
     return {
       image: image
     };
+  },
+  methods:{
+    godown(){
+      document.getElementById('footer').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   }
 };
 </script>

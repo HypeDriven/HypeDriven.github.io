@@ -1,5 +1,6 @@
 <template>
     <footer
+        id="footer"
         class="py-16 flex flex-col items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 gap-20">
         <div class="flex justify-between w-full">
             <div class="flex flex-col gap-10">
@@ -14,9 +15,10 @@
                 <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
                     <div class="hidden md:flex-grow md:flex justify-end gap-6">
                         <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
-                            <a :class="`text-white capitalize`">
+                            <router-link :to="{ path: menu.link, query: { id: menu.id } }"
+                                :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
                                 {{ menu?.name }}
-                            </a>
+                            </router-link>
                         </template>
                     </div>
                 </div>
@@ -32,7 +34,7 @@
             </div>
 
         </div>
-        <div class="text-white mt-6">
+        <div class="text-white mt-6" id="footer">
             © 2022 hypedriven
         </div>
     </footer>
@@ -62,19 +64,13 @@ export default {
                 },
                 {
                     name: "Services",
-                    link: "/services"
-                },
-                {
-                    name: "Industries",
-                    link: "/industries"
+                    link: "/",
+                    id: "services"
                 },
                 {
                     name: "Careers",
-                    link: "/careers"
-                },
-                {
-                    name: "Contact Us",
-                    link: "/contact-us"
+                    link: "/",
+                    id: "careers"
                 }
             ]
         };
