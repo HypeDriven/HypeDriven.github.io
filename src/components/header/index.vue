@@ -26,7 +26,7 @@
                     :class="!hideMenu ? 'flex flex-col my-8 md:my-0 md:flex-grow md:flex-row md:flex md:justify-end gap-6' : 'hidden'">
                     <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
                         <a class="text-white uppercase" v-if="menu?.id == 'contactus'"
-                            :href="'mailto:' + $t('info.email')">
+                            href="mailto:careers@hypedriven.com">
                             {{ menu?.name }}
                         </a>
                         <router-link v-else :to="{ path: menu.link, query: { id: menu?.id } }"

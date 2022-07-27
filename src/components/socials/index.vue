@@ -3,8 +3,8 @@
         <img :src="linkedin" alt="Linkedin" class="m-auto">
     </IconButton> -->
     <IconButton>
-        <a :href="`mailto:${$t('info.email')}`">
-        <img :src="mail" alt="Mail" class="m-auto">
+        <a href="mailto:careers@hypedriven.com">
+            <img :src="mail" alt="Mail" class="m-auto">
         </a>
     </IconButton>
     <!-- <IconButton>
@@ -24,7 +24,7 @@ import facebook from "../../assets/img/icons/socials/facebook.svg";
 
 export default {
     name: "SocialsComponent",
-    components:{
+    components: {
         IconButton
     },
     data: function () {

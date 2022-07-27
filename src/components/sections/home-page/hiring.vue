@@ -13,8 +13,9 @@
                         <Button :class="!showEmail ? 'block' : 'hidden'">{{ $t('button.searchjob') }}</Button>
                         <div :class="showEmail ? 'block' : 'hidden'">
                             <BodyText class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
-                                <span>{{ $t('info.emailus') }}</span> <span class="text-violet-700">{{ $t('info.email')
-                                }}</span>
+                                <span>{{ $t('info.emailus') }}</span> <span class="text-violet-700">
+                                    <a href="mailto:careers@hypedriven.com">mailto:careers@hypedriven.com</a>
+                                </span>
                             </BodyText>
                         </div>
                     </div>

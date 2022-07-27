@@ -15,7 +15,7 @@
                     <div class="hidden md:flex-grow md:flex justify-end gap-6">
                         <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
                             <a class="text-white uppercase" v-if="menu?.id == 'contactus'"
-                                :href="'mailto:' + $t('info.email')">
+                                href="mailto:careers@hypedriven.com">
                                 {{ menu?.name }}
                             </a>
                             <router-link v-else :to="{ path: menu.link, query: { id: menu?.id } }"
