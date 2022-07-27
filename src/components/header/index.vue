@@ -25,15 +25,15 @@
                 <div class="md:flex-grow md:flex justify-end gap-6"
                     :class="!hideMenu ? 'flex flex-col my-8 md:my-0 md:flex-grow md:flex-row md:flex md:justify-end gap-6' : 'hidden'">
                     <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
-                        <router-link :to="{ path: menu.link, query: { id: menu.id } }"
+                        <a class="text-white uppercase" v-if="menu?.id == 'contactus'"
+                            :href="'mailto:' + $t('info.email')">
+                            {{ menu?.name }}
+                        </a>
+                        <router-link v-else :to="{ path: menu.link, query: { id: menu?.id } }"
                             :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
                             {{ menu?.name }}
                         </router-link>
                     </template>
-                    <a class="text-white uppercase"
-                        :href="`mailto:${$t('info.email')}`">
-                        Contact us
-                    </a>
                 </div>
             </div>
         </nav>
@@ -66,6 +66,11 @@ export default {
                     name: "Careers",
                     link: "/",
                     id: "careers"
+                },
+                {
+                    name: "Contact us",
+                    link: "/",
+                    id: "contactus"
                 }
             ]
         };

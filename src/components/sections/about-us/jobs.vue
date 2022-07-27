@@ -10,10 +10,13 @@
                         {{ $t('aboutpage.jobs.subtitle') }}
                     </BodyText>
                     <div @click="changeShowEmail">
-                        <Button :class="!showEmail? 'block': 'hidden'">{{ $t('button.searchjob') }}</Button>
-                        <BodyText :class="showEmail? 'block': 'hidden'" class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
-                            {{ $t('info.emailus') }} <span class="text-violet-700">{{ $t('info.email') }}</span>
-                        </BodyText>
+                        <Button :class="!showEmail ? 'block' : 'hidden'">{{ $t('button.searchjob') }}</Button>
+                        <div :class="showEmail ? 'block' : 'hidden'">
+                            <BodyText class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
+                                <span>{{ $t('info.emailus') }}</span> <span class="text-violet-700">{{ $t('info.email')
+                                }}</span>
+                            </BodyText>
+                        </div>
                     </div>
                 </div>
             </Card>
