@@ -11,7 +11,7 @@
                     </BodyText>
                     <div @click="changeShowEmail">
                         <Button v-if="!showEmail">{{ $t('button.searchjob') }}</Button>
-                        <BodyText v-else class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
+                        <BodyText v-else-if="showEmail" class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
                             {{ $t('info.emailus') }} <span class="text-violet-700">{{ $t('info.email') }}</span>
                         </BodyText>
                     </div>

@@ -5,7 +5,7 @@
     "contactus": "Contact us",
     "searchjob": "Contact us"
   },
-  "info":{
+  "info": {
     "emailus": "Email us via: ",
     "email": "albert.meyburgh@hypedriven.com"
   },
@@ -58,7 +58,22 @@
       "danielBarrero": {
         "message": "Albert is a really smart programmer, he is a very hard working individual with an very inquisitive mind that fuels his curiosity to keep up to date on any programming, math and science related knowledge.  He is a great asset for any team that lucky enough to have him.",
         "fullName": "Daniel Barrero Graphics",
-        "position": "programmer, Relic Entertainment"
+        "position": "Programmer, Relic Entertainment"
+      },
+      "jacobkwitkoski": {
+        "message": "Albert was a great manager that was able to get the most out of his direct reports. He was able to successfully remove roadblocks and let each team member showcase their skills to the best of their abilities. His technical leadership also helped level up my career. He is a valuable asset to have on a team.",
+        "fullName": "Jacob Kwitkoski",
+        "position": "Mobile Architect Android, AutoTrader.ca"
+      },
+      "neemateymory": {
+        "message": "Albert is a hard working and motivated programmer that takes the time to fully understand a problem before tackling it. He is not afraid to explore different options when finding a solution, and communicates well with his team to find the best path forward. Any team would be lucky to have him.",
+        "fullName": "Neema Teymory",
+        "position": "Principal Software Engineer, Piranha Games"
+      },
+      "timholman": {
+        "message": "Albert is a hard working and motivated programmer that takes the time to fully understand a problem before tackling it. He is not afraid to explore different options when finding a solution, and communicates well with his team to find the best path forward. Any team would be lucky to have him.",
+        "fullName": "Tim Holman",
+        "position": "Game production, creative leadership, and business development"
       }
     },
     "hiring": {

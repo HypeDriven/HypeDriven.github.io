@@ -7,7 +7,8 @@
         </div>
         <div>
             <Carousel :items="testimonies" v-slot="{ data }">
-                <TestimonialCard class="mx-4" :message="$t(`homepage.testimonial.${data}.message`)" :fullName="$t(`homepage.testimonial.${data}.fullName`)"
+                <TestimonialCard class="mx-4" :message="$t(`homepage.testimonial.${data}.message`)"
+                    :fullName="$t(`homepage.testimonial.${data}.fullName`)"
                     :position="$t(`homepage.testimonial.${data}.position`)" />
             </Carousel>
         </div>
@@ -30,7 +31,10 @@ export default {
     data: function () {
         return {
             testimonies: [
-                'danielBarrero'
+                'danielBarrero',
+                'jacobkwitkoski',
+                'neemateymory',
+                'timholman'
             ]
         };
     }
