@@ -1,6 +1,5 @@
 <template>
-    <footer
-        id="footer"
+    <footer id="footer"
         class="py-16 flex flex-col items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 gap-20">
         <div class="flex justify-between w-full">
             <div class="flex flex-col gap-10">
@@ -15,7 +14,10 @@
                 <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
                     <div class="hidden md:flex-grow md:flex justify-end gap-6">
                         <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
-                            <router-link :to="{ path: menu.link, query: { id: menu.id } }"
+                            <a class="text-white uppercase" v-if="menu.id == 'contactus'" :href="`mailto:${$t('info.email')}`">
+                                {{ menu?.name }}
+                            </a>
+                            <router-link v-else :to="{ path: menu.link, query: { id: menu.id } }"
                                 :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
                                 {{ menu?.name }}
                             </router-link>
@@ -29,7 +31,7 @@
                 </div>
                 <div class="text-white flex gap-1">
                     <img :src="mapIcon" />
-                    <span>Canada</span>
+                    <span>United Arab Emirates</span>
                 </div>
             </div>
 
@@ -71,6 +73,11 @@ export default {
                     name: "Careers",
                     link: "/",
                     id: "careers"
+                },
+                {
+                    name: "Contact us",
+                    link: "/",
+                    id: "contactus"
                 }
             ]
         };
