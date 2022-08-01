@@ -4,7 +4,7 @@
       <Header />
       <Hero class="flex-1" />
     </div>
-    <main class="flex flex-col px-6 sm:px-0 bg-primary-bg">
+    <main class="flex flex-col px-6 sm:px-0 bg-primary-bg" id="main-content">
       <ServicesSection id="services" />
       <IndustriesSection />
       <!-- <ClientsSection /> -->

@@ -53,7 +53,7 @@ export default {
   },
   methods:{
     godown(){
-      document.getElementById('footer').scrollIntoView({
+      document.getElementById('main-content').scrollIntoView({
         behavior: 'smooth'
       });
     }

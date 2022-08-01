@@ -115,5 +115,11 @@
       "title": "Join Us!",
       "subtitle": "We’re always looking for experts to join our team and create great products together."
     }
+  },
+  "404": {
+    "hero": {
+      "title": "404",
+      "subtitle": "Page not found"
+    }
   }
 }

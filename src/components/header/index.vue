@@ -20,7 +20,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="w-full block flex-grow md:flex md:items-center md:w-auto"
+            <div class="w-full block flex-grow md:flex md:items-center md:w-auto z-10"
                 :class="!hideMenu ? 'h-screen md:h-auto' : ''">
                 <div class="md:flex-grow md:flex justify-end gap-6"
                     :class="!hideMenu ? 'flex flex-col my-8 md:my-0 md:flex-grow md:flex-row md:flex md:justify-end gap-6' : 'hidden'">
