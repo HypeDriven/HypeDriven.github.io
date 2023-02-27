@@ -1,89 +1,65 @@
 <template>
-    <SectionContainer>
-        <div class="flex flex-col gap-8 max-w-lg m-auto">
-            <SectionTitle class="text-white h-fit m-auto text-4xl max-w-full px-2 text-center">
-                {{$t('homepage.industries.subtitle')}}
-            </SectionTitle>
-        </div>
-        <div>
-            <Carousel :items="industries" v-slot="{ data }">
-                <IndustryCard :img="data?.img" :title="data?.title">
-                    <div class="flex flex-col gap-5 card-content">
-                        <img :src="data?.img" class="h-10 w-10 m-auto" />
-                        <div>
-                            {{$t(`homepage.industries.${data?.title}`)}}
-                        </div>
+    <!-- <SectionContainer>     -->
+        <div class="flex flex-row justify-between">
+            <Carousel  :carouselData="industries">
+                <!-- <IndustryCard :img="data?.img" :title="data?.title"> -->
+                    <!-- <div class="flex flex-col gap-5 card-content"> -->
+                        <!-- <img :src="data?.img" class="h-10 w-10 m-auto" /> -->
+                        <!-- <div> -->
+                            <!-- {{$t(`homepage.industries.${data?.title}`)}} -->
+                        <!-- </div> -->
 
-                    </div>
-                </IndustryCard>
+                    <!-- </div> -->
+                <!-- </IndustryCard> -->
             </Carousel>
         </div>
-    </SectionContainer>
+    <!-- </SectionContainer> -->
 </template>
 
 <script>
-import IndustryCard from "../../industries/industries_card";
-import SectionContainer from "../container";
-import SectionTitle from "../title";
-import Carousel from "../../carousel";
+// import IndustryCard from "../../industries/industries_card";
+// import SectionContainer from "../container";
+// import SectionTitle from "../title";
+import Carousel from "../../carousel/bigSingle.vue";
 export default {
     name: "IndustriesSectionComponent",
     components: {
-        SectionContainer,
-        SectionTitle,
-        Carousel,
-        IndustryCard
-    },
+    Carousel
+},
     data: function () {
         return {
             industries: [
                 {
-                    title: 'logistics',
-                    img: require('../../../assets/img/images/logistics.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 1
                 },
                 {
-                    title: 'telecom',
-                    img: require('../../../assets/img/images/telecom.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 2
                 },
                 {
-                    title: 'automotive',
-                    img: require('../../../assets/img/images/automotive.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 3
                 },
                 {
-                    title: 'bankingCapitalMarkets',
-                    img: require('../../../assets/img/images/banking.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 4
                 },
                 {
-                    title: 'gaming',
-                    img: require('../../../assets/img/images/gaming.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 5
                 },
                 {
-                    title: 'eCommerce',
-                    img: require('../../../assets/img/images/ecommerce.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 6
                 },
                 {
-                    title: 'manufacturing',
-                    img: require('../../../assets/img/images/manufacturing.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 7
                 },
                 {
-                    title: 'realEstate',
-                    img: require('../../../assets/img/images/realstate.png')
-                },
-                {
-                    title: 'Enterprise',
-                    img: require('../../../assets/img/images/enterprise.png')
-                },
-                {
-                    title: 'healthcare',
-                    img: require('../../../assets/img/images/healthcare.png')
-                },
-                {
-                    title: 'hospitality',
-                    img: require('../../../assets/img/images/hospitality.png')
-                },
-                {
-                    title: ' travel',
-                    img: require('../../../assets/img/images/travel.png')
+                    img: require('../../../assets/img/images/telecom2.png'),
+                    id: 8
                 }
             ]
         };
@@ -92,7 +68,4 @@ export default {
 </script>
 
 <style>
-.card-content {
-    max-width: 120px;
-}
 </style>

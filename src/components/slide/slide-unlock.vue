@@ -30,12 +30,12 @@ export default {
     --su-color-progress-complete-bg: #000026 !important;
     --su-color-text-normal: #000026 !important;
     --su-color-text-complete: #000026 !important;
-    --su-color-handler-bg: #fefefe !important;
+    --su-color-handler-bg: #00007E !important;
     --su-color-handler: none !important;
 }
 
 .slideunlock.is-circle {
-    border: 1px solid white !important;
+    border: 2px solid #00007E !important;
 }
 
 .slideunlock.is-complete .slideunlock-handler {

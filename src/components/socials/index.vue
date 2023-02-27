@@ -1,18 +1,18 @@
 <template>
-    <!-- <IconButton>
+    <IconButton>
         <img :src="linkedin" alt="Linkedin" class="m-auto">
-    </IconButton> -->
+    </IconButton> 
     <IconButton>
         <a href="mailto:careers@hypedriven.com">
             <img :src="mail" alt="Mail" class="m-auto">
         </a>
     </IconButton>
-    <!-- <IconButton>
+     <IconButton>
         <img :src="instagram" alt="Instagram" class="m-auto">
     </IconButton>
     <IconButton>
         <img :src="facebook" alt="Facebook" class="m-auto">
-    </IconButton> -->
+    </IconButton> 
 </template>
 
 <script>
@@ -37,3 +37,4 @@ export default {
     }
 };
 </script>
+

@@ -6,19 +6,20 @@ module.exports = {
         sans: ["Gilroy", "sans-serif"],
       },
       backgroundImage: (theme) => ({
+        //"hero-main-baner": "url('assets/img/wave.svg')",
         "hero-lg": "url('assets/img/career-intro-bg.jpg')",
         "hero-sm": "url('assets/img/career_header.png')",
         "hero-home-page-bg": "url('assets/img/home-hero-bg.svg')",
       }),
       headers: {},
-
       colors: {
         // Background colors
-        "primary-bg": "#000026",
-        "secondary-bg": "#E8E8FF",
+        "main-bg": "#9DD3E1",
+        "primary-bg": "#00007E",
+        "secondary-bg": "#FFFFFF",
 
         // Button colors
-        "primary-button": "#9B5AFF",
+        "primary-button": "#150DCE",
         "secondary-button": "#7419FF",
 
         //

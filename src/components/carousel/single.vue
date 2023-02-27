@@ -33,7 +33,7 @@ export default {
 .carousel__prev,
 .carousel__next {
     background-color: transparent;
-    color: #7419FF;
+    color: #00007E;
     margin-top: -30px;
 }
 
@@ -57,10 +57,10 @@ export default {
 }
 
 .carousel__pagination-button--active {
-    background-color: #7419FF;
+    background-color: #00007E;
 }
 
 .carousel__track {
-    gap: 20px;
+    gap: 15px;
 }
 </style>

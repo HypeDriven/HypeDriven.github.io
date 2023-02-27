@@ -1,10 +1,10 @@
 <template>
     <footer id="footer"
-        class="py-16 flex flex-col items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 gap-20">
+        class="py-16 flex flex-col items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 gap-20 border-t-4 border-[#66C3CD]">
         <div class="flex justify-between w-full">
             <div class="flex flex-col gap-10">
-                <div class="text-white">
-                    <img :src="logo" alt="Logo" />
+                <div class="text-white text-2xl">
+                    Hypedriven
                 </div>
                 <div class="text-white">
                     Software development company
@@ -19,7 +19,7 @@
                                 {{ menu?.name }}
                             </a>
                             <router-link v-else :to="{ path: menu.link, query: { id: menu?.id } }"
-                                :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
+                                :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-[#66C3CD]' : ''}`">
                                 {{ menu?.name }}
                             </router-link>
                         </template>
@@ -69,6 +69,11 @@ export default {
                     name: "Services",
                     link: "/",
                     id: "services"
+                },
+                {
+                    name: "Industrieds",
+                    link: "/",
+                    id: "industrieds"
                 },
                 {
                     name: "Careers",

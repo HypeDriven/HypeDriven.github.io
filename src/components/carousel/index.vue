@@ -27,7 +27,7 @@ export default {
     props: ['items'],
     data: function () {
         return {
-            itemsCount: 6
+            itemsCount: 4
         };
     },
     created() {
@@ -39,8 +39,8 @@ export default {
             let count = document.documentElement.clientWidth / 400;
             if (count < 1)
                 count = 1;
-            else if (count > 6)
-                count = 6;
+            else if (count > 4)
+                count = 4;
             this.itemsCount = count;
         }
     }
@@ -51,7 +51,7 @@ export default {
 .carousel__prev,
 .carousel__next {
     background-color: transparent;
-    color: #7419FF;
+    color: #00007E;
     margin-top: -30px;
 }
 
@@ -75,7 +75,7 @@ export default {
 }
 
 .carousel__pagination-button--active {
-    background-color: #7419FF;
+    background-color: #00007E;
 }
 
 .carousel__track {

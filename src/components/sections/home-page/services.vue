@@ -1,22 +1,40 @@
 <template>
     <SectionContainer>
-        <div class="flex flex-col gap-8 max-w-lg m-auto">
-            <SectionTitle class="text-white h-fit m-auto text-4xl max-w-xl px-2 text-center">
-                {{$t('homepage.services.title')}}
-            </SectionTitle>
-            <SectionSubTitle class="text-accent-orange h-fit m-auto text-2xl max-w-3xl px-2 text-center">
-                {{$t('homepage.services.subtitle')}}
-            </SectionSubTitle>
+        <div class="flex flex-row justify-around max-w-8xl  pt-56">
+            <div class="flex flex-row justify-between ">
+                <div>
+                    <SectionTitle class="text-white h-fit m-auto text-6xl max-w-xl px-2 text-center services">
+                        {{$t('homepage.services.title')}}
+                    </SectionTitle>
+                </div>
+                <div>
+                    <img class="servicesArrowImg" src="@/assets/img/servicesArrowImg.svg">
+                </div>
+                
+            </div>
+            <div class="border-l-2 lineStyle"></div>
+            <div class="flex max-w-lg">
+                
+                <SectionSubTitle class="text-[#000026] h-fit ml-12 text-xl px-2 font-bold text-left">
+                    {{$t('homepage.services.subtitle')}}
+                </SectionSubTitle>
+            </div>
         </div>
         <div>
             <Carousel :items="services" v-slot="{ data }">
                 <ServiceCard>
-                    <div class="flex flex-col gap-5 card-content">
-                        <img :src="data?.img" class="h-10 w-10 m-auto" />
-                        <div>
-                            {{$t(`homepage.services.${data?.title}`)}}
+                    <div class="card-content1 cursor-pointer" @mouseover="data.hover=true" @mouseleave="data.hover=false"> 
+                        <div class="flex flex-col gap-5 card-icon"
+                        :style="{'background-image': data.hover ? `url(`+ data.img2 +`)` : '',}">   
+                            <div class="mt-8 mb-8">
+                                <img :src="data?.img1" class="w-24 h-24 m-auto icons" v-bind:class="[data.hover ? ` iconsWhite `: '']"/>    
+                            </div>
+                        </div>
+                        <div class="text-xl font-bold mt-4 card-text">
+                            <span>{{$t(`homepage.services.${data?.title}`)}}</span>
                         </div>
                     </div>
+                   
                 </ServiceCard>
             </Carousel>
         </div>
@@ -42,48 +60,34 @@ export default {
         return {
             services: [
                 {
-                    title: 'outsourcedServices',
-                    img: require("../../../assets/img/icons/it.svg")
+                    title: 'customSoftwareDevelopment',
+                    img1: require("@/assets/img/icons/custom-software-dev.svg"),
+                    img2: require("@/assets/img/icons/softwareDev2.jpg"),
+                    hover: false
                 },
                 {
-                    title: 'webDev',
-                    img: require("../../../assets/img/icons/optimization.svg")
+                    title: 'softwareTesting',
+                    img1: require("@/assets/img/icons/software-testing.svg"),
+                    img2: require("@/assets/img/icons/it-specialist-check.jpg"),
+                    hover: false
                 },
                 {
-                    title: 'uxDesign',
-                    img: require("../../../assets/img/icons/ui.svg")
+                    title: 'productEngineering',
+                    img1: require("@/assets/img/icons/product-engineering.svg"),
+                    img2: require("@/assets/img/icons/product-engineering.jpg"),
+                    hover: false
                 },
                 {
-                    title: 'itSecurityManagement',
-                    img: require("../../../assets/img/icons/management-(2).svg")
+                    title: 'itSupport',
+                    img1: require("@/assets/img/icons/it-support.svg"),
+                    img2: require("@/assets/img/icons/it-support.jpg"),
+                    hover: false
                 },
                 {
-                    title: 'projectManagement',
-                    img: require("../../../assets/img/icons/management-(1).svg")
-                },
-                {
-                    title: 'businessAnalysis',
-                    img: require("../../../assets/img/icons/analysis.svg")
-                },
-                {
-                    title: 'qualityAssurance',
-                    img: require("../../../assets/img/icons/quality-assurance.svg")
-                },
-                {
-                    title: 'mobileDev',
-                    img: require("../../../assets/img/icons/app-development.svg")
-                },
-                {
-                    title: 'applicationMaintenance',
-                    img: require("../../../assets/img/icons/repair 1.svg")
-                },
-                {
-                    title: 'solutionArchitecture',
-                    img: require("../../../assets/img/icons/solution.svg")
-                },
-                {
-                    title: 'supportServices',
-                    img: require("../../../assets/img/icons/technical-support.svg")
+                    title: 'itConsult',
+                    img1: require("@/assets/img/icons/it-consult.svg"),
+                    img2: require("@/assets/img/icons/it-consult.jpg"),
+                    hover: false
                 }
             ]
         };
@@ -92,7 +96,69 @@ export default {
 </script>
 
 <style>
-.card-content{
-    max-width: 120px;
+.card-content1{
+    width: 80%;
+    transition: .4s;
 }
+
+.card-content1:hover {
+    color: #00007E;
+}
+
+.card-icon {
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    height: 60px;
+    padding: auto;
+}
+
+/*.card-content1::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 2px;
+    border-right: 1px solid rgb(255, 255, 255);
+}*/
+
+.lineStyle {
+    width: 100px;
+    height: 100px;
+    margin-right: -150px;
+
+}
+
+.services::after {
+    content: url("@/assets/img/servicesImg.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: 18px;
+    transform: translateY(-40px);
+    display: inline-block;
+}
+
+.servicesArrowImg {
+    width: 32px;
+    height: 32px;
+    margin-left: 150px;
+}
+
+.iconsWhite,
+.iconsWhite:focus {
+    filter: brightness(0) invert(1);
+    transition: .4s;
+}
+
 </style>

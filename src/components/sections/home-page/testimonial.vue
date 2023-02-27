@@ -1,7 +1,7 @@
 <template>
     <SectionContainer>
         <div class="flex flex-col gap-8 max-w-lg m-auto">
-            <SectionTitle class="text-white h-fit m-auto text-4xl max-w-full px-2 text-center">
+            <SectionTitle class="text-[#00007E] h-fit m-auto text-6xl max-w-full px-2 text-center">
                 {{ $t('homepage.testimonial.title') }}
             </SectionTitle>
         </div>
@@ -42,7 +42,4 @@ export default {
 </script>
 
 <style>
-.card-content {
-    max-width: 120px;
-}
 </style>

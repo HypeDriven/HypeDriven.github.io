@@ -1,14 +1,17 @@
 <template>
     <div>
         <nav
-            class="z-20 flex items-center justify-between flex-wrap bg-primary-bg p-4 md:px-16 lg:px-28 xl:px-28 w-full">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
+            class="z-20 flex items-center justify-between flex-wrap bg-white p-4 md:px-16 lg:px-28 xl:px-28 w-full mt-[-50px]"
+            :class="`${$route.path=='/' ? '' : 'mt-[0px]'}`">
+            <div class="flex items-center flex-shrink-0 mr-6 z-10">
                 <span class="font-semibold text-xl tracking-tight">
                     <router-link to="/">
                         <img :src="logo" alt="Logo" />
                     </router-link>
                 </span>
             </div>
+            <div v-if="$route.path=='/'" class="rounded-full animation"></div>
+            <div v-if="$route.path=='/'" class="rounded-full secAnimation"></div>
             <div class="block md:hidden">
                 <button @click="toggleMenu()"
                     class="flex items-center px-3 py-2 border rounded text-primary-button border-primary-button hover:text-secondary-button hover:border-secondary-button">
@@ -25,12 +28,12 @@
                 <div class="md:flex-grow md:flex justify-end gap-6"
                     :class="!hideMenu ? 'flex flex-col my-8 md:my-0 md:flex-grow md:flex-row md:flex md:justify-end gap-6' : 'hidden'">
                     <template v-for="(menu, menuIndex) in menus" :key="menuIndex">
-                        <a class="text-white uppercase" v-if="menu?.id == 'contactus'"
+                        <a class="text-black font-extrabold" v-if="menu?.id == 'contactus'"
                             href="mailto:careers@hypedriven.com">
                             {{ menu?.name }}
                         </a>
                         <router-link v-else :to="{ path: menu.link, query: { id: menu?.id } }"
-                            :class="`text-white uppercase ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-secondary-button' : ''}`">
+                            :class="`font-extrabold ${$route.path == menu.link && $route.query?.id == menu.id ? 'text-[#314FA5] border-b-2 border-[#314FA5] ' : ''}`">
                             {{ menu?.name }}
                         </router-link>
                     </template>
@@ -63,6 +66,26 @@ export default {
                     id: "services"
                 },
                 {
+                    name: "Industries",
+                    link: "/",
+                    id: "industries"
+                },
+                {
+                    name: "Technologies",
+                    link: "/",
+                    id: "technologies"
+                },
+                {
+                    name: "Diversity",
+                    link: "/",
+                    id: "diversity"
+                },
+                {
+                    name: "Team",
+                    link: "/",
+                    id: "team"
+                },
+                {
                     name: "Careers",
                     link: "/",
                     id: "careers"
@@ -82,3 +105,81 @@ export default {
     }
 };
 </script>
+
+<style>
+
+    @keyframes waves {
+        100%{
+            /*box-shadow: 0 0 0 1000px #b3822700;*/
+            transform: scale(4);
+            opacity: 0.2;
+            
+        }
+    }
+
+    .animation {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 0 0 #ffffff;
+        /*animation: waves 4s infinite linear;*/
+        position: relative;
+        z-index: 1;
+        top: -40px; left: -200px;
+    }
+
+    .animation::before,
+    .animation::after{
+        content: "";
+        width: 200%;
+        height: 200%;
+        border: 1px solid rgba(211, 211, 211, 0.425);
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        opacity: 0.6;
+    }
+
+    .animation::before {
+        animation: waves 4s .2s ease-out infinite;
+        width: 230%;
+        height: 230%;
+    }
+    .animation::after {
+        animation: waves 4s .3s ease-out infinite;
+    }
+
+    .secAnimation {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 0 0 #ffffff;
+        position: relative;
+        z-index: 1;
+        top: -40px; left: -350px;
+    }
+
+    .secAnimation::before,
+    .secAnimation::after{
+        content: "";
+        width: 140%;
+        height: 140%;
+        border: 1px solid rgba(211, 211, 211, 0.425);
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        opacity: 0.6;
+    }
+
+    .secAnimation::before {
+        animation: waves 4s .5s ease-out infinite;
+        width: 170%;
+        height: 170%;
+    }
+    .secAnimation::after {
+        animation: waves 4s .6s ease-out infinite;
+    }
+
+</style>

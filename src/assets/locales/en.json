@@ -1,5 +1,6 @@
 {
   "button": {
+    "readmore": "Read More",
     "learnmore": "Learn More",
     "scrolldown": "Scroll down",
     "contactus": "Contact us",
@@ -12,37 +13,30 @@
   "homepage": {
     "hero": {
       "title": "Software development company",
-      "subtitle": "We can help you with your software development outstaffing needs."
+      "subtitle": "Hypedriven ensures quality execution of the entire software development process, from product vision discussion to applications design and software enhancement."
     },
     "services": {
       "title": "Services",
       "subtitle": "We are passionate about what we are doing that’s why we are striving to ensure the high quality of the solutions we develop",
-      "outsourcedServices": "Outsourced IT Services",
-      "webDev": "Web Dev",
-      "uxDesign": "UI/UX Design",
-      "itSecurityManagement": "IT Security Management",
-      "projectManagement": "Project Management",
-      "businessAnalysis": "Business Analysis",
-      "qualityAssurance": "Quality Assurance",
-      "mobileDev": "Mobile Dev",
-      "applicationMaintenance": "Application maintenance",
-      "solutionArchitecture": "Solution Architecture",
-      "supportServices": " Support Services"
+      "customSoftwareDevelopment": "Custom software development",
+      "softwareTesting": "Software testing",
+      "productEngineering": "Product engineering",
+      "itSupport": "IT support",
+      "itConsult": "IT consulting & advisory"
     },
     "industries": {
-      "subtitle": "We bring our expertise to many industries",
-      "logistics": "Logistics",
-      "telecom": "Telecom",
-      "automotive": "Automotive",
-      "bankingCapitalMarkets": "Banking and Capital Markets",
-      "gaming": "Gaming",
-      "eCommerce": "eCommerce",
-      "manufacturing": "Manufacturing",
-      "realEstate": "Real Estate",
-      "enterprise": "Enterprise",
-      "healthcare": "Healthcare",
-      "hospitality": "Hospitality",
-      "travel": " Travel"
+      "subtitle": "We bring our expertise to",
+      "1": "Logistics",
+      "2": "Telecom",
+      "3": "Automotive",
+      "4": "Banking and Capital Markets",
+      "5": "Gaming",
+      "6": "eCommerce",
+      "7": "Manufacturing",
+      "8": "Real Estate"
+    },
+    "ourgoals": {
+
     },
     "clients": {
       "title": "Our Clients"
@@ -50,6 +44,8 @@
     "aboutus": {
       "title": "About us",
       "subtitle": "Great companies are a product of great people.",
+      "locationtitle": "Location",
+      "teamtitle": "Team",
       "location": "Hypedriven is a development company with developers all over the world.",
       "team": "At Hypedriven, the most valuable asset we have is the relationship we hold within our team."
     },
@@ -78,7 +74,8 @@
     },
     "hiring": {
       "title": "We are hiring!",
-      "subtitle": "At Hypedriven, we are making sure that our future employees are safe and secure.\nWe are hiring at full speed for our secured projects run for global industry leaders."
+      "subtitle1": "At Hypedriven, we are making sure that our future employees are safe and secure.",
+      "subtitle2": "We are hiring at full speed for our secured projects run for global industry leaders."
     },
     "contactus": {
       "title": "Interested in working with us?",

@@ -1,6 +1,6 @@
 <template>
   <button type="button"
-    class="w-10 h-10 text-white iconButton rounded-full hover:bg-primary-bg/[.1]">
+    class="w-10 h-10 text-white iconButton rounded-full">
     <slot class="m-auto"></slot>
   </button>
 </template>
@@ -16,8 +16,13 @@ export default {
 
 <style>
 .iconButton {
-  background: rgba(232, 232, 255, 0.1);
-  border: 1px solid rgba(232, 232, 255, 0.1);
+  background: #00007E;
+  border: 2px solid rgb(255, 255, 255);
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.iconButton:hover {
+  transition: .4s;
+  scale: 1.2;
 }
 </style>
