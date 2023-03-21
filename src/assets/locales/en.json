@@ -4,7 +4,19 @@
     "learnmore": "Learn More",
     "scrolldown": "Scroll down",
     "contactus": "Contact us",
-    "searchjob": "Contact us"
+    "contactUs": "Contact US",
+    "searchjob": "Contact us",
+    "find": "Find",
+    "needDev": "Need a developer",
+    "getAdvice": "Get advice",
+    "requestContact": "Request contact",
+    "getSupport": "Get support",
+    "wantConsult": "Want consult",
+    "joinUs": "Join US",
+    "lookvacancy": "Look at the vacancy",
+    "findTheJob": "Find the job",
+    "sendYourCv": "Send your CV",
+    "seeAll": "See all"
   },
   "info": {
     "emailus": "Email us via: "
@@ -83,13 +95,72 @@
     }
   },
   "aboutpage": {
-    "hero": {
-      "title": "",
-      "subtitle": ""
+    "button": {
+      "contactus": "Contact US"
     },
-    "mission": {
-      "title": "Our mission",
-      "content": "To find clever technological solutions for complex business problems of our clients,encouraging innovations in business and society, increasing income of our clients, business partners, team and company creators."
+    "hero": {
+      "title": "About",
+      "subtitle": "Hypedriven is a software development and IT consulting company. Our company serves IT and non-IT organizations, helping to achieve a variety of goals and objectives with digital solutions and recent trend technologies."
+    },
+    "employment": {
+      "title": "Employment",
+      "subtitle": "At Hypedriven, we are making sure that our future employees are safe and secure. We are hiring at full speed for our secured projects run for global industry leaders."
+    },
+    "ourmission": {
+      "title": "Mission and vision of Hypedriven",
+      "vision": {
+        "title": "Vision",
+        "subtitle": "Hypedriven isn’t just to be modern and technological, but to create a new modernity."
+      },
+      "mission": {
+        "title": "Mission",
+        "subtitle": "We develop software. We work alongside our clients to make the world a better place for everyone."
+      }
+    },
+    "values": {
+      "title": "Values",
+      "wedo": "We do it well because we love it.",
+      "working": "Working flexibly and openly, we get the necessary results.",
+      "wetake": "We take pride in our team and continuously evolve.",
+      "amodern": "A modern look at any problems."
+    },
+    "challenges": {
+      "title": "Challenges Hypedriven help to solve",
+      "digital": {
+        "title": "Digital transformation",
+        "subtitle": "Our team can help you plan and implement digital transformation initiatives, covering all possible stages. Hypedriven is a reliable partner on the path to digital success and business optimization."
+      }, 
+      "cost": {
+        "title": "Cost reduction",
+        "subtitle": "Hypedriven provides IT outsourcing services and helps clients around the world to optimize software development costs. Our team has all the needed expertise to carry out turnkey projects, quickly complete tasks and bring all the benefits of outsourcing."
+      },
+      "itexp": {
+        "title": "IT expertise gap",
+        "subtitle": "We help our customers get rid of any technological gaps, offering the experienced teams of IT professionals to complete software development projects of any complexity."
+      }
+    },
+    "whyus": {
+      "title": "Why us ?",
+      "slide1": {
+        "title": "Result-oriented",
+        "subtitle": "Hypedriven perform the work as quickly and qualitatively as possible! High-quality performance of the set goals and tasks by our client is the only indicator of project success for our company."
+      },
+      "slide2": {
+        "title": "Experticed",
+        "subtitle": "Hypedriven has established well-managed processes to deliver software development services. They are based on the best examples of IT outsourcing and can be easily aligned to the specifics of customers and their projects."
+      },
+      "slide3": {
+        "title": "Transparent",
+        "subtitle": "Our cooperation with clients is always open and honest. We ensure regular communication, an established daily reporting system, and tracking tools according to the client’s preferences. Thus, our clients can control all possible aspects of projects."
+      },
+      "slide4": {
+        "title": "Flexible",
+        "subtitle": "Thanks to a large number of highly qualified IT specialists, we quickly adapt to the needs of our costumers. We provide rapid team ramp-up and easily scale it up and down depending on the changing conditions of the project."
+      }
+    },
+    "ourstory": {
+      "title": "Our Story",
+      "subtitle": "Lorem ipsum dolor sit amet consectetur. Elit vulputate mauris nunc lacus augue interdum pulvinar egestas. Nunc aliquet nibh mus egestas aenean erat malesuada semper fringilla. Donec mattis diam molestie nibh diam."
     },
     "weare": {
       "header": "Who we are",
@@ -111,6 +182,199 @@
     "jobs": {
       "title": "Join Us!",
       "subtitle": "We’re always looking for experts to join our team and create great products together."
+    }
+  },
+  "servicespage": {
+    "button": {
+      "contactus": "Contact US"
+    },
+    "hero": {
+      "title": "Software development",
+      "slide1": {
+        "subtitle": "Hypedriven ensures quality execution of the entire software development process, from product vision discussion to applications design and software enhancement."
+      },
+      "slide2": {
+        "subtitle": "Our multi-skilled experienced team facilitates businesses worldwide on their way to digital transformation and helps companies take full advantage of IT innovations."
+      }
+    },
+    "services": {
+      "title": "Services",
+      "subtitle1": "Whether you need custom software development or IT staff augmentation, we are ready to help you at any stage of the project.",
+      "subtitle2": "Custom software development",
+      "mobile": "Mobile",
+      "web": "Web",
+      "cloud": "Cloud",
+      "desktop": "Destop",
+      "runningline": {
+        "text1": "HYPEDRIVEN",
+        "text2": "DEVELOPMENT",
+        "text3": "HYPEDRIVEN",
+        "text4": "SOFTWARE"
+      }
+    },
+    "softwareTesting": {
+      "title": "Software testing and quality assurance",
+      "item1": {
+        "title": "Manual Testing",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Viverra mattis aenean augue."
+      },
+      "item2": {
+        "title": "Automation Testing",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
+      }
+    },
+    "productEngineering": {
+      "title": "Product engineering",
+      "item1": {
+        "title": "Business Analysis",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Mattis aenean augue."
+      },
+      "item2": {
+        "title": "Product design UX/UI design",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
+      },
+      "item3": {
+        "title": "Prototyping MVP development",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
+      },
+      "item4": {
+        "title": "Product design Software architecture",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
+      },
+      "item5": {
+        "title": "Prototyping PoC development",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
+      },
+      "item6": {
+        "title": "Offer",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
+      }
+    },
+    "itSupport": {
+      "title": "IT support",
+      "item1": {
+        "title": "Cyber security"
+      },
+      "item2": {
+        "title": "System integration"
+      },
+      "item3": {
+        "title": "Project rescue"
+      },
+      "item4": {
+        "title": "Software migration"
+      },
+      "item5": {
+        "title": "DevOps"
+      }
+    },
+    "itConsultingAdvisory": {
+      "title": "IT consulting & advisory",
+      "item1": {
+        "title": "IT audit",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Velit facilisi suspendisse nisl semper aliquam. Magna aliquet urna eu eget."
+      },
+      "item2": {
+        "title": "IT Technology consulting",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Velit facilisi suspendisse nisl semper aliquam. Magna aliquet urna eu eget."
+      }
+    }
+  },
+  "industriesPage": {
+    "hero": {
+      "title": "We bring our expertise to "
+    },
+    "industry": {
+      "title": "Industry",
+      "subtitle": "Whether you need custom software development or IT staff augmentation, we are ready to help you at any stage of the project."
+    },
+    "digitalTransform": {
+      "title": "Digital transformation",
+      "subtitle": "Hypedriven’s team helps businesses of all sizes get the digitization process rolling and set the trend of business enhancement with IT. Find in the list below the digital transformation service for your enterprise, and feel free to reach our IT consultants."
+    }
+  },
+  "technologiesPage": {
+    "hero": {
+      "title": "Hypedriven",
+      "subtitle": "Bringing together skillful IT specialists in different domains, we deliver technically sophisticated turnkey solutions which empower businesses with new opportunities and create competitive advantages."
+    },
+    "technologies": {
+      "title": "Technologies",
+      "subtitle": "Hypedriven renders full-cycle software development and IT consulting services and comprehensive expertise in cutting-edge technologies."
+    },
+    "technologicalAdvancement": {
+      "title": "Technological advancement",
+      "subtitle": "Hypedriven provides businesses and software development companies with IT services for technological advancement. Whether cloud migration or VR app development, we design solutions to streamline internal workflows, win the market in the particular industry, and drive innovation forward."
+    }
+  },
+  "diversityPage": {
+    "hero": {
+      "title": "Diversity",
+      "subtitle": "Our openness to diversity widens our access to the best talent. Inclusion allows us to collect effectively the best team and leads to enhanced innovation, creativity, productivity, engagement and  best results."
+    },
+    "qote": {
+      "title": "Qote:",
+      "phrase": "Some qote about Diversity and inclusion. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique mattis lorem sit amet pretium.",
+      "whoSaid": "Albert Meyburgh",
+      "position": "CEO & Founder"
+    },
+    "worldwide": {
+      "title": "Worldwide",
+      "subtitle": "Text explaining Map. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique mattis lorem sit amet pretium. Pellentesque ullamcorper dictum enim in eleifend."
+    },
+    "contactUs": {
+      "title": "Contact Us!",
+      "subtitle": "When we come together, we transform idea into reality."
+    }
+  },
+  "teamPage": {
+    "hero": {
+      "title": "Hypedriven",
+      "subtitle": "Ready to collaborate and work together",
+      "text": "Hypedriven brings together IT talents from different parts of the world and directs their vast expertise in technologies, industries, and technological domains to the benefit of customers."
+    },
+    "albertMeyburgh": {
+      "title": "Albert Meyburgh",
+      "position": "CEO & Founder",
+      "subtitle": "Biography with lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique mattis lorem sit amet pretium. Nullam nec lacus consectetur, aliquet nibh ac, fringilla arcu. Aenean non mauris at mauris pretium tincidunt vulputate vel risus. In in sapien eu velit volutpat fermentum."
+    },
+    "ourTeam": {
+      "title": "Our team",
+      "subtitle": "We are a company that focuses on diversity. All our employees are seniors and are experienced specialists. Our company has many satisfied customers, because we quickly adapt to the wishes of customers.",
+      "text": "Would you like to join our friendly team of specialists. Check out our vacancies, maybe you are the one we need!"
+    }
+  },
+  "careersPage": {
+    "hero": {
+      "title": "We are hiring!",
+      "subtitle": "We are hiring at full speed for our secured projects run for global industry leaders."
+    },
+    "ourBenefits": {
+      "title": "Our benefits"
+    },
+    "howWeHire": {
+      "title": "How we hire"
+    },
+    "findYourDreamJob": {
+      "title": "Find your dream job!",
+      "canNotFound": {
+        "title": "Can’t find your job here?",
+        "subtitle": "If you want to be part of our team - please send your resume and a detailed description of your experience, skills, contact details and suggestions the salary by email"
+      }
+    },
+    "staffAugmentation": {
+      "title": "Staff Augmentation",
+      "subtitle": "Team extension"
+    },
+    "dedicatedTeam": {
+      "title": "Dedicated team"
+    },
+    "contactUs": {
+      "title": "Contact Us!",
+      "subtitle": "When we come together, we transform idea into reality."
+    },
+    "careersVacancies": {
+      "title": "Vacancies"
     }
   },
   "404": {

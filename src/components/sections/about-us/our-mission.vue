@@ -1,25 +1,32 @@
 <template>
     <SectionContainer>
-        <div class="flex flex-col gap-6 m-auto">
-            <Header1 class="text-white max-w-auto text-3xl font-extrabold text-center">
-                {{ $t('homepage.hiring.title') }}
-            </Header1>
-            <BodyText class="text-white max-w-auto whitespace-pre-wrap leading-10 text-2xl font-bold text-center">
-                {{ $t('homepage.hiring.subtitle') }}
-            </BodyText>
-        </div>
+        <Header1 class="text-white max-w-auto text-2xl font-extrabold leading-[80px]">
+            {{ $t('aboutpage.ourmission.title') }}
+        </Header1>
     </SectionContainer>
+    <div class="flex">
+        <div class="employment-ourmission-vision">
+            <Header4 class="max-w-auto font-bold text-[#00007E] mt-[40px] px-16">{{ $t('aboutpage.ourmission.vision.title') }}</Header4>
+            <BodyText class="max-w-auto text-white text-3xl px-16 mt-[300px]">{{ $t('aboutpage.ourmission.vision.subtitle') }}</BodyText>
+        </div>
+        <div class="employment-ourmission-mission">
+            <Header4 class="max-w-auto font-bold text-[#00007E] mt-[40px] px-16">{{ $t('aboutpage.ourmission.mission.title') }}</Header4>
+            <BodyText class="max-w-auto text-black text-3xl mt-[150px] px-16">{{ $t('aboutpage.ourmission.mission.subtitle') }}</BodyText>
+        </div>
+    </div>
 </template>
 
 <script>
 import SectionContainer from "../container";
 import Header1 from "../../text/header/header_1.vue";
+import Header4 from "../../text/header/header_4.vue";
 import BodyText from "../../text/body/body.vue";
 export default {
     name: "OurMissionSectionComponent",
     components: {
         SectionContainer,
         Header1,
+        Header4,
         BodyText
     },
     data: function () {
@@ -30,4 +37,18 @@ export default {
 </script>
 
 <style>
+.employment-ourmission-vision {
+    background-image: url('../../../assets/img/images/employment-ourmission-vision.png');
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+    padding: 50px;
+}
+.employment-ourmission-mission {
+    background-image: url('../../../assets/img/images/employment-ourmission-mission.png');
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+    padding: 50px;
+}
 </style>

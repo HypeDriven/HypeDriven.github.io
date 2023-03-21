@@ -1,5 +1,5 @@
 <template>
- <h2>
+ <h2 class="h-fit text-6xl w-full">
     <slot></slot>
  </h2>
 </template>

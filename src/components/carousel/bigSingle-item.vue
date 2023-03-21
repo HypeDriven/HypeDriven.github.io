@@ -40,11 +40,24 @@
     .slide-in-leave-active,
     .slide-out-enter-active,
     .slide-out-leave-active  {
-        transition: all 1s ease-in-out;
+        opacity: 1;
+        transition: all .7s ease-in-out;
     }
-    .slide-in-enter-from {
-        transform: translateY(-100%);
+    /*.slide-in-enter-from {
+        transform: translateX(-0%);
     }
+    .slide-in-leave-to {
+        transform: translateX(100%);
+    }
+    .slide-out-enter-from {
+        transform: translateX(100%);
+    }
+    .slide-out-leave-to {
+        transform: translateX(-100%);
+    }*/
+    /*.slide-in-enter-from { 
+        transform: translateY(0%); /*-100% 
+     } 
     .slide-in-leave-to {
         transform: translateY(100%);
     }
@@ -52,6 +65,32 @@
         transform: translateY(100%);
     }
     .slide-out-leave-to {
-        transform: translateY(-100%);
+        transform: translateY(-0%);
+    }*/
+    /*.slide-in-enter-from {
+        transform: scale(1);
     }
+    .slide-in-leave-to {
+        transform: scale(0.6);
+    }
+    .slide-out-enter-from {
+        transform: scale(0.6);
+    }
+    .slide-out-leave-to {
+        transform: scale(0.6);
+    }*/
+
+    .slide-in-enter-from { 
+        opacity: .5; 
+    } 
+    .slide-in-leave-to {
+        opacity: .5;
+    }
+    .slide-out-enter-from {
+        opacity: .5;
+    }
+    .slide-out-leave-to {
+        opacity: .5;
+    }
+
  </style>

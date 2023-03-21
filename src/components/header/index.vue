@@ -62,33 +62,33 @@ export default {
                 },
                 {
                     name: "Services",
-                    link: "/",
-                    id: "services"
+                    link: "/services",
+                    // id: "services"
                 },
                 {
                     name: "Industries",
-                    link: "/",
-                    id: "industries"
+                    link: "/industries",
+                    // id: "industries"
                 },
                 {
                     name: "Technologies",
-                    link: "/",
-                    id: "technologies"
+                    link: "/technologies",
+                    // id: "technologies"
                 },
                 {
                     name: "Diversity",
-                    link: "/",
-                    id: "diversity"
+                    link: "/diversity",
+                    // id: "diversity"
                 },
                 {
                     name: "Team",
-                    link: "/",
-                    id: "team"
+                    link: "/team",
+                    // id: "team"
                 },
                 {
                     name: "Careers",
-                    link: "/",
-                    id: "careers"
+                    link: "/careers",
+                    // id: "careers"
                 },
                 {
                     name: "Contact us",

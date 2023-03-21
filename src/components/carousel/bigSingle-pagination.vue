@@ -14,6 +14,17 @@
             @click="$emit('switch', index)"
             >{{`${item}`}}<span class="ml-[25px]">{{$t(`homepage.industries.${item}`)}}</span></button>
         </div>
+        <div class="carousel-pagination-more text-xl font-black">
+            <router-link to="/industries" class="flex justify-between">
+                <div class="flex">
+                    <span class="flex flex-col justify-center">...</span>
+                    <span class="ml-[25px] flex flex-col justify-center">more</span>
+                </div>
+                <div class="p-4 bg-[#66C3CD] mr-[-68px] z-10">
+                    <img class="industries-arrowImg" src="@/assets/img/servicesArrowImg.svg">
+                </div>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -42,8 +53,22 @@ export default {
         border-top: 2px solid #00007E;
         padding-left: 10px;
     }
+    .carousel-pagination-more {
+        border-top: 2px solid #00007E;
+        border-bottom: 2px solid #00007E;
+        height: 70px;
+        padding-left: 10px;
+    }
+    .carousel-pagination-more:hover {
+        background-color: #00007E;
+        color: #66C3CD;
+    }
     .active {
         background-color: #00007E;
         color: #66C3CD;
+    }
+    .industries-arrowImg {
+        width: 35px;
+        height: 35px;
     }
 </style>

@@ -4,7 +4,7 @@
         <div class="flex flex-wrap justify-between flex-row"> 
             <div class="w-full flex sm:pl-16 sm:pr-16 lg:pr-16 lg:pl-16" >
                 <div class="w-[50%] flex justify-between border-solid border-r-2 border-white py-4">
-                    <Header1 class="text-[#00007E] text-3xl font-extrabold">
+                    <Header1 class="text-[#00007E] text-2xl font-extrabold">
                         {{ $t('homepage.aboutus.title') }}
                     </Header1>
                     <router-link to="about-us">
@@ -103,6 +103,12 @@ export default {
 .about-us-arrowImg {
     width: 32px;
     height: 32px;
+}
+
+.about-us-arrowImg:hover {
+    filter: brightness(0) invert(1);
+    transform: scale(1.2);
+    transition: .5s ease-in;
 }
 
 .about-us-img-wrapper1 {

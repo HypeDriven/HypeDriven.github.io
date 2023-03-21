@@ -5,7 +5,7 @@
         </Slide>
 
         <template #addons>
-            <Navigation />
+            <Navigation /> <!--v-if="items.length>2"-->
             <Pagination />
         </template>
     </Carousel>

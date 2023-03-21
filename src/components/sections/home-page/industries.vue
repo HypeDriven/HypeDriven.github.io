@@ -30,23 +30,23 @@ export default {
         return {
             industries: [
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/logistics.png'),
                     id: 1
                 },
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/telecom.png'),
                     id: 2
                 },
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/automotive.png'),
                     id: 3
                 },
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/banking.png'),
                     id: 4
-                },
+                }/*,
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/logistics.png'),
                     id: 5
                 },
                 {
@@ -54,13 +54,13 @@ export default {
                     id: 6
                 },
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/automotive.png'),
                     id: 7
                 },
                 {
-                    img: require('../../../assets/img/images/telecom2.png'),
+                    img: require('../../../assets/img/images/banking.png'),
                     id: 8
-                }
+                }*/
             ]
         };
     }

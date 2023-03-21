@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 :root {
     --su-color-bg: trasparent !important;
     --su-color-progress-normal-bg: #000026 !important;

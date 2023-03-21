@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 .card-bg {
-    background-image: url('../../assets/img/images/building.png');
+    /* background-image: url('../../assets/img/images/building.png'); */
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;

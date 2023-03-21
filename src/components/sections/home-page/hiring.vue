@@ -3,7 +3,7 @@
         <div class="flex gap-10 flex-wrap justify-between flex-row bggg">
             <Card class="w-full" :reverse="true" :url1="screenFrame" :url2="hiringPersons" :url3="flyElements" :url4="arrow" :url5="cloud">
                 <div class="flex flex-col gap-6 self-center px-14">
-                    <Header1 class="text-[#00007E] max-w-max text-3xl font-extrabold pb-5">
+                    <Header1 class="text-[#00007E] max-w-max text-2xl font-extrabold pb-5">
                         {{ $t('homepage.hiring.title') }}
                     </Header1>
                     <BodyText class="flex text-black max-w-max leading-5 text-2xl font-normal">

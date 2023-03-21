@@ -44,14 +44,16 @@ export default {
         },
         prev(step = -1) {
             const index = this.currentSlide > 0 ? this.currentSlide + step : this.slides.length - 1;
-            this.setCurrentSlide(index);
             this.direction = "down";
+            this.setCurrentSlide(index);
+            
             this.startSlideTimer();
         },
         _next(step = 1) {
             const index = this.currentSlide < this.carouselData.length - 1 ? this.currentSlide + step : 0;
-            this.setCurrentSlide(index);
             this.direction = "up";
+            this.setCurrentSlide(index);
+            
         },
         next(step = 1) {
             this._next(step);
@@ -88,8 +90,8 @@ export default {
     .wrapper {
         display: flex;
         justify-content: center;
-        width: 1400px; 
-        height: 940px;
+        width: 1000px; 
+        height: 740px;
         overflow: hidden;
         margin: 0 auto;
     }

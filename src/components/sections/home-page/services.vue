@@ -7,8 +7,10 @@
                         {{$t('homepage.services.title')}}
                     </SectionTitle>
                 </div>
-                <div>
-                    <img class="servicesArrowImg" src="@/assets/img/servicesArrowImg.svg">
+                <div class="servicesArrowImgWrapper">
+                    <router-link to="/services">
+                        <img class="servicesArrowImg" src="@/assets/img/servicesArrowImg.svg">
+                    </router-link>
                 </div>
                 
             </div>
@@ -153,6 +155,17 @@ export default {
     width: 32px;
     height: 32px;
     margin-left: 150px;
+}
+
+.servicesArrowImgWrapper {
+    cursor: pointer;
+}
+
+.servicesArrowImgWrapper:hover {
+    filter: brightness(0) invert(1);
+    transform: scale(1.2);
+    transition: .5s ease-in;
+    
 }
 
 .iconsWhite,

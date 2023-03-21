@@ -1,58 +1,60 @@
 <template>
+    <div class="jobs-bg">
     <SectionContainer>
         <div class="flex gap-10 flex-wrap justify-between flex-row">
-            <Card class="w-full" :reverse="true" :url="cardUrl">
-                <div class="flex flex-col gap-6 self-center">
-                    <Header1 class="text-white max-w-max text-3xl font-extrabold">
-                        {{ $t('aboutpage.jobs.title') }}
-                    </Header1>
-                    <BodyText class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
-                        {{ $t('aboutpage.jobs.subtitle') }}
-                    </BodyText>
-                    <div @click="changeShowEmail">
-                        <Button :class="!showEmail ? 'block' : 'hidden'">{{ $t('button.searchjob') }}</Button>
-                        <div :class="showEmail ? 'block' : 'hidden'">
-                            <BodyText class="text-white max-w-max whitespace-pre-wrap leading-10 text-2xl font-bold">
-                                <span>{{ $t('info.emailus') }}</span> <span class="text-violet-700">
-                                    <a href="mailto:careers@hypedriven.com">mailto:careers@hypedriven.com</a>
-                                </span>
-                            </BodyText>
-                        </div>
+            <v-card class="w-full">
+                <div class="flex justify-between gap-6 bg-main-bg">
+                    <div class="flex flex-col justify-center ml-8">
+                        <Header1 class="text-[#00007E] max-w-max text-2xl font-extrabold">
+                            {{ $t('aboutpage.jobs.title') }}
+                        </Header1>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <BodyText class="text-white max-w-xl whitespace-pre-wrap text-2xl font-bold">
+                            {{ $t('aboutpage.jobs.subtitle') }}
+                        </BodyText>
+                    </div>
+                    <img class="" :src="aboutpageJobsBgIllustr">
+                    <div class="p-10 bg-[#00007E] cursor-pointer">
+                        <img class="" :src="aboutpageArrowImg">
                     </div>
                 </div>
-            </Card>
+            </v-card>
         </div>
     </SectionContainer>
+    </div>
 </template>
 
 <script>
 import SectionContainer from "../container";
-import Card from "../../card/";
-import Button from "../../buttons";
+// import Card from "../../card/";
+// import Button from "../../buttons";
 import Header1 from "../../text/header/header_1.vue";
 import BodyText from "../../text/body/body.vue";
 export default {
     name: "JobsSectionComponent",
     components: {
         SectionContainer,
-        Card,
-        Button,
+        // Card,
+        // Button,
         Header1,
         BodyText
     },
     data: function () {
         return {
-            showEmail: false,
-            cardUrl: require('../../../assets/img/images/jobs.png')
+            aboutpageJobsBgIllustr: require('@/assets/img/images/aboutpage-jobs-bg-illustr.png'),
+            aboutpageArrowImg: require('@/assets/img/images/aboutpageArrowImg.svg')
         };
-    },
-    methods: {
-        changeShowEmail() {
-            this.showEmail = !this.showEmail;
-        }
     }
 };
 </script>
 
 <style>
+.jobs-bg {
+    background-image: url('../../../assets/img/images/aboutpage-jobs-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 </style>

@@ -39,7 +39,7 @@ import Button from "../buttons";
 import Header1 from "../text/header/header_1.vue";
 import BodyText from "../text/body/body.vue";
 import image from "../../assets/img/home-page-hero-bg.svg";
-import SlideUnlock from "../slide/slide-unlock";
+import SlideUnlock from "../slide/slide-unlock.vue";
 import Socials from "../socials/index.vue";
 import ilustraition from "@/assets/img/mainBanerIllustration.svg"
 

@@ -30,9 +30,9 @@
                 <div class="flex gap-4">
                     <Socials />
                 </div>
-                <div class="text-white flex gap-1">
+                <div class="text-white flex gap-2">
                     <img :src="mapIcon" />
-                    <span>United Arab Emirates</span>
+                    <span>Canada</span>
                 </div>
             </div>
 
@@ -67,18 +67,33 @@ export default {
                 },
                 {
                     name: "Services",
-                    link: "/",
-                    id: "services"
+                    link: "/services",
+                    // id: "services"
                 },
                 {
                     name: "Industrieds",
-                    link: "/",
-                    id: "industrieds"
+                    link: "/industries",
+                    // id: "industrieds"
+                },
+                {
+                    name: "Technologies",
+                    link: "/technologies"
+                    // id: "technologies"
+                },
+                {
+                    name: "Diversity",
+                    link: "/diversity"
+                    // id: "diversity"
+                },
+                {
+                    name: "Team",
+                    link: "/team"
+                    // id: "team"
                 },
                 {
                     name: "Careers",
-                    link: "/",
-                    id: "careers"
+                    link: "/careers",
+                    // id: "careers"
                 },
                 {
                     name: "Contact us",

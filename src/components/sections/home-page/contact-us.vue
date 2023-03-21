@@ -27,7 +27,6 @@ export default {
     },
     data: function () {
         return {
-            cardUrl: require('../../../assets/img/images/banking.png')
         };
     }
 };
