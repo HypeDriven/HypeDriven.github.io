@@ -92,8 +92,8 @@ export default {
                 },
                 {
                     name: "Contact us",
-                    link: "/",
-                    id: "contactus"
+                    link: "/contact-us",
+                    // id: "contactus"
                 }
             ]
         };

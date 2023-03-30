@@ -13,10 +13,12 @@
     "getSupport": "Get support",
     "wantConsult": "Want consult",
     "joinUs": "Join US",
-    "lookvacancy": "Look at the vacancy",
+    "lookvacancies": "Check the vacancies",
     "findTheJob": "Find the job",
     "sendYourCv": "Send your CV",
-    "seeAll": "See all"
+    "seeAll": "See all",
+    "clickToApply": "Click to apply",
+    "goBack": "Go Back"
   },
   "info": {
     "emailus": "Email us via: "
@@ -204,13 +206,7 @@
       "mobile": "Mobile",
       "web": "Web",
       "cloud": "Cloud",
-      "desktop": "Destop",
-      "runningline": {
-        "text1": "HYPEDRIVEN",
-        "text2": "DEVELOPMENT",
-        "text3": "HYPEDRIVEN",
-        "text4": "SOFTWARE"
-      }
+      "desktop": "Destop"
     },
     "softwareTesting": {
       "title": "Software testing and quality assurance",
@@ -342,6 +338,13 @@
       "title": "Our team",
       "subtitle": "We are a company that focuses on diversity. All our employees are seniors and are experienced specialists. Our company has many satisfied customers, because we quickly adapt to the wishes of customers.",
       "text": "Would you like to join our friendly team of specialists. Check out our vacancies, maybe you are the one we need!"
+    },
+    "runningline": {
+      "text1": "Ceo",
+      "text2": "Managers",
+      "text3": "Assistants",
+      "text4": "Backend",
+      "text5": ""
     }
   },
   "careersPage": {

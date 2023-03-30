@@ -8,8 +8,12 @@ import Diversity from "../view/diversity_page";
 import Team from "../view/team_page.vue";
 import Careers from "../view/careers_page.vue";
 import Vacancies from "../components/sections/careers-page/careers_vacancies.vue";
+import VacancyDetails from "../components/sections/careers-page/careers_vacancy_details.vue";
+import PrivatePolicy from "../components/private-policy/private-policy.vue";
+import Applied from "../components/sections/careers-page/thanks-for-application.vue";
 import ContactUsPage from "../view/contact_us_page";
 import NotFound from "../view/404";
+// import vacancies from "@/components/sections/careers-page/vacancy-storage";
 
 const routes = [
   {
@@ -65,6 +69,27 @@ const routes = [
     name: "Vacancies",
     component: Vacancies,
     children: [{ path: "", component: Vacancies }],
+  },
+  {
+    path: "/careers/vacancies/details/:id",
+    name: "VacancyDetails",
+    component: VacancyDetails,
+    children: [{ path: "", component: VacancyDetails }],
+    // props: (route) => ({ vacancy: vacancies[route.params.id] })
+  },
+  {
+    path: "/private-policy",
+    alias: ["/careers/vacancies/details/:id/private-policy", "/contact-us/private-policy"],
+    // props: (route) => ({agree: route.agree}),
+    name: "PrivatePolicy",
+    component: PrivatePolicy,
+    children: [{ path: "", component: PrivatePolicy }],
+  },
+  {
+    path: "/careers/vacancies/applied",
+    name: "Applied",
+    component: Applied,
+    children: [{ path: "", component: Applied }],
   },
   {
     path: "/contact-us",

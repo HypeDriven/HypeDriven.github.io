@@ -1,21 +1,11 @@
 <template>
     <div class="flex running-elements">
-        <img :src="img"/>
-        <h1 class="text-[#ffffff] h-fit m-auto text-3xl">
-            {{ $t(`${text1}`) }}
-        </h1>
-        <img :src="img"/>
-        <h1 class="text-[#ffffff] h-fit m-auto text-3xl">
-            {{ $t(`${text2}`) }}
-        </h1>
-        <img :src="img"/>
-        <h1 class="text-[#ffffff] h-fit m-auto text-3xl">
-            {{ $t(`${text3}`) }}
-        </h1>
-        <img :src="img"/>
-        <h1 class="text-[#ffffff] h-fit m-auto text-3xl">
-            {{ $t(`${text4}`) }}
-        </h1>
+        <div v-for="(text, i) in content" :key="i" class="flex w-full">
+            <img :src="img"/>
+            <h1 class="text-[#ffffff] h-fit m-auto text-3xl">
+                {{ $t(`${text}`) }}
+            </h1>
+        </div>
         <img :src="img"/>
     </div>
 </template>
@@ -23,7 +13,14 @@
 <script>
 export default {
     name: "RunningLineComponent",
-    props: ['img', 'text1', 'text2', 'text3', 'text4'],
+    props: {
+        img: {
+            type: String
+        },
+        content: {
+            type: Array
+        }
+    },
     data: function () {
         return {
         };

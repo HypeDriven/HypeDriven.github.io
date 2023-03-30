@@ -1,5 +1,5 @@
 <template>
-    <SectionContainer>
+    <SectionContainer class="mt-16">
         <div class="flex flex-row justify-around max-w-8xl  pt-56">
             <div class="flex flex-row justify-between ">
                 <div>
@@ -25,7 +25,7 @@
         <div>
             <Carousel :items="services" v-slot="{ data }">
                 <ServiceCard>
-                    <div class="card-content1 cursor-pointer" @mouseover="data.hover=true" @mouseleave="data.hover=false"> 
+                    <div class="card-content1 cursor-pointer flex flex-col justify-between" @mouseover="data.hover=true" @mouseleave="data.hover=false"> 
                         <div class="flex flex-col gap-5 card-icon"
                         :style="{'background-image': data.hover ? `url(`+ data.img2 +`)` : '',}">   
                             <div class="mt-8 mb-8">
@@ -99,8 +99,9 @@ export default {
 
 <style>
 .card-content1{
-    width: 80%;
+    width: 100%;
     transition: .4s;
+    height: 100%;
 }
 
 .card-content1:hover {
@@ -110,10 +111,11 @@ export default {
 .card-icon {
     border-top: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid rgb(255, 255, 255);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .card-text {

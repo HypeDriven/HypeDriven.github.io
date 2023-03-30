@@ -27,7 +27,7 @@
                 </div>
             </Card>
         </div>
-        <Carousel :items="technologies" v-slot={data}>
+        <Carousel :items="technologies" :key="technologies.id" v-slot={data}>
                 <TechnologiesCard @mouseover="data.hover=true" @mouseleave="data.hover=false" class="cursor-pointer">
                     <div class="technologies-card-content"> 
                             <img v-if="!data.hover" :src="data?.img" class="technologies-card-imgs" />   

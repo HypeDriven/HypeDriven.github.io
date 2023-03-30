@@ -11,7 +11,7 @@
             {{ $t('careersPage.careersVacancies.title') }}
         </SectionTitle>
         <div class="flex justify-between mb-20">
-            <div class="flex justify-between rounded-3xl w-[85%] bg-white py-2">   <!---->
+            <div class="flex justify-between rounded-3xl w-[100%] bg-white py-2">   <!---->
                 <div class="relative w-full border-r-2 mr-2"> <!--py-1 rounded-l-3xl-->
                     <img :src="searchBarIcon" class=" absolute left-[10px] translate-y-[20%]"/>
                     <input  class="p-2 px-12 rounded-3xl w-[100%]" 
@@ -30,7 +30,7 @@
                 </select>
             </div>
             
-            <Button class="rounded-3xl">{{ $t('button.findTheJob') }}</Button>
+            <!-- <Button class="rounded-3xl">{{ $t('button.findTheJob') }}</Button> -->
         </div>
 
         <div class="text-lg text-center mb-20">
@@ -42,6 +42,7 @@
         </div>
 
         <FindYourDreamJobItem v-for="(item, index) in filteredVacancies" :key="index" @mouseover="item.isHoverd=true" @mouseout="item.isHoverd=false">
+            <router-link :to="{ name: 'VacancyDetails', params: { id: item.id } }">
             <div class="flex border-y-2 border-[#ffffff] cursor-pointer" v-bind:class="item.isHoverd ? 'bg-[#66C3CD] border-x-2' : 'bg-[#00007E]'">
                 <div class="flex p-4 w-full flex-col justify-center">
                     <SectionSubTitle class="h-fit text-3xl font-bold text-left ml-6"
@@ -53,9 +54,10 @@
                     <img v-if="item.isHoverd" class="w-[56px]" :src="contentButtonArrow2">
                 </div>
             </div>
+            </router-link>
         </FindYourDreamJobItem>
 
-        <Button class="rounded-3xl mt-20">{{ $t('button.seeAll') }}</Button>
+        <Button class="rounded-3xl mt-20">{{ $t('button.contactUs') }}</Button>
 
         <div class="bg-main-bg flex mt-20 hover:border-[2px]">
             <div class="p-14 pt-20">
@@ -77,6 +79,7 @@ import SectionTitle from "../title";
 import SectionSubTitle from "../sub-title.vue";
 import Button from "../../buttons";
 import FindYourDreamJobItem from "./find-your-job-item.vue";
+import vacancies from "./vacancy-storage.js";
 export default {
     name: "CareersPageVacanciesComponent",
     components: {
@@ -90,6 +93,7 @@ export default {
 },
     data: function () {
         return {
+            vacancies,
             searchQuery: '',
             filter: "",
             notFound: false,
@@ -101,15 +105,8 @@ export default {
             contentButtonArrow2: require('@/assets/img/servicesArrowImg.svg'),
             options: [
                 { label: "All jobs", value: "" },
-                { label: "Full-time", value: "full-time" },
-                { label: "Part-time", value: "part-time" },
-            ],
-            vacancies: [
-                {title: "Xamarin Developer", type: 'part-time', isHoverd: false},
-                {title: "C# and Solidity Software Engineer", type: 'full-time', isHoverd: false},
-                {title: "DevOps Engineer", type: 'full-time', isHoverd: false},
-                {title: "Frontend Engineer", type: 'part-time',isHoverd: false},
-                {title: "Project manager",  type: 'part-time', isHoverd: false}
+                { label: "Full-time", value: "Full-time" },
+                { label: "Part-time", value: "Part-time" },
             ]
         }
     }, 

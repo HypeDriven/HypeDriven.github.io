@@ -32,11 +32,7 @@
    
     </SectionContainer>
     <div class="flex flex-col justify-center bg-[#150DCE] whyus-running-line">
-        <RunningLine :img="runStringImg" 
-        :text1="'aboutpage.whyus.slide1.title'" 
-        :text2="'aboutpage.whyus.slide2.title'" 
-        :text3="'aboutpage.whyus.slide3.title'" 
-        :text4="'aboutpage.whyus.slide4.title'"/>
+        <RunningLine :img="runStringImg" :content="runningLineContent"/>
     </div>
 </template>
 
@@ -63,6 +59,7 @@ export default {
         return {
             runStringImg: require('../../../assets/img/images/aboutpage-whyus-star.svg'),
             runStringImg1: require('../../../assets/img/images/aboutpage-whyus-ticker-line.png'),
+            runningLineContent: ['Result-oriented', 'Experticed', 'Transparent', 'Flexible'],
             whyUs: [
                {
                 img: require('../../../assets/img/images/aboutpage-whyus-img1.png'),

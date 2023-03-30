@@ -38,11 +38,7 @@
         </div>
     </SectionContainer>
     <div class="flex flex-col justify-center bg-[#150DCE] services-running-line">
-            <RunningLine :img="runStringImg" 
-            :text1="'servicespage.services.runningline.text1'"
-            :text2="'servicespage.services.runningline.text2'"
-            :text3="'servicespage.services.runningline.text3'"
-            :text4="'servicespage.services.runningline.text4'"/>
+            <RunningLine :img="runStringImg" :content="runningLineContent"/>
         </div>
     </div>
 </template>
@@ -67,6 +63,7 @@ export default {
     data: function () {
         return {
             runStringImg: require("@/assets/img/icons/servicespage-runningline-icon-logo.svg"),
+            runningLineContent:['HYPEDRIVEN', 'DEVELOPMENT', 'HYPEDRIVEN', 'SOFTWARE'],
             services: [
                 {
                     title: 'mobile',

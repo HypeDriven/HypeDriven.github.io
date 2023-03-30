@@ -1,5 +1,5 @@
 <template>
-    <v-card elevation="4" class="mx-auto w-full h-72 service_card text-white flex justify-center items-center">
+    <v-card elevation="4" class="mx-auto w-full h-80 service_card text-white flex justify-center items-center">
         <slot></slot>
     </v-card>
 </template>

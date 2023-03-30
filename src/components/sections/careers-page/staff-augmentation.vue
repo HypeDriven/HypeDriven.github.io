@@ -11,11 +11,11 @@
             <div v-for="(tech, i) in technologies" :key="i" 
             class="cursor-pointer flex flex-col justify-center relative" 
             @mouseover="tech.hover=true" @mouseleave="tech.hover=false"
-            :class="{'border-[3px] border-[#00007E]': tech.hover}">
-                <img :src="crissСross" class="absolute left-[-21px] top-[-21px]" />  
+            > <!--:class="{'border-[3px] border-[#00007E]': tech.hover}"-->
+                <img :src="crissСross" class="absolute left-[-21px] top-[-20px]" />  
                 <img v-if="tech.crissСrossLeftBottom" :src="crissСross" class="absolute left-[-21px] bottom-[-21px]" />  
                 <img v-if="tech.crissСrossTopRight" :src="crissСross" class="absolute right-[-21px] top-[-21px]" />  
-                <img v-if="tech.crissСrossRightBottom" :src="crissСross" class="absolute right-[-21px] bottom-[-21px]" />  
+                <img v-if="tech.crissСrossRightBottom" :src="crissСross" class="absolute right-[-21px] bottom-[-20px]" />  
                 <div class="flex justify-center p-4 py-10">     
                     <img v-if="!tech.hover" :src="tech?.img" class="" />   
                     <span v-if="tech.hover" class="text-2xl font-bold text-[#00007E]">{{tech?.title}}</span> 
@@ -136,3 +136,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.border-crisscross-img {
+    border: 2px solid;
+    border-image: url('@/assets/img/images/crisscross.svg');
+}
+</style>

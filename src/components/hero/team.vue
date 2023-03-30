@@ -16,7 +16,11 @@
                 {{ $t('teamPage.hero.text') }}
             </SectionSubTitle>
         </div>
+       
     </SectionContainer>
+    <div class="flex flex-col justify-center bg-[#150DCE] team-running-line">
+            <RunningLine :img="runStringImg" :content="runningLineContent"/>
+        </div>
 </template>
 
 <script>
@@ -24,18 +28,31 @@ import SectionContainer from "../sections/container.vue";
 import SectionTitle from "../sections/title";
 import SectionSubTitle from "../sections/sub-title.vue"
 import Button from "../buttons";
+import RunningLine from "../sections/running-line/running-line.vue";
 export default {
     name: 'TeamPageHeroComponent',
     components: {
         SectionContainer,
         SectionTitle,
         SectionSubTitle,
-        Button
+        Button,
+        RunningLine
     },
     data: function () {
         return {
-            teamPageHeroImhg: require('@/assets/img/images/teampage-hero-illustration.png')
+            teamPageHeroImhg: require('@/assets/img/images/teampage-hero-illustration.png'),
+            runStringImg: require("@/assets/img/icons/servicespage-runningline-icon-logo.svg"),
+            runningLineContent: ['Ceo', 'Managers', 'Backend', 'QA', 'Frontend', 'Designer']
         };
     },
 }
 </script>
+
+<style>
+.team-running-line {
+    width: 100vw;
+    height: 100px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+</style>
