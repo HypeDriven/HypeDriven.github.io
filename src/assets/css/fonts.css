@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* FONTS
+---------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Helvetica-Regular";
+  src: url("../fonts/Helvetica-Regular.eot");
+  src: local("☺"), url("../fonts/Helvetica-Regular.woff") format("woff2"), url("../fonts/Helvetica-Regular.woff") format("woff2"), url("../fonts/Helvetica-Regular.ttf") format("truetype"), url("../fonts/Helvetica-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MontserratAlternates-Bold";
+  src: url("../fonts/MontserratAlternates-Bold.eot");
+  src: local("☺"), url("../fonts/MontserratAlternates-Bold.woff") format("woff2"), url("../fonts/MontserratAlternates-Bold.woff") format("woff2"), url("../fonts/MontserratAlternates-Bold.ttf") format("truetype"), url("../fonts/MontserratAlternates-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MontserratAlternates-SemiBold";
+  src: url("../fonts/MontserratAlternates-SemiBold.eot");
+  src: local("☺"), url("../fonts/MontserratAlternates-SemiBold.woff") format("woff2"), url("../fonts/MontserratAlternates-SemiBold.woff") format("woff2"), url("../fonts/MontserratAlternates-SemiBold.ttf") format("truetype"), url("../fonts/MontserratAlternates-SemiBold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MontserratAlternates-Thin";
+  src: url("../fonts/MontserratAlternates-Thin.eot");
+  src: local("☺"), url("../fonts/MontserratAlternates-Thin.woff") format("woff2"), url("../fonts/MontserratAlternates-Thin.woff") format("woff2"), url("../fonts/MontserratAlternates-Thin.ttf") format("truetype"), url("../fonts/MontserratAlternates-Thin.svg") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: url("../fonts/Montserrat-ExtraLight.eot");
+  src: local("☺"), url("../fonts/Montserrat-ExtraLight.woff") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff2"), url("../fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("../fonts/Montserrat-ExtraLight.svg") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat-Light.eot");
+  src: local("☺"), url("../fonts/Montserrat-Light.woff") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("truetype"), url("../fonts/Montserrat-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("../fonts/Montserrat-Regular.woff") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff2"), url("../fonts/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ProximaNova-Light";
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: local("☺"), url("../fonts/ProximaNova-Light.woff") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff2"), url("../fonts/ProximaNova-Light.ttf") format("truetype"), url("../fonts/ProximaNova-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.eot");
+  src: local("☺"), url("../fonts/Montserrat-Bold.woff") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: local("☺"), url("../fonts/ProximaNova-Regular.woff") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff2"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
