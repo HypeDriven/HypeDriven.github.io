@@ -1,7 +1,7 @@
 <template>
-    <SectionContainer>
+    <SectionContainer class=" xxs:pt-10 xs:pt-10">
         <div class="flex flex-col gap-8 max-w-lg m-auto">
-            <SectionTitle class="text-[#00007E] h-fit m-auto text-6xl max-w-full px-2 text-center">
+            <SectionTitle class="text-[#00007E] h-fit m-auto text-6xl xs:text-5xl xxs:text-5xl max-w-full px-2 text-center">
                 {{ $t('homepage.testimonial.title') }}
             </SectionTitle>
         </div>

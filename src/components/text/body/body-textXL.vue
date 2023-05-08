@@ -1,5 +1,5 @@
 <template>
- <div class="h-fit text-xl max-w-xl">
+ <div class="h-fit text-xl lg:max-w-xl md:w-auto"> 
     <slot></slot>
  </div>
 </template>

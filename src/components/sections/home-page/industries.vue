@@ -1,25 +1,10 @@
 <template>
-    <!-- <SectionContainer>     -->
-        <div class="flex flex-row justify-between">
-            <Carousel  :carouselData="industries">
-                <!-- <IndustryCard :img="data?.img" :title="data?.title"> -->
-                    <!-- <div class="flex flex-col gap-5 card-content"> -->
-                        <!-- <img :src="data?.img" class="h-10 w-10 m-auto" /> -->
-                        <!-- <div> -->
-                            <!-- {{$t(`homepage.industries.${data?.title}`)}} -->
-                        <!-- </div> -->
-
-                    <!-- </div> -->
-                <!-- </IndustryCard> -->
-            </Carousel>
-        </div>
-    <!-- </SectionContainer> -->
+    <div class="flex flex-row justify-between">
+        <Carousel  :carouselData="industries"></Carousel>
+    </div>
 </template>
 
 <script>
-// import IndustryCard from "../../industries/industries_card";
-// import SectionContainer from "../container";
-// import SectionTitle from "../title";
 import Carousel from "../../carousel/bigSingle.vue";
 export default {
     name: "IndustriesSectionComponent",
@@ -44,23 +29,7 @@ export default {
                 {
                     img: require('../../../assets/img/images/banking.png'),
                     id: 4
-                }/*,
-                {
-                    img: require('../../../assets/img/images/logistics.png'),
-                    id: 5
-                },
-                {
-                    img: require('../../../assets/img/images/telecom2.png'),
-                    id: 6
-                },
-                {
-                    img: require('../../../assets/img/images/automotive.png'),
-                    id: 7
-                },
-                {
-                    img: require('../../../assets/img/images/banking.png'),
-                    id: 8
-                }*/
+                }
             ]
         };
     }

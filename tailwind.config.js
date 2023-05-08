@@ -2,11 +2,21 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        'xxs':{'min': '320px', 'max': '424px'},
+        'xs': {'min': '425px', 'max': '575.5px'},
+        'sm': {'min': '576px', 'max': '767.5px'},
+        '1xl': '1440px',
+        '3xl': '1600px',
+        '4xl': '1750px',
+        '5xl': '1850px',
+        '6xl': '2050px',
+        '7xl': '2200px'
+      },
       fontFamily: {
         sans: ["Gilroy", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        //"hero-main-baner": "url('assets/img/wave.svg')",
         "hero-lg": "url('assets/img/career-intro-bg.jpg')",
         "hero-sm": "url('assets/img/career_header.png')",
         "hero-home-page-bg": "url('assets/img/home-hero-bg.svg')",

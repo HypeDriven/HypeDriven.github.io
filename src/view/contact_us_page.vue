@@ -2,7 +2,7 @@
   <div>
     <Header />
     <main>
-      <Hero class="h-[100vh]"/>
+      <Hero/> 
     </main>
     <Footer />
   </div>
@@ -13,7 +13,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Hero from "../components/hero/contact-us.vue";
 export default {
-  name: "HomePage",
+  name: "ContactUs",
   components: {
     Header,
     Footer,

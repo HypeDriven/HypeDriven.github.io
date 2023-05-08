@@ -1,7 +1,7 @@
 <template>
     <Header/>
-    <SectionContainer class="gap-0 bg-primary-bg">
-        <div class="text-lg">
+    <SectionContainer class="gap-[0px] bg-primary-bg xxs:px-4 xxs:pt-[40px] xxs:pb-10 xs:px-4 xs:pt-[40px] xs:pb-10 sm:px-4 sm:pt-[40px] sm:pb-10 md:pt-[40px]">
+        <div class="text-lg xxs:mb-10 xs:mb-10 sm:mb-10 md:mb-10 lg:mb-0">
             <router-link to="/careers">
                 <span class="text-white">Careers > </span>
             </router-link>
@@ -10,61 +10,20 @@
         <SectionTitle class="text-white h-fit text-center mb-20">
             {{ $t('careersPage.careersVacancies.title') }}
         </SectionTitle>
-        <div class="flex justify-between mb-20">
-            <div class="flex justify-between rounded-3xl w-[100%] bg-white py-2">   <!---->
-                <div class="relative w-full border-r-2 mr-2"> <!--py-1 rounded-l-3xl-->
-                    <img :src="searchBarIcon" class=" absolute left-[10px] translate-y-[20%]"/>
-                    <input  class="p-2 px-12 rounded-3xl w-[100%]" 
-                    placeholder="Write title of job"
-                    type="text"
-                    v-model="searchQuery"
-                    maxlength="30"/> <!--border-r-2-->
-                    <img :src="crossSearchBarIcon" class=" absolute right-[10px] top-[50%] translate-y-[-50%] cursor-pointer"
-                    @click="searchQuery=''"/> 
-                </div>
-              
-                <select v-model="filter" class="text-[#00007E] rounded-r-3xl ">
-                    <option class="bg-[white]" v-for="(option, index) in options" :key="index" :value="option.value">
-                        {{ option.label }}
-                    </option>
-                </select>
-            </div>
-            
-            <!-- <Button class="rounded-3xl">{{ $t('button.findTheJob') }}</Button> -->
-        </div>
 
-        <div class="text-lg text-center mb-20">
-            <span class="text-white text-2xl">We have <strong>{{ vacancies.length }} vacancies</strong> for today</span>
-        </div>
+        
+        <div id="example-widget-container" class="mb-20"></div>
 
-        <div v-if="filteredVacancies.length == 0" class="text-lg text-center mb-20">
-            <span class="text-white text-2xl">Unfortunately, we couldn't find any results to match your query.</span>
-        </div>
+        <router-link to="/contact-us">
+            <Button class="w-full">{{ $t('button.contactUs') }}</Button>
+        </router-link>
 
-        <FindYourDreamJobItem v-for="(item, index) in filteredVacancies" :key="index" @mouseover="item.isHoverd=true" @mouseout="item.isHoverd=false">
-            <router-link :to="{ name: 'VacancyDetails', params: { id: item.id } }">
-            <div class="flex border-y-2 border-[#ffffff] cursor-pointer" v-bind:class="item.isHoverd ? 'bg-[#66C3CD] border-x-2' : 'bg-[#00007E]'">
-                <div class="flex p-4 w-full flex-col justify-center">
-                    <SectionSubTitle class="h-fit text-3xl font-bold text-left ml-6"
-                    v-bind:class="item.isHoverd ? 'text-[#00007E]' : 'text-[#66C3CD]'"
-                    >{{ item.title }}</SectionSubTitle>
-                </div>
-                <div class="p-4 cursor-pointer">
-                    <img v-if="!item.isHoverd" :src="contentButtonArrow1">
-                    <img v-if="item.isHoverd" class="w-[56px]" :src="contentButtonArrow2">
-                </div>
-            </div>
-            </router-link>
-        </FindYourDreamJobItem>
-
-        <Button class="rounded-3xl mt-20">{{ $t('button.contactUs') }}</Button>
-
-        <div class="bg-main-bg flex mt-20 hover:border-[2px]">
-            <div class="p-14 pt-20">
+        <div class="bg-main-bg flex md:flex-col lg:flex-col xl:flex-row mt-20 hover:border-[2px]">
+            <div class="xxs:px-5 xxs:py-10 xs:px-8 xs:py-12 sm:px-10 sm:py-14 md:p-14 md:pt-20 xl:px-6 xl:pt-14 1xl:px-16 1xl:pt-20">
                 <SectionTitle class="text-[#00007E]">{{ $t('careersPage.findYourDreamJob.canNotFound.title') }}</SectionTitle>
-                <SectionSubTitle class="text-white text-[16px] mt-10">{{ $t('careersPage.findYourDreamJob.canNotFound.subtitle') }}<a href="mailto:career@ukrainiansoftware.com" class="text-[#00007E]"> mailto:career@ukrainiansoftware.com</a></SectionSubTitle>
+                <SectionSubTitle class="text-white text-[16px] lg:text-xl mt-10">{{ $t('careersPage.findYourDreamJob.canNotFound.subtitle') }}<a href="mailto:careers@hypedriven.com" class="text-[#00007E]"> mailto:careers@hypedriven.com</a></SectionSubTitle>
             </div>
-            <img :src="findYourJobImg"/>
+            <img :src="findYourJobImg" class="xxs:hidden xs:hidden sm:hidden lg:px-14 lg:pb-10 xl:px-0 xl:pb-0"/>
         </div>
 
     </SectionContainer>
@@ -78,59 +37,32 @@ import SectionContainer from "../container";
 import SectionTitle from "../title";
 import SectionSubTitle from "../sub-title.vue";
 import Button from "../../buttons";
-import FindYourDreamJobItem from "./find-your-job-item.vue";
-import vacancies from "./vacancy-storage.js";
 export default {
     name: "CareersPageVacanciesComponent",
     components: {
-    Header,
-    Footer,
-    SectionContainer,
-    SectionTitle,
-    SectionSubTitle,
-    Button,
-    FindYourDreamJobItem
-},
+        Header,
+        Footer,
+        SectionContainer,
+        SectionTitle,
+        SectionSubTitle,
+        Button,
+    },
     data: function () {
         return {
-            vacancies,
-            searchQuery: '',
-            filter: "",
-            notFound: false,
-            enterText: false,
             findYourJobImg: require('@/assets/img/images/careerspage-findyourjob-searchbar-img.png'),
             searchBarIcon: require('@/assets/img/images/industriespage-hero-searchbar-icon.svg'),
             crossSearchBarIcon: require('@/assets/img/images/industriespage-hero-searchbar-cross-icon.svg'),
             contentButtonArrow1:  require('@/assets/img/images/aboutpageArrowImg.svg'), 
-            contentButtonArrow2: require('@/assets/img/servicesArrowImg.svg'),
-            options: [
-                { label: "All jobs", value: "" },
-                { label: "Full-time", value: "Full-time" },
-                { label: "Part-time", value: "Part-time" },
-            ]
+            contentButtonArrow2: require('@/assets/img/servicesArrowImg.svg')
         }
     }, 
-    computed: {
-        filteredVacancies() {
-            let filteredVacancies = this.vacancies;
-
-            if(this.searchQuery) {
-                filteredVacancies = filteredVacancies.filter((item) => {
-                    return item.title.toLowerCase().includes(this.searchQuery.toLowerCase().trim());
-                })
-            }
-
-            if(this.filter) {
-                filteredVacancies = filteredVacancies.filter((item) => {
-                    return item.type === this.filter;
-                });
-            }
-
-            return filteredVacancies
-        }
+    mounted() {
+        const widgetScript = document.createElement('script')
+        widgetScript.type = 'text/javascript'
+        widgetScript.src = 'https://jobsapi.ceipal.com/APISource/widget.js'
+        widgetScript.setAttribute('data-ceipal-api-key', 'TDZrR2luMyt2ZXlDdk4yQ3JUVkFIdz09')
+        widgetScript.setAttribute('data-ceipal-career-portal-id', 'Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09')
+        document.body.appendChild(widgetScript)
     }
 }
 </script>
-
-<style>
-</style>

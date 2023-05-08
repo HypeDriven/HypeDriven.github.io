@@ -23,25 +23,21 @@ data: function () {
         itemsCount: 6
     };
 },
-created() {
-    window.addEventListener("resize", this.resizeEventHandler);
-},
+mounted() {
+    this.updateItemsPerPage(); 
+    window.addEventListener('resize', this.updateItemsPerPage); 
+  },
+beforeUnmount() {
+    window.removeEventListener('resize', this.updateItemsPerPage); 
+  },
 methods: {
-    resizeEventHandler() {
-        // this.$refs.carouselContent.clientWidth
-        let count = document.documentElement.clientWidth / 100;
-        if (count < 1)
-            count = 1;
-        else if (count > 6)
-            count = 6;
-        this.itemsCount = count;
+    updateItemsPerPage() {
+        if (window.innerWidth < 950) {
+            this.itemsCount = 3;
+        } else {
+            this.itemsCount = 6;
+        }
     }
 }
 }
 </script>
-
-<style>
-/*li .carousel__slide .carousel__slide--active .carousel__slide--visible{
-    width: 100%;
-}*/
-</style>

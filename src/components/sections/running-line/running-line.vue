@@ -1,12 +1,12 @@
 <template>
     <div class="flex running-elements">
         <div v-for="(text, i) in content" :key="i" class="flex w-full">
-            <img :src="img"/>
-            <h1 class="text-[#ffffff] h-fit m-auto text-3xl">
+            <img :src="img" class="xs:w-[20px] xxs:w-[10px]"/>
+            <h1 class="text-[#ffffff] h-fit m-auto xl:text-3xl lg:text-2xl md:text-xl sm:text-2xl xs:text-xl xxs:text-xl">
                 {{ $t(`${text}`) }}
             </h1>
         </div>
-        <img :src="img"/>
+        <img :src="img" class="xs:w-[20px] xxs:w-[10px]"/>
     </div>
 </template>
 

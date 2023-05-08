@@ -1,28 +1,27 @@
 <template>
-    <SectionContainer class="bg-main-bg" >
-        <div class="flex flex-col gap-8 max-w-lg">
-            <SectionTitle class="text-[#00007E] h-fit m-auto text-6xl max-w-full px-2 text-center">
+    <SectionContainer class="bg-main-bg sm:pt-10 xs:p-6 xxs:p-4">
+        <div class="flex flex-col gap-8 max-w-lg lg:m-0">
+            <SectionTitle class="text-[#00007E] h-fit text-6xl max-w-full xxs:pt-2 xs:pt-2 sm:pt-2 px-2 lg:text-left md:text-left ">
                 {{ $t('aboutpage.whyus.title') }}
             </SectionTitle>
-            <!-- <Test class="text-[#ffffff] h-fit m-auto text-3xl font-bold px-2 text-center " :items="whyUs" v-slot="{ data }"> -->
-                <!-- {{ $t(`aboutpage.whyus.${data?.title}`) }} -->
-            <!-- </Test> -->
         </div>
         <div>
             <Carousel :items="whyUs" v-slot="{ data }" :autoplay="2000" :transition="2000"> 
-                <WhyUsCard class="mx-4">
-                   
-                    <div class="flex justify-between"> 
-                        <div class="whyus-card-content">  
+                <WhyUsCard class=""> 
+                    <div class="flex xxs:flex-col xs:flex-col justify-between"> 
+                        <div class="whyus-card-content xxs:hidden xs:hidden">  
                             <img :src="data?.img" class="whyus-card-content-img"/>    
                         </div>
                         <div class="whyus-card-content">
-                            <h1 class="text-[#ffffff] h-fit m-auto text-4xl font-bold mt-[-50px] mb-[50px] ">
+                            <h1 class="text-[#ffffff] h-fit m-auto text-4xl xs:text-3xl xxs:text-2xl font-bold xl:mt-[-50px] xl:mb-[50px] lg:mt-[-30px] lg:mb-[30px] md:mt-[-20px] md:mb-[20px] sm:mt-[-15px] sm:mb-[15px] xs:mt-[-10px] xs:mb-[10px] xxs:mt-[-10px] xxs:mb-[10px]">
                                 {{ $t(`aboutpage.whyus.${data?.title}`) }}
                             </h1>
-                            <div class=" border-t-2 border-[#00007E] pt-8">
-                                <BodyText class="text-lg font-bold">{{$t(`aboutpage.whyus.${data?.subtitle}`)}}</BodyText>
+                            <div class=" border-t-2 border-[#00007E] xl:pt-8 lg:pt-5 md:pt-3 sm:pt-2 xs:pt-2 xxs:pt-1 xxs:mb-10 xs:mb-5">
+                                <BodyText class="xl:text-lg lg:text-base md:text-base sm:text-sm xs:text-sm xxs:text-sm lg:mr-0 md:pr-6 sm:pr-5 xs:pr-5 xxs:pr-5 font-bold">{{$t(`aboutpage.whyus.${data?.subtitle}`)}}</BodyText>
                             </div>
+                        </div>
+                        <div class="hidden whyus-card-content xxs:block xs:block">  
+                            <img :src="data?.img" class="whyus-card-content-img"/>    
                         </div>
                         
                     </div>
@@ -43,7 +42,6 @@ import SectionTitle from "../title";
 import Carousel from "../../carousel/single.vue";
 import BodyText from "../../text/body/body-textXL.vue";
 import RunningLine from "../../sections/running-line/running-line.vue";
-// import Test from "./testiks.vue";
 export default {
     name: "WhyUsSectionComponent",
     components: {
@@ -53,12 +51,10 @@ export default {
         WhyUsCard,
         BodyText,
         RunningLine,
-        // Test
     },
     data: function () {
         return {
             runStringImg: require('../../../assets/img/images/aboutpage-whyus-star.svg'),
-            runStringImg1: require('../../../assets/img/images/aboutpage-whyus-ticker-line.png'),
             runningLineContent: ['Result-oriented', 'Experticed', 'Transparent', 'Flexible'],
             whyUs: [
                {
@@ -93,13 +89,52 @@ export default {
     text-align: left;
 }
 .whyus-card-content-img {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
 }
 .whyus-running-line {
     width: 100vw;
     height: 100px;
     margin-top: -100px;
     z-index: 1;
+}
+@media (min-width: 576px) and (max-width: 767.5px) {
+    .whyus-running-line {
+        height: 80px;
+        margin-top: -80px;
+        width: 160vw;
+    }
+}
+@media (min-width: 425px) and (max-width: 575.5px) {
+     .whyus-card-content {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .whyus-card-content-img {
+        width: 90%;
+        height: 90%;
+    }
+    .whyus-running-line {
+        height: 60px;
+        margin-top: -60px;
+        width: 160vw;
+    }
+}
+@media (min-width: 320px) and (max-width: 424.5px) {
+    .whyus-card-content {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .whyus-card-content-img {
+        width: 90%;
+        height: 90%;
+    }
+    .whyus-running-line {
+        height: 60px;
+        margin-top: -60px;
+        width: 160vw;
+    }
 }
 </style>

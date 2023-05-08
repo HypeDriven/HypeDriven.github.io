@@ -1,19 +1,21 @@
 <template>
-    <v-card elevation="4"
-        class="card flex gap-10 md:gap-6 lg:gap-16 p-6 sm:p-16 lg:p-16  md:flex-nowrap"
+    <div elevation="4"
+        class="6xl:h-[1050px] 3xl:h-[950px] xl:h-[750px] lg:h-[700px] md:h-[540px] flex gap-10 md:gap-6 lg:gap-16 p-6 sm:p-16 xl:p-16 lg:p-2 4xl:px-52 5xl:px-64 6xl:px-80 7xl:px-96 md:flex-nowrap"
         :class="reverse ? 'flex-row-reverse' : ''">
-        <div class="w-[50%] md:w-1/2 hiringImgWrapper">   
-            <img class="hiringImg hiring-cloud" :src="url5" data-speed="3"/>
+        <div class="w-[50%] hiringImgWrapper lg:block md:hidden sm:hidden xs:hidden xxs:hidden">   
+            <img class="hiringImg hiring-cloud" :src="url4" data-speed="3"/>
             <img class="hiringImg" :src="url1" data-speed="-2"/> 
             <img class="hiringImg hiring-persons" :src="url2" data-speed="-1"/>
             <img class="hiringImg hiring-fly-elements" :src="url3" data-speed="-3"/>
-            <img class="hiringImg hiring-arrow" :src="url4" data-speed="2"/>
             
         </div>
-        <div class="w-[50%] md:w-1/2 flex">
+        <div class="hidden lg:hidden md:flex md:w-[50%] md:self-center justify-center">
+            <img :src="weAreHiringMobile"/>
+        </div>
+        <div class="md:w-[50%] sm:w-[100%] xs:w-[100%] xxs:w-[100%]  flex z-10">
             <slot></slot>
         </div>
-    </v-card>
+    </div>
 </template>
 <script>
 document.addEventListener("mousemove", parallax);
@@ -29,24 +31,18 @@ function parallax(e) {
 }
 export default {
     name: "HiringCardComponent",
-    props: ["reverse", "url1", "url2", "url3", "url4", "url5","url6"],
+    props: ["reverse", "url1", "url2", "url3", "url4"],
     data: function () {
         return {
-           hoverClass: ''
-        }
-    },
-    methods: {
-        parallax: () => {
-            
+           hoverClass: '',
+           weAreHiringMobile: require('@/assets/img/images/home-page-hiring-mobile-img.png'),
         }
     }
-    
 };
 </script>
 
 <style>
     .hiringImgWrapper {
-       
         position: relative;
     }
     .hiringImg {
@@ -65,13 +61,116 @@ export default {
         right: 90px;
         z-index: 1;
     }
-    .hiring-arrow {
-        max-width: 95%;
-        bottom: 250px;
-    }
     .hiring-cloud {
         max-width: 100%;
         top: 0;
         left: -80%;
+    }
+    @media (min-width: 2200px) and (max-width: 2560px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: -20px;
+            bottom: 325px;
+        }
+        .hiring-persons {
+            bottom: 325px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 2050px) and (max-width: 2199.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: -20px;
+            bottom: 325px;
+        }
+        .hiring-persons {
+            bottom: 325px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 1850px) and (max-width: 2049.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: -70px;
+            bottom: 225px;
+        }
+        .hiring-persons {
+            bottom: 225px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 1750px) and (max-width: 1849.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: -70px;
+            bottom: 225px;
+        }
+        .hiring-persons {
+            bottom: 225px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 1600px) and (max-width: 1749.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: 40px;
+            bottom: 225px;
+        }
+        .hiring-persons {
+            bottom: 225px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 1440px) and (max-width: 1599.5px) {
+        .hiringImg {
+            bottom: 75px;
+            right: 40px;
+        }
+        .hiring-fly-elements {
+            left: 20px;
+            bottom: 100px;
+        }
+    }
+    @media (min-width: 1280px) and (max-width: 1439.5px) {
+        .hiringImg {
+            bottom: 75px;
+            right: 20px;
+        }
+        .hiring-fly-elements {
+            left: -20px;
+            bottom: 90px;
+        }
+    }
+    @media (min-width: 1024px) and (max-width: 1279.5px) {
+        .hiringImg {
+            bottom: 75px;
+            right: 20px;
+        }
+        .hiring-fly-elements {
+            left: -20px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .hiringImg {
+            bottom: 45px;
+            right: -15px;
+        }
+        .hiring-persons {
+            top: 180px;
+            left: 50px;
+        }
+        .hiring-fly-elements {
+            left: 15px;
+        }
     }
 </style>

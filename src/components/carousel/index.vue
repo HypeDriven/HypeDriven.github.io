@@ -30,18 +30,20 @@ export default {
             itemsCount: 4
         };
     },
-    created() {
-        window.addEventListener("resize", this.resizeEventHandler);
+    mounted() {
+        this.updateItemsPerPage();
+        window.addEventListener('resize', this.updateItemsPerPage); 
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.updateItemsPerPage); 
     },
     methods: {
-        resizeEventHandler() {
-            // this.$refs.carouselContent.clientWidth
-            let count = document.documentElement.clientWidth / 400;
-            if (count < 1)
-                count = 1;
-            else if (count > 4)
-                count = 4;
-            this.itemsCount = count;
+        updateItemsPerPage() {
+            if (window.innerWidth < 576) {
+                this.itemsCount = 2;
+            } else {
+                this.itemsCount = 4;
+            }
         }
     }
 }

@@ -1,20 +1,36 @@
 <template>
-    <SectionContainer class="bg-main-bg">
-        <SectionTitle class="text-[#00007E]">{{ $t('careersPage.dedicatedTeam.title') }}</SectionTitle>
-        <div class="grid grid-rows-2 gap-[2px] grid-cols-3 mt-10 bg-[#00007E]">
-            <CareersPageCard v-for="(itemData, i) in ddedicatedTeamItems" :key="i"  class="bg-main-bg h-[350px]">
+    <SectionContainer class="bg-main-bg xxs:px-4 xxs:pt-[40px] xxs:pb-10 xs:px-4 xs:pt-[40px] xs:pb-10 sm:px-4 sm:pt-[40px] sm:pb-10">
+        <SectionTitle class="text-[#00007E] xxs:text-5xl">{{ $t('careersPage.dedicatedTeam.title') }}</SectionTitle>
+        <div class="grid grid-rows-2 grid-cols-3 mt-10 xxs:hidden xs:hidden sm:hidden">
+            <CareersPageCard v-for="(itemData, i) in ddedicatedTeamItems" :key="i"  class="bg-main-bg dedicated-item-borders">  
                 <div class="cursor-pointer" 
                     @mouseover="itemData.hover=true" 
                     @mouseleave="itemData.hover=false"> 
                         <div class="flex flex-col gap-5 careerspage-dedicated-team-icon"
                         :style="{'background-image': itemData.hover ? `url(`+ itemData.bgImg +`)` : '',}"
-                        :class="{'border-[3px] border-[#00007E]': itemData.hover}">   
+                        :class="{'border-[2px] border-[#00007E]': itemData.hover}">  
+                            <div class="mt-8 mb-8">
+                                <img v-if="itemData?.icon" :src="itemData?.icon" class="lg:w-24 lg:h-24 md:w-20 md:h-20 m-auto"/>   
+                            </div>
+                            <div v-if="itemData.title" class="lg:text-2xl md:text-xl text-center mt-4 font-bold">
+                                <span class="text-[#00007E]">{{itemData?.title}}</span> 
+                            </div> 
+                        </div>
+                    </div>
+            </CareersPageCard>
+        </div>
+        <div class="hidden xxs:grid xs:grid sm:grid grid-rows-6 grid-cols-1 gap-[2px] mt-10 bg-[#00007E] border-b-[2px] border-[#00007E]">
+            <CareersPageCard v-for="(itemData, i) in ddedicatedTeamItems" :key="i"  class="bg-main-bg h-[350px]">
+                <div class="cursor-pointer" 
+                    @mouseover="itemData.hover=true" 
+                    @mouseleave="itemData.hover=false"> 
+                        <div class="flex flex-col gap-5 careerspage-dedicated-team-icon"
+                        :style="{'background-image': `url(`+ itemData.bgImg +`)`}">  
                             <div class="mt-8 mb-8">
                                 <img v-if="itemData?.icon" :src="itemData?.icon" class="w-24 h-24 m-auto"/>   
-                                <img v-if="itemData?.img" :src="itemData?.img" class="w-72 h-72 m-auto">
                             </div>
-                            <div v-if="itemData.title" class="text-2xl text-center mt-4 font-bold">
-                                <span class="text-[#00007E]">{{itemData?.title}}</span> <!--v-bind:class="itemData.hover ? 'text-white' : 'text-[#00007E]'"-->
+                            <div v-if="itemData.title" class="text-3xl text-center mt-4 font-bold">
+                                <span class="text-[#00007E]">{{itemData?.title}}</span> 
                             </div> 
                         </div>
                     </div>
@@ -108,5 +124,38 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.dedicated-item-borders:nth-child(1) {
+    border-right: 2px solid #00007E;
+    border-bottom: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(2) {
+    border-right: 2px solid #00007E;
+    border-bottom: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(3) {
+    border-bottom: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(4) {
+    border-right: 2px solid #00007E;
+    border-bottom: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(5) {
+    border-right: 2px solid #00007E;
+    border-bottom: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(6) {
+    border-bottom: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(7) {
+    border-right: 2px solid #00007E;
+}
+.dedicated-item-borders:nth-child(8) {
+    border-right: 2px solid #00007E;
+}
+@media (min-width: 768px) and (max-width: 1023.5px) {
+    .careerspage-dedicated-team-icon {
+        height: 300px;
+    }
 }
 </style>

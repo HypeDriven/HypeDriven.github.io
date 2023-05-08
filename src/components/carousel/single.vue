@@ -5,7 +5,7 @@
         </Slide>
 
         <template #addons>
-            <Navigation /> <!--v-if="items.length>2"-->
+            <Navigation /> 
             <Pagination />
         </template>
     </Carousel>
@@ -47,6 +47,37 @@ export default {
 
 .carousel__pagination {
     margin-top: 30px;
+}
+
+.carousel__slide {
+    justify-content: flex-start;
+}
+
+@media (min-width: 576px) and (max-width: 767.5px) {
+    .carousel__prev {
+        display: none;
+    }
+    .carousel__next {
+        display: none;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 575.5px) {
+    .carousel__prev {
+        left: -10px;
+    }
+    .carousel__next {
+        right: -10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 424.5px) {
+    .carousel__prev {
+        display: none;
+    }
+    .carousel__next {
+        display: none;
+    }
 }
 
 .carousel__pagination-button {
