@@ -1,32 +1,17 @@
 <template>
-    <SectionContainer class="bg-primary-bg xxs:px-4 xxs:pt-[40px] xs:px-4 xs:pt-[40px] sm:px-4 sm:pt-[40px]">
+    <SectionContainer class="bg-primary-bg">
         <div class="flex flex-col">
-            <SectionTitle class="text-white h-fit text-center xxs:text-5xl mb-6">
+            <SectionTitle class="text-white h-fit text-center mb-6">
                 {{$t('careersPage.ourBenefits.title')}}
             </SectionTitle>
-            <div class="flex-row mt-[100px] xxs:hidden xs:hidden sm:hidden md:hidden lg:flex">
+            <div class="flex flex-row mt-[100px]">
                 <OurBenefitsCard v-for="(itemData, index) in ourBenefits" :key="index" class="careers-page-items-border">
                     <div class="careerspage-card-content cursor-pointer" @mouseover="itemData.hover=true" @mouseleave="itemData.hover=false"> 
                         <div class="flex flex-col gap-5 careerspage-card-icon"
                         :style="{'background-image': itemData.hover ? `url(`+ itemData.img2 +`)` : '',}">   
                             <div class="mt-8 mb-8">
-                                <img :src="itemData?.img1" class="xl:w-24 xl:h-24 lg:w-20 lg:h-20 m-auto"/>   
-                                <div class="xl:text-2xl lg:text-lg text-center mt-4 font-bold">
-                                    <span>{{itemData?.title}}</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </OurBenefitsCard>
-            </div>
-            <div class="lg:hidden xxs:grid xs:grid sm:grid md:grid grid-cols-2 grid-rows-2 mt-[30px] "> 
-                <OurBenefitsCard v-for="(itemData, index) in ourBenefits" :key="index" class="careers-page-items-border-mobile">
-                    <div class="careerspage-card-content cursor-pointer" @mouseover="itemData.hover=true" @mouseleave="itemData.hover=false">
-                        <div class="flex flex-col gap-5 careerspage-card-icon"
-                        :style="{'background-image': itemData.hover ? `url(`+ itemData.img2 +`)` : ''}"> 
-                            <div class="mt-8 mb-8">
-                                <img :src="itemData?.img1" class="w-24 h-24 m-auto xxs:w-16 xxs:h-16"/>   
-                                <div class="text-xl text-center mt-4 font-bold">
+                                <img :src="itemData?.img1" class="w-24 h-24 m-auto"/>   
+                                <div class="text-2xl text-center mt-4 font-bold">
                                     <span>{{itemData?.title}}</span>
                                 </div> 
                             </div>
@@ -105,86 +90,6 @@ export default {
 
 .careers-page-items-border:hover {
     border: 2px solid white;
-}
-@media (min-width: 1024px) and (max-width: 1279.5px) {
-    .careerspage-card-icon {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-@media (min-width: 768px) and (max-width: 1023.5px) {
-    .careerspage-card-icon {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .careers-page-items-border-mobile:nth-child(1) {
-        border-right: 2px solid #ffffff;
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(2) {
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(3) {
-        border-right: 2px solid #ffffff;
-    }
-}
-@media (min-width: 576px) and (max-width: 767.5px) {
-    .careerspage-card-icon {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .careers-page-items-border-mobile:nth-child(1) {
-        border-right: 2px solid #ffffff;
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(2) {
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(3) {
-        border-right: 2px solid #ffffff;
-    }
-}
-@media (min-width: 425px) and (max-width: 575.5px) {
-    .careerspage-card-icon {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .careers-page-items-border-mobile:nth-child(1) {
-        border-right: 2px solid #ffffff;
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(2) {
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(3) {
-        border-right: 2px solid #ffffff;
-    }
-}
-@media (min-width: 320px) and (max-width: 424.5px) {
-    .careerspage-card-icon {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .careers-page-items-border-mobile:nth-child(1) {
-        border-right: 2px solid #ffffff;
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(2) {
-        border-bottom: 2px solid #ffffff;
-    }
-    .careers-page-items-border-mobile:nth-child(3) {
-        border-right: 2px solid #ffffff;
-    }
 }
 </style>
 

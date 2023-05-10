@@ -1,6 +1,6 @@
 <template>
   <button type="button"
-    class="w-10 h-10 xxs:w-12 xxs:h-12 text-white iconButton rounded-full">
+    class="w-10 h-10 text-white iconButton rounded-full">
     <slot class="m-auto"></slot>
   </button>
 </template>

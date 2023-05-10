@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex flex-col"> 
+        <div class="flex flex-col ">
             <Header />
             <Hero class="flex-1" />
         </div>

@@ -23,21 +23,25 @@ data: function () {
         itemsCount: 6
     };
 },
-mounted() {
-    this.updateItemsPerPage(); 
-    window.addEventListener('resize', this.updateItemsPerPage); 
-  },
-beforeUnmount() {
-    window.removeEventListener('resize', this.updateItemsPerPage); 
-  },
+created() {
+    window.addEventListener("resize", this.resizeEventHandler);
+},
 methods: {
-    updateItemsPerPage() {
-        if (window.innerWidth < 950) {
-            this.itemsCount = 3;
-        } else {
-            this.itemsCount = 6;
-        }
+    resizeEventHandler() {
+        // this.$refs.carouselContent.clientWidth
+        let count = document.documentElement.clientWidth / 100;
+        if (count < 1)
+            count = 1;
+        else if (count > 6)
+            count = 6;
+        this.itemsCount = count;
     }
 }
 }
 </script>
+
+<style>
+/*li .carousel__slide .carousel__slide--active .carousel__slide--visible{
+    width: 100%;
+}*/
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper xl:w-[1050px] xl:h-[830px] lg:w-[1030px] lg:h-[800px] md:w-[800px] md:h-[600px] sm:w-[650px] sm:h-[468px] xs:w-[480px] xs:h-[378px] xxs:w-[350px] xxs:h-[290px]">
+    <div class="wrapper">
         <carouselPagination :total="carouselData.length" :current-index="currentSlide" @switch="switchSlide($event)"/>
         <div class="big-carousel">
             <big-carousel-item 
@@ -90,6 +90,8 @@ export default {
     .wrapper {
         display: flex;
         justify-content: center;
+        width: 1000px; 
+        height: 740px;
         overflow: hidden;
         margin: 0 auto;
     }

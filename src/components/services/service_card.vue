@@ -1,7 +1,7 @@
 <template>
-    <div class="mx-auto w-full xl:h-auto lg:h-auto md:h-auto sm:h-auto xs:h-auto xxs:h-auto service_card text-white flex justify-center items-center"> 
+    <v-card elevation="4" class="mx-auto w-full h-80 service_card text-white flex justify-center items-center">
         <slot></slot>
-    </div>
+    </v-card>
 </template>
 
 <script>
@@ -12,6 +12,12 @@ export default {
 
 <style>
 .service_card {
+    /*background: rgba(232, 232, 255, 0.1);*/
+    /* border-top: 1px solid rgb(255, 255, 255); */
+    /* border-bottom: 1px solid rgb(255, 255, 255); */
+    /* BG */
+
     backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
 }
 </style>

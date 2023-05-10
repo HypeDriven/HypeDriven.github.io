@@ -1,8 +1,6 @@
 <template>
     <IconButton>
-        <a href="https://www.linkedin.com/company/hypedriven/mycompany/">
-            <img :src="linkedin" alt="Linkedin" class="m-auto">
-        </a>
+        <img :src="linkedin" alt="Linkedin" class="m-auto">
     </IconButton> 
     <IconButton>
         <a href="mailto:careers@hypedriven.com">
@@ -10,10 +8,11 @@
         </a>
     </IconButton>
      <IconButton>
-        <a href="https://instagram.com/hype.driven?igshid=YmMyMTA2M2Y=">
-            <img :src="instagram" alt="Instagram" class="m-auto">
-        </a>
+        <img :src="instagram" alt="Instagram" class="m-auto">
     </IconButton>
+    <IconButton>
+        <img :src="facebook" alt="Facebook" class="m-auto">
+    </IconButton> 
 </template>
 
 <script>

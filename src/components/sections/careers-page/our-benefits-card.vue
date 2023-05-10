@@ -1,7 +1,7 @@
 <template>
-    <div class="mx-auto w-full h-auto text-white flex justify-center items-center">
+    <v-card elevation="4" class="mx-auto w-full h-[295px] service_card text-white flex justify-center items-center">
         <slot></slot>
-    </div>
+    </v-card>
 </template>
 
 <script>

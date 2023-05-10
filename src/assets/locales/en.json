@@ -15,7 +15,7 @@
     "joinUs": "Join US",
     "lookvacancies": "Check the vacancies",
     "findTheJob": "Find the job",
-    "chooseTheJob": "Choose the job",
+    "sendYourCv": "Send your CV",
     "seeAll": "See all",
     "clickToApply": "Click to apply",
     "goBack": "Go Back"
@@ -43,7 +43,7 @@
       "1": "Logistics",
       "2": "Telecom",
       "3": "Automotive",
-      "4": "Banking",
+      "4": "Banking and Capital Markets",
       "5": "Gaming",
       "6": "eCommerce",
       "7": "Manufacturing",
@@ -60,7 +60,7 @@
       "subtitle": "Great companies are a product of great people.",
       "locationtitle": "Location",
       "teamtitle": "Team",
-      "location": "Hypedriven is a development company based in Dubai with branches in Kyiv, Canada and Turkey.",
+      "location": "Hypedriven is a development company with developers all over the world.",
       "team": "At Hypedriven, the most valuable asset we have is the relationship we hold within our team."
     },
     "testimonial": {
@@ -162,10 +162,7 @@
     },
     "ourstory": {
       "title": "Our Story",
-      "subtitle1": "Hypedriven, a software development company, was founded in Kyiv in 2018 with a team of 10 employees at the end of the year. We started with a vision to create innovative software solutions that could transform the industry. By the end of 2019, Hypedriven had grown to a team of 20 employees, and our reputation for quality work had spread.",
-      "subtitle2": "The year 2020 brought about unexpected challenges for many businesses, as the COVID-19 pandemic forced companies to adopt remote work formats. However, Hypedriven adapted to the changes and continued to produce exceptional software solutions.",
-      "subtitle3": "In 2021, another 10 employees joined our team, including our first employee from Nigeria. Their diverse backgrounds and skills allowed us to tackle even more complex projects. The company recognized the need to expand the global presence and registered a subsidiary in Canada, enabling us to work with clients in that region. In early 2022, Hypedriven began hiring from Turkey, but our plans were disrupted by the war in Ukraine in February of that year. The company quickly responded by registering a subsidiary in Dubai and expanding the hiring pool to include candidates from Ethiopia and Azerbaijan.",
-      "subtitle4": "Hypedriven is now a thriving company that exemplifies what can be achieved through hard work, dedication, and a commitment to excellence. Our unwavering focus on producing quality software solutions and the ability to adapt to changing circumstances have been key to our success. Hypedriven continues to be a leading provider of innovative software solutions, with a team of highly skilled professionals from around the world."
+      "subtitle": "Lorem ipsum dolor sit amet consectetur. Elit vulputate mauris nunc lacus augue interdum pulvinar egestas. Nunc aliquet nibh mus egestas aenean erat malesuada semper fringilla. Donec mattis diam molestie nibh diam."
     },
     "weare": {
       "header": "Who we are",
@@ -194,13 +191,12 @@
       "contactus": "Contact US"
     },
     "hero": {
+      "title": "Software development",
       "slide1": {
-        "title": "Software development ",
-        "subtitle": "Hypedriven ensures quality execution of the entire software development process, from product vision discussion to applications design and software enhancement. Our multi-skilled experienced team facilitates businesses worldwide on their way to digital transformation and helps companies take full advantage of IT innovations.."
+        "subtitle": "Hypedriven ensures quality execution of the entire software development process, from product vision discussion to applications design and software enhancement."
       },
       "slide2": {
-        "title": "Software engineering ",
-        "subtitle": "Hypedriven delivers software engineering and development services for IT product companies, non-IT enterprises and innovative start-ups in various industries. Keeping up with the changing technology trends, we provide full- scale assistance with the below-listed services."
+        "subtitle": "Our multi-skilled experienced team facilitates businesses worldwide on their way to digital transformation and helps companies take full advantage of IT innovations."
       }
     },
     "services": {
@@ -210,44 +206,44 @@
       "mobile": "Mobile",
       "web": "Web",
       "cloud": "Cloud",
-      "desktop": "Desktop"
+      "desktop": "Destop"
     },
     "softwareTesting": {
       "title": "Software testing and quality assurance",
       "item1": {
         "title": "Manual Testing",
-        "subtitle": "It involves human testers executing test cases and scenarios to identify issues and defects that may arise while using the software product."
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Viverra mattis aenean augue."
       },
       "item2": {
         "title": "Automation Testing",
-        "subtitle": "This type of testing is typically used to ensure that the software is functioning correctly and efficiently, and to reduce the amount of manual testing required."
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
       }
     },
     "productEngineering": {
       "title": "Product engineering",
       "item1": {
         "title": "Business Analysis",
-        "subtitle": "It is a critical practice that drives organizational change through data analysis and information evaluation. By identifying trends, patterns, and insights related to business operations, companies can make informed decisions that lead to enhanced effectiveness in achieving their goals."
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Mattis aenean augue."
       },
       "item2": {
-        "title": "UX/UI product design",
-        "subtitle": "Our team of user interface and user experience experts creates websites that are easy to navigate, intuitive, visually appealing, and perfectly tailored for the target audience. We thoroughly analyze our clients' brand identity and business goals to ensure optimal results."
+        "title": "Product design UX/UI design",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
       },
       "item3": {
-        "title": "MVP development",
-        "subtitle": "A minimum viable product is the fastest and most reliable way to provide a target audience with a solution to their problem and obtain feedback for future development."
+        "title": "Prototyping MVP development",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
       },
       "item4": {
-        "title": "Software architecture",
-        "subtitle": "We offer customized design solutions to ensure that software systems are structured, scalable, and adaptable to meet their functional and non-functional requirements."
+        "title": "Product design Software architecture",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
       },
       "item5": {
-        "title": "PoC development",
-        "subtitle": "Innovation often brings uncertainty, and a proof of concept can help determine whether an idea is feasible."
+        "title": "Prototyping PoC development",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
       },
       "item6": {
-        "title": "Prototyping",
-        "subtitle": "Creating a preliminary version of a product or feature provides an opportunity to test and refine its functionality and user experience before investing in full development."
+        "title": "Offer",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Congue phasellus gravida tempus quam etiam."
       }
     },
     "itSupport": {
@@ -272,11 +268,11 @@
       "title": "IT consulting & advisory",
       "item1": {
         "title": "IT audit",
-        "subtitle": "The IT audit service provides organizations with an assessment of their IT systems and processes to ensure they are effectively supporting the business objectives. This service helps identify potential risks and vulnerabilities in the IT infrastructure and provides recommendations for improvements."
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Velit facilisi suspendisse nisl semper aliquam. Magna aliquet urna eu eget."
       },
       "item2": {
         "title": "IT Technology consulting",
-        "subtitle": "IT Technology consulting service provides businesses with expert advice on how to improve their IT infrastructure, implement new technologies, and optimize their IT processes. With the support of IT consultants, companies can enhance their operations, decrease expenses, and stay competitive in the digital world."
+        "subtitle": "Lorem ipsum dolor sit amet consectetur. Velit facilisi suspendisse nisl semper aliquam. Magna aliquet urna eu eget."
       }
     }
   },
@@ -314,13 +310,13 @@
     },
     "qote": {
       "title": "Qote:",
-      "phrase": "At our company, we value diversity because it brings together people with different viewpoints, which leads to better decision-making, problem-solving, and creativity. We strive to create an environment where everyone feels welcomed, included, and supported.",
+      "phrase": "Some qote about Diversity and inclusion. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique mattis lorem sit amet pretium.",
       "whoSaid": "Albert Meyburgh",
       "position": "CEO & Founder"
     },
     "worldwide": {
       "title": "Worldwide",
-      "subtitle": "Our team is proudly comprised of employees from Canada, Ukraine, Turkey, Nigeria, Ethiopia, and Azerbaijan, representing diverse cultural backgrounds and enriching our global workforce."
+      "subtitle": "Text explaining Map. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique mattis lorem sit amet pretium. Pellentesque ullamcorper dictum enim in eleifend."
     },
     "contactUs": {
       "title": "Contact Us!",
@@ -336,7 +332,7 @@
     "albertMeyburgh": {
       "title": "Albert Meyburgh",
       "position": "CEO & Founder",
-      "subtitle": "Albert Meyburgh, founder, started his career in Vancouver, Canada by opening a development agency after graduation from BCIT in 2006.  Since then he's worked on AAA games, digital media systems, R&D with AI, mobile games, financial industry systems, and moved to Ukraine in 2018 to start building a development agency from there utilizing access to the broad under-tapped talent based of the region."
+      "subtitle": "Biography with lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique mattis lorem sit amet pretium. Nullam nec lacus consectetur, aliquet nibh ac, fringilla arcu. Aenean non mauris at mauris pretium tincidunt vulputate vel risus. In in sapien eu velit volutpat fermentum."
     },
     "ourTeam": {
       "title": "Our team",

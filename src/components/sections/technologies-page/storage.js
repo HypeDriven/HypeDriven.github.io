@@ -4,7 +4,6 @@ const technologyItems = [
         title: "Frontend",
         showContent: false,
         img: require('@/assets/img/images/technologiespage-technologies-img1.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img1.2.png'),
         imgType: 1,
         technologiesDescribe: [
             {
@@ -33,8 +32,7 @@ const technologyItems = [
         id: 2,
         title: "Backend",
         img: require('@/assets/img/images/technologiespage-technologies-img2.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img2.1.png'),
-        imgType: 1,
+        imgType: 2,
         showContent: false,
         technologiesDescribe: [
             {
@@ -43,9 +41,9 @@ const technologyItems = [
                 icon: require('@/assets/img/images/technologiespage-backend-icon1.svg'),
             },
             {
-                title: "PHP",
-                subtittle: "PHP, AMP V3, ReactPHP, DUKPT, Laravel, Symfony, Yii2, Laminas, Magento, PrestaShop, OpenCart, WordPress, Drupal, Joomla, PHP::FFI, PHP::JIT, MySQL, MSSQL, MongoDB, PostgreSQL, REST/SOAP/GraphQL API, JWT, OAuth, HTML, Twig, CSS, SASS/SCSS, LESS, Web Socket, Swagger, Redis, ElasticSearch, Docker, Vagrant ,AWS SQS, Payment systems integrations (Stripe, Coinbase, Circle, PayPal, Authorize.net), social integrations (Facebook, Google), Firebase CM, WebRTC, Video Streaming",
-                icon: require('@/assets/img/images/technologiespage-backend-icon4.svg'),
+                title: ".NET",
+                subtittle: ".NET Core, ASP.NET Core MVC, ASP.NET Web API, ASP.NET MVC, ASP.NET Web forms",
+                icon: require('@/assets/img/images/technologiespage-backend-icon2.svg'),
             },
             {
                 title: "Python",
@@ -53,9 +51,9 @@ const technologyItems = [
                 icon: require('@/assets/img/images/technologiespage-backend-icon3.svg'),
             },
             {
-                title: ".NET",
-                subtittle: ".NET Core, ASP.NET Core MVC, ASP.NET Web API, ASP.NET MVC, ASP.NET Web forms",
-                icon: require('@/assets/img/images/technologiespage-backend-icon2.svg'),
+                title: "PHP",
+                subtittle: "PHP, AMP V3, ReactPHP, DUKPT, Laravel, Symfony, Yii2, Laminas, Magento, PrestaShop, OpenCart, WordPress, Drupal, Joomla, PHP::FFI, PHP::JIT, MySQL, MSSQL, MongoDB, PostgreSQL, REST/SOAP/GraphQL API, JWT, OAuth, HTML, Twig, CSS, SASS/SCSS, LESS, Web Socket, Swagger, Redis, ElasticSearch, Docker, Vagrant ,AWS SQS, Payment systems integrations (Stripe, Coinbase, Circle, PayPal, Authorize.net), social integrations (Facebook, Google), Firebase CM, WebRTC, Video Streaming",
+                icon: require('@/assets/img/images/technologiespage-backend-icon4.svg'),
             },
             {
                 title: "Unity",
@@ -86,7 +84,6 @@ const technologyItems = [
         showContent: false,
         imgType: 1,
         img: require('@/assets/img/images/technologiespage-technologies-img3.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img3.1.png'),
         technologiesDescribe: [
             {
                 title: "Android",
@@ -139,9 +136,8 @@ const technologyItems = [
         id: 4,
         title: "Design",
         showContent: false,
-        imgType: 2,
+        imgType: 3,
         img: require('@/assets/img/images/technologiespage-technologies-img4.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img4.1.png'),
         technologiesDescribe: [
             {
                 title: "UI",
@@ -166,7 +162,6 @@ const technologyItems = [
         showContent: false,
         imgType: 1,
         img: require('@/assets/img/images/technologiespage-technologies-img5.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img5.1.png'),
         technologiesDescribe: [
             {
                 title: "Manual testing",
@@ -184,34 +179,33 @@ const technologyItems = [
         id: 6,
         title: "DevOps",
         showContent: false,
-        imgType: 2,
+        imgType: 3,
         img: require('@/assets/img/images/technologiespage-technologies-img6.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img6.1.png'),
         technologiesDescribe: [
             {
-                title: "Сloud computing",
+                title: "-",
                 subtittle: "AWS, Azure, GCP, Digital Ocean, Kubernetes, Terraform, CloudFormation, Ansible, Docker, Docker Сompose, Bash, CI/CD, Linux administration, High Availability, HiLoad, Zabbix, Prometheus, Data Dog, ELK, Grafana CI/CD",
                 icon: require('@/assets/img/images/technologiespage-devops-icon1.svg'),
             },
             {
-                title: "Infrastructure automation",
+                title: "-",
                 subtittle: "Git, Ansible, CloudFormation, Jenkins, Bamboo, GitLab, GitHub, Bitbucket CI/CD, Helm, Terraform, Terragrunt, Kubernetes Operators, IntelliJ IDEA Databases and cache management tools",
                 icon: require('@/assets/img/images/technologiespage-devops-icon2.svg'),
             },
             {
-                title: "Database management system",
+                title: "-",
                 subtittle: "PostgreSQL, Oracle, MySQL, MS SQL, MongoDB, CosmosDB, Cassandra, RavenDB, DynamoDB, MariaDB, SQLite, Azure SQL Server, AWS RDS, Redis, Hazelcast, ClickHouse",
                 icon: require('@/assets/img/images/technologiespage-devops-icon3.svg'),
             },
             {
-                title: "Collaboration and communication",
-                subtittle: "Jira, Trello, Microsoft Teams, Slack, MS Project, VersionOne, Mantis, Trac, Redmine, Zoom, Replicon",
-                icon: require('@/assets/img/images/technologiespage-devops-icon5.svg'),
+                title: "-",
+                subtittle: "Management, planning and reporting tools, Management, planning and reporting tools, ",
+                icon: require('@/assets/img/images/technologiespage-devops-icon4.svg'),
             },
             {
-                title: "Management system",
-                subtittle: "Management, time-managment, planning and reporting tools",
-                icon: require('@/assets/img/images/technologiespage-devops-icon4.svg'),
+                title: "-",
+                subtittle: "Jira, Trello, Microsoft Teams, Slack, MS Project, VersionOne, Mantis, Trac, Redmine, Zoom, Replicon",
+                icon: require('@/assets/img/images/technologiespage-devops-icon5.svg'),
             }
         ]
     },
@@ -221,7 +215,6 @@ const technologyItems = [
         showContent: false,
         imgType: 1,
         img: require('@/assets/img/images/technologiespage-technologies-img7.png'),
-        img2: require('@/assets/img/images/technologiespage-technologies-img7.1.png'),
         technologiesDescribe: [
             {
                 title: "RDBMS",

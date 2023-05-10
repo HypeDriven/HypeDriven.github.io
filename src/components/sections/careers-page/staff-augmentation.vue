@@ -1,36 +1,23 @@
 <template>
-    <SectionContainer class="bg-secondary-bg xxs:px-4 xxs:pt-[40px] xxs:pb-10 xs:px-4 xs:pt-[40px] xs:pb-10 sm:px-4 sm:pt-[40px] sm:pb-10"> 
-        <SectionTitle class="text-[#66C3CD] tracking-wider uppercase xxs:text-5xl">{{ $t('careersPage.staffAugmentation.title') }}</SectionTitle>
-        <div class="flex justify-between xl:mt-[-220px] xxs:mt-0 xs:mt-0 sm:mt-0 md:mt-[-80px] lg:mt-[-100px]">
-            <SectionSubTitle class="text-[#00007E] text-6xl xxs:text-5xl font-bold flex flex-col justify-end w-[50%] xxs:w-[100%] xs:w-[100%] sm:w-[100%]">{{ $t('careersPage.staffAugmentation.subtitle') }}</SectionSubTitle>
-            <div class="w-[50%] border-b-2 border-[#00007E] flex justify-end xxs:hidden xs:hidden sm:hidden">
-                <img :src="careersPageStaffAugImg" class="md:w-[50%]"/>
+    <SectionContainer class="bg-secondary-bg">
+        <SectionTitle class="text-[#66C3CD] tracking-wider">{{ $t('careersPage.staffAugmentation.title') }}</SectionTitle>
+        <div class="flex justify-between mt-[-200px]">
+            <SectionSubTitle class="text-[#00007E] text-6xl font-bold flex flex-col justify-end w-[50%]">{{ $t('careersPage.staffAugmentation.subtitle') }}</SectionSubTitle>
+            <div class="w-[50%] border-b-2 border-[#00007E] flex justify-end">
+                <img :src="careersPageStaffAugImg"/>
             </div>
         </div>
-        <div class="xl:grid grid-rows-3 grid-cols-6 xxs:hidden xs:hidden sm:hidden md:hidden lg:hidden">
+        <div class="grid grid-rows-3 grid-cols-6">
             <div v-for="(tech, i) in technologies" :key="i" 
             class="cursor-pointer flex flex-col justify-center relative" 
             @mouseover="tech.hover=true" @mouseleave="tech.hover=false"
-            > 
+            > <!--:class="{'border-[3px] border-[#00007E]': tech.hover}"-->
                 <img :src="crissСross" class="absolute left-[-21px] top-[-20px]" />  
                 <img v-if="tech.crissСrossLeftBottom" :src="crissСross" class="absolute left-[-21px] bottom-[-21px]" />  
                 <img v-if="tech.crissСrossTopRight" :src="crissСross" class="absolute right-[-21px] top-[-21px]" />  
                 <img v-if="tech.crissСrossRightBottom" :src="crissСross" class="absolute right-[-21px] bottom-[-20px]" />  
                 <div class="flex justify-center p-4 py-10">     
                     <img v-if="!tech.hover" :src="tech?.img" class="" />   
-                    <span v-if="tech.hover" class="text-2xl font-bold text-[#00007E]">{{tech?.title}}</span> 
-                </div>
-            </div>
-        </div>
-        <div class="xl:hidden xxs:grid xs:grid sm:grid md:grid lg:grid grid-rows-8 grid-cols-2 md:grid-rows-4 md:grid-cols-4"> 
-            <div v-for="(tech, i) in technologies" :key="i" 
-            class="cursor-pointer flex flex-col justify-center relative" 
-            @mouseover="tech.hover=true" @mouseleave="tech.hover=false"
-            > 
-                <img :src="crissСross" class="staff-aug-crisscross absolute top-[0px] xxs:left-[-10px] xs:left-[-11px] sm:left-[-15px] md:left-[-20px] md:top-[-15px]" />  
-                <img :src="crissСross" class="staff-aug-crisscross absolute top-[0px] xxs:right-[-10px] xs:right-[-11px] sm:right-[-15px] md:right-[-20px] md:top-[-15px]" />  
-                <div class="flex justify-center p-4 py-10 md:px-2 md:py-10">     
-                    <img v-if="!tech.hover" :src="tech?.img" class="xxs:w-[50px] xxs:h-[80px] xs:w-[70px] xs:h-[90px] sm:w-[80px] sm:h-[100px]" />   
                     <span v-if="tech.hover" class="text-2xl font-bold text-[#00007E]">{{tech?.title}}</span> 
                 </div>
             </div>
@@ -154,27 +141,5 @@ export default {
 .border-crisscross-img {
     border: 2px solid;
     border-image: url('@/assets/img/images/crisscross.svg');
-}
-.staff-aug-crisscross {
-    width: 40px;
-    height: 40px;        
-}
-@media (min-width: 576px) and (max-width: 767.5px) {
-    .staff-aug-crisscross {
-        width: 30px;
-        height: 30px; 
-    }
-}
-@media (min-width: 425px) and (max-width: 575.5px) {
-    .staff-aug-crisscross {
-        width: 22px;
-        height: 22px; 
-    }
-}
-@media (min-width: 320px) and (max-width: 424.5px) {
-    .staff-aug-crisscross {
-        width: 20px;
-        height: 20px; 
-    }
 }
 </style>

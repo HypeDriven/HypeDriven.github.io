@@ -1,18 +1,18 @@
 <template>
     <Header/>
-    <SectionContainer class="gap-0 bg-main-bg xxs:px-4 xxs:pt-[40px] xxs:pb-10 xs:px-4 xs:pt-[40px] xs:pb-10 sm:px-4 sm:pt-[40px] sm:pb-10 md:pt-[50px]">
+    <SectionContainer class="gap-0 bg-main-bg">
         <div class="text-lg flex">
             <div @click="goBack" class="cursor-pointer">
                 <span class="text-white">Previous page > </span>
             </div>
             <span class="text-[#00007E] ml-1">Private policy</span>
         </div>
-        <div class="flex justify-center lg:gap-16 md:gap-8 xxs:mt-2 xs:mt-4 sm:mt-2 md:mt-6 lg:mt-10 xl:mt-14 1xl:mt-20">
-            <div class="lg:max-w-[40%] md:max-w-[17%] xxs:hidden xs:hidden sm:hidden">
+        <div class="flex justify-center gap-16 mt-20">
+            <div class="max-w-[40%]">
                 <img :src="vacancyDetailsLogo"/>
             </div>
-            <div class="xxs:max-w-[100%] xs:max-w-[100%] sm:max-w-[100%] md:max-w-[83%] lg:max-w-[60%]"> 
-                <SectionTitle class="text-white h-fit xxs:mb-4 xs:mb-6 sm:mb-8 md:mb-8 lg:mb-8 xl:mb-12">
+            <div class="max-w-[60%]"> <!---->
+                <SectionTitle class="text-white h-fit mb-12">
                     Private Policy
                 </SectionTitle>
                 <div class="p-5">
@@ -133,14 +133,19 @@
                     </div>  
                 </div>
                 
-                <div class="flex xxs:justify-between xs:justify-between mt-4">
-                    <Button class="rounded-3xl grow xxs:grow-0 xs:grow-0 mr-[22px] xxs:mr-0 xs:mt-0 xxs:w-[48%] xs:w-[48%]" @click="agree">Agree</Button>
-                    <Button class="rounded-3xl bg-transparent border-2 border-white px-12 xxs:w-[48%] xs:w-[48%]" @click="goBack">Go back</Button>
+                <div class="flex mt-4">
+                    <Button class="rounded-3xl grow mr-[22px]" @click="agree">Agree</Button>
+                    <Button class="rounded-3xl bg-transparent border-2 border-white px-12" @click="goBack">Go back</Button>
                 </div>
                 
             </div>
             
         </div>
+        
+    
+
+        
+        
     </SectionContainer>
     <Footer/>
 </template>
@@ -154,7 +159,6 @@ import BodyText from "../text/body/body.vue"
 import SectionSubTitle from "../sections/sub-title";
 import Button from "../buttons/index.vue";
 import router from "@/router";
-import { mapMutations } from "vuex";
 export default {
     name: "PrivatePolicyComponent",
     components: {
@@ -172,14 +176,15 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['agreeContactUs']),
         goBack() {
             router.go(-1)
         },
         agree() {
-            this.agreeContactUs();
-            this.goBack()
+            this.$emit('agree', true)
         }
+        /*setPrivatePolicyToTrue() {
+            this.$router.commit('agree', true);
+        }*/
     }
     
 }
@@ -193,7 +198,7 @@ export default {
     content: "";
     position: absolute;
     left: -30px;
-    top: 7px;
+    top: 10px;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -209,47 +214,5 @@ export default {
     border-top: 2px solid rgb(255, 255, 255);
     margin-top: 27px;
     margin-left: 15px;
-}
-@media (min-width: 576px) and (max-width: 767.5px) {
-    .private-policy-bodytext-dot::before {
-        left: -22px;
-        top: 6px;
-    }
-    .private-policy-bodytext-line {
-        margin-left: -17px;
-        margin-right: 17px;
-    }
-}
-@media (min-width: 501px) and (max-width: 575.5px) {
-    .private-policy-bodytext-dot::before {
-        left: -22px;
-        top: 4px;
-    }
-    .private-policy-bodytext-line {
-        margin-left: -17px;
-        margin-right: 17px;
-    }
-}
-@media (min-width: 425px) and (max-width: 500.5px) {
-    .private-policy-bodytext-dot::before {
-        left: -21.5px;
-        top: 4px;
-    }
-    .private-policy-bodytext-line {
-        margin-left: -17px;
-        margin-right: 17px;
-    }
-}
-@media (min-width: 320px) and (max-width: 424.5px) {
-    .private-policy-bodytext-dot::before {
-        left: -21px;
-        top: 5px;
-        width: 10px;
-        height: 10px;
-    }
-    .private-policy-bodytext-line {
-        margin-left: -17px;
-        margin-right: 17px;
-    }
 }
 </style>

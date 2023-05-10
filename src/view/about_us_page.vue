@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="flex flex-col 3xl:h-[100vh]">
+    <div class="flex flex-col ">
       <Header />
       <Hero class="flex-1" />
     </div>
-    <main class="flex flex-col sm:px-0" id="main-content"> 
+    <main class="flex flex-col px-6 sm:px-0 bg-primary-bg" id="main-content">
       <Employment/>
       <OurMission/>
       <Values/>
@@ -31,7 +31,7 @@ import Jobs from "../components/sections/about-us/jobs.vue";
 import OurStory from "../components/sections/about-us/our-story.vue"
 import Map from "../components/sections/about-us/map.vue";
 export default {
-  name: "AboutUs",
+  name: "HomePage",
   components: {
     Header,
     Footer,
@@ -44,6 +44,6 @@ export default {
     OurStory,
     Jobs,
     Map
-  }
+},
 };
 </script>
