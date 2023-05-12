@@ -45,7 +45,7 @@ export default {
 
 <style>
 .contact-us-wrapper {
-    background-image: url('@/assets/img/images/contact-us-page-img.png');
+    background-image: url('@/assets/img/images/contact-us-page-img.svg');
     background-size: auto;
     background-position: 10% 100%;
     background-repeat: no-repeat;

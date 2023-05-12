@@ -36,7 +36,7 @@ export default {
     },
     data: function () {
         return {
-            img: require('../../assets/img/images/technologiespage-hero-img.png')
+            img: require('../../assets/img/images/technologiespage-hero-img.svg')
         };
     }
 };
@@ -55,7 +55,7 @@ export default {
     height: 100%;
 }
 .technologies-hero-wrapper {
-    background-image: url('../../assets/img/images/technologiespage-hero-img.png');
+    background-image: url('../../assets/img/images/technologiespage-hero-img.svg');
     background-repeat: no-repeat;
     background-size: auto;
     background-position: 90% 100%;
@@ -67,7 +67,7 @@ export default {
 }
 @media (min-width: 1024px) and (max-width: 1279.5px) {
     .technologies-hero-wrapper {
-        background-image: url('../../assets/img/images/technologiespage-hero-img.png');
+        background-image: url('../../assets/img/images/technologiespage-hero-img.svg');
         background-repeat: no-repeat;
         background-size: 50%;
         background-position: 98% 100%;
@@ -78,7 +78,7 @@ export default {
         max-width: 100%;
     }
     .technologies-hero-wrapper {
-        background-image: url('../../assets/img/images/technologiespage-hero-img.png');
+        background-image: url('../../assets/img/images/technologiespage-hero-img.svg');
         background-repeat: no-repeat;
         background-size: 55%;
         background-position: 100% 100%;

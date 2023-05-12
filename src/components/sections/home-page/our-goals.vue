@@ -17,13 +17,13 @@
                 <div class="h-auto border-l-2 border-white"></div>
                 <div class="text-center">
                     <h1 class="lg:text-6xl md:text-5xl sm:text-5xl font-black mb-[15px]">100%</h1>
-                    <span class="md:text-lg sm:text-xl">recurring</span>
+                    <span class="md:text-lg sm:text-xl">Recurring</span>
                     <span class="block md:text-lg sm:text-xl">customers</span>
                 </div> 
                 <div class="h-auto border-r-2 border-white"></div>
                 <div class="text-center">
                     <h1 class="lg:text-6xl md:text-5xl sm:text-5xl font-black mb-[15px]">5+</h1>
-                    <span class="md:text-lg sm:text-xl">years</span>
+                    <span class="md:text-lg sm:text-xl">Years</span>
                     <span class="block md:text-lg sm:text-xl">of expertise</span>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="text-center bg-primary-bg p-5">
                     <h1 class="text-5xl font-black">5+</h1>
-                    <span class="text-xl">Uears</span>
+                    <span class="text-xl">Years</span>
                     <span class="block text-xl">of expertise</span>
                 </div>
             </div>

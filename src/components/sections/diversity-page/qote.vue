@@ -2,7 +2,7 @@
     <SectionContainer class="bg-primary-bg xxs:px-4 xxs:pt-[50px] xs:px-4 xs:pt-[50px] sm:px-4 sm:pt-[50px]"> 
         <div>
             <SectionTitle class="text-[#66C3CD] h-fit text-center m-auto text-6xl xxs:text-5xl max-w-full mb-16">
-                {{ $t('diversityPage.qote.title') }}
+                {{ $t('diversityPage.quote.title') }}
             </SectionTitle>
             <div class="relative flex xxs:flex-col xs:flex-col sm:flex-col justify-around">
                 <img :src="quoteImg" class="absolute top-0 left-0 quote-img"/>
@@ -13,10 +13,10 @@
                     <img :src="diversityQoteImgMobile" class="w-[100%] rounded-t-full"/>
                 </div>
                 <div class="flex flex-col justify-between max-w-[50%] xxs:max-w-[100%] xs:max-w-[100%] sm:max-w-[90%] sm:m-auto xxs:px-0 xxs:pt-8 xs:px-0 xs:pt-8 sm:px-0 sm:pt-8 md:px-2 md:pt-0 lg:px-2 lg:pt-1 xl:px-15 xl:pt-5 1xl:px-20 1xl:pt-12 ">
-                    <span class="xl:text-2xl xxs:text-lg xs:text-xl sm:text-xl md:text-sm lg:text-lg text-size text-white italic font-bold xl:tracking-widest md:tracking-normal lg:tracking-normal">{{ $t('diversityPage.qote.phrase') }}</span>
+                    <span class="xl:text-2xl xxs:text-lg xs:text-xl sm:text-xl md:text-sm lg:text-lg text-size text-white italic font-bold xl:tracking-widest md:tracking-normal lg:tracking-normal">{{ $t('diversityPage.quote.phrase') }}</span>
                     <div class="flex flex-col xxs:pt-6 xs:pt-6 sm:pt-6">
-                        <span class="text-xl text-[#66C3CD] font-bold">{{ $t('diversityPage.qote.whoSaid') }}</span> 
-                        <span class="text-sm text-white">{{ $t('diversityPage.qote.position') }}</span>
+                        <span class="text-xl text-[#66C3CD] font-bold">{{ $t('diversityPage.quote.whoSaid') }}</span> 
+                        <span class="text-sm text-white">{{ $t('diversityPage.quote.position') }}</span>
                     </div>
                 </div>
                 <img :src="quoteImg" class="absolute bottom-0 right-0 rotate-180 quote-img"/>

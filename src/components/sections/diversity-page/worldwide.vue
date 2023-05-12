@@ -93,14 +93,14 @@ export default {
             height: 50vh;
         }
     }
-    @media (min-height: 425px) and (max-height: 575.5px) {
+    @media (min-height: 451px) and (max-height: 555.5px) { /*575.5px*/
         .diversity-map-wrapper {
-            height: 80vh;
+            height: 85vh;
         }
     }
-    @media (min-height: 320px) and (max-height: 424.5px) {
+    @media (min-height: 320px) and (max-height: 450.5px) {
         .diversity-map-wrapper {
-            height: 100vh;
+            height: 120vh;
         }
     }
 </style>

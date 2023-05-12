@@ -35,7 +35,7 @@ export default {
     },
     data: function () {
         return {
-            img: require('../../assets/img/images/diversitypage-hero-img.png')
+            img: require('../../assets/img/images/diversitypage-hero-img.svg')
         };
     }
 };
@@ -43,7 +43,7 @@ export default {
 
 <style>
 .divarsity-hero-wrapper {
-    background-image: url('../../assets/img/images/diversitypage-hero-img.png');
+    background-image: url('../../assets/img/images/diversitypage-hero-img.svg');
     background-repeat: no-repeat;
     background-size: auto;
     background-position: 90% 100%;

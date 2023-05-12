@@ -90,6 +90,10 @@ export default {
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+    .values-bg {
+        height: 100%;
+        padding-bottom: 40px;
+    }
     .employment-values-img {
         width: 120px;
         height: 120px;

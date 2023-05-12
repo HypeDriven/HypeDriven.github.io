@@ -63,7 +63,7 @@ export default {
             searchQuery: '',
             placeholder: 'Write name of Industry',
             notFound: false,
-            img: require('../../assets/img/images/industriespage-hero-img.png'),
+            img: require('../../assets/img/images/industriespage-hero-img.svg'),
             searchBarIcon: require('../../assets/img/images/industriespage-hero-searchbar-icon.svg'),
             crossSearchBarIcon: require('../../assets/img/images/industriespage-hero-searchbar-cross-icon.svg'),
             industryItems: [

@@ -30,7 +30,7 @@ export default {
 
 <style>
 .running-elements {
-    animation: runningline 8s infinite linear;
+    animation: runningline 16s infinite linear;
 }
 @keyframes runningline {
   0%{

@@ -1,7 +1,7 @@
 <template>
     <SectionContainer class="bg-main-bg services-hero-wrapper"> 
         <div>
-            <Carousel :items="servicesHero" v-slot="{ data }" :autoplay="3000" :transition="1000" class=" justify-start"> 
+            <Carousel :items="servicesHero" v-slot="{ data }" :autoplay="8000" :transition="3000" class=" justify-start"> 
                     <div class="flex flex-col justify-evenly md:h-[450px] sm:h-[400px] xs:h-[380px] xxs:h-[350px]"> 
                         <div class="flex flex-col max-w-auto">
                             <SectionTitle class="text-white h-fit m-auto xxs:m-0 xxs:max-w-sm xs:m-0 xs:max-w-lg lg:text-6xl md:text-5xl sm:text-5xl xs:text-4xl xxs:text-4xl max-w-full sm:pr-3 xs:pr-6 xxs:pr-6 text-left z-10 uppercase">
@@ -41,7 +41,6 @@ export default {
     },
     data: function () {
         return {
-            servicesHeroBg:  require('../../assets/img/images/servicespage-hero-illustration.png'), 
             servicesHero: [
                {
                 title: "slide1.title",
@@ -72,7 +71,7 @@ export default {
 }
 
 .services-hero-wrapper { 
-    background-image: url('../../assets/img/images/servicespage-hero-illustration.png');  
+    background-image: url('../../assets/img/images/servicespage-hero-illustration.svg');  
     background-repeat: no-repeat;
     background-position: 100% 100%;
 }

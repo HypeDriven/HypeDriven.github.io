@@ -150,6 +150,9 @@ export default {
     }
 }
 @media (min-width: 768px) and (max-width: 1023.5px) {
+    .servicespage-sowtwaretesting-wrapper {
+        height: 100%;
+    }
     .servicespage-softwaretesting-item {
         height: auto;
         padding: 35px;

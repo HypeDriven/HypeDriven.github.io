@@ -6,7 +6,7 @@
             </SectionTitle>
         </div>
         <div>
-            <Carousel :items="whyUs" v-slot="{ data }" :autoplay="2000" :transition="2000"> 
+            <Carousel :items="whyUs" v-slot="{ data }" :autoplay="6000" :transition="3000"> 
                 <WhyUsCard class=""> 
                     <div class="flex xxs:flex-col xs:flex-col justify-between"> 
                         <div class="whyus-card-content xxs:hidden xs:hidden">  

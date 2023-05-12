@@ -42,7 +42,7 @@ export default {
     },
     data: function () {
         return {
-            teamPageHeroImhg: require('@/assets/img/images/teampage-hero-illustration.png'),
+            teamPageHeroImhg: require('@/assets/img/images/teampage-hero-illustration.svg'),
             runStringImg: require("@/assets/img/icons/servicespage-runningline-icon-logo.svg"),
             runningLineContent: ['Ceo', 'Managers', 'Backend', 'QA', 'Frontend', 'Designer']
         };
