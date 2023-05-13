@@ -66,12 +66,64 @@ export default {
         top: 0;
         left: -80%;
     }
-    @media (min-width: 2200px) and (max-width: 2560px) {
+    @media (min-width: 2560px) {
         .hiringImg {
             right: 120px;
         }
         .hiring-fly-elements {
-            left: -20px;
+            left: 175px;
+            bottom: 325px;
+        }
+        .hiring-persons {
+            bottom: 325px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 2421px) and (max-width: 2559.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: 115px;
+            bottom: 325px;
+        }
+        .hiring-persons {
+            bottom: 325px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 2300px) and (max-width: 2420.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: 45px;
+            bottom: 325px;
+        }
+        .hiring-persons {
+            bottom: 325px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 2300px) and (max-width: 2420.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: 45px;
+            bottom: 325px;
+        }
+        .hiring-persons {
+            bottom: 325px;
+            right: 180px;
+        }
+    }
+    @media (min-width: 2200px) and (max-width: 2299.5px) {
+        .hiringImg {
+            right: 120px;
+        }
+        .hiring-fly-elements {
+            left: -5px;
             bottom: 325px;
         }
         .hiring-persons {
@@ -92,12 +144,12 @@ export default {
             right: 180px;
         }
     }
-    @media (min-width: 1850px) and (max-width: 2049.5px) {
+    @media (min-width: 1850px) and (max-width: 2049.7px) {
         .hiringImg {
             right: 120px;
         }
         .hiring-fly-elements {
-            left: -70px;
+            left: -60px;
             bottom: 225px;
         }
         .hiring-persons {
