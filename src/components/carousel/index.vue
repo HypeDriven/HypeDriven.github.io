@@ -69,6 +69,13 @@ export default {
     margin-top: 30px;
 }
 
+/*Стилі нижче, для того, щоб уникнути багу з елементами списку 1. 2. 3. 4. ....*/
+
+.carousel__pagination li.carousel__pagination-item {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
 .carousel__pagination-button {
     width: 10px;
     height: 10px;

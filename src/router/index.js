@@ -11,6 +11,10 @@ import Vacancies from "../components/sections/careers-page/careers_vacancies.vue
 import PrivatePolicy from "../components/private-policy/private-policy.vue";
 import Applied from "../components/sections/careers-page/thanks-for-application.vue";
 import ContactUsPage from "../view/contact_us_page";
+import LogInPage from "../view/log_in.vue";
+import BlogPage from "../view/blog.vue"
+import DetaildPostPage from '../view/post-detailed.vue';
+import UnsubscribePage from '../view/unsubscribe.vue'
 import NotFound from "../view/404";
 
 const routes = [
@@ -69,7 +73,7 @@ const routes = [
     children: [{ path: "", component: Vacancies }],
   },
   {
-    path: "/contact-us/private-policy",
+    path: "/private-policy",
     name: "PrivatePolicy",
     component: PrivatePolicy,
     children: [{ path: "", component: PrivatePolicy }],
@@ -85,6 +89,29 @@ const routes = [
     name: "ContactUsPage",
     component: ContactUsPage,
     children: [{ path: "", component: ContactUsPage }],
+  },
+  {
+    path: "/log-in",
+    name: "LogInPage",
+    component: LogInPage,
+    children: [{ path: "", component: LogInPage }],
+  },
+  {
+    path: "/blog",
+    name: "BlogPage",
+    component: BlogPage,
+    children: [{ path: "", component: BlogPage }],
+  },
+  {
+    path: "/detailed-post/:postId",
+    name: "DetaildPostPage",
+    component: DetaildPostPage,
+    // children: [{ path: "", component: BlogPage }],
+  },
+  {
+    path: "/unsubscribe/:subscriptionId", ///:toname
+    name: "UnsubscribePage",
+    component: UnsubscribePage,
   },
   {
     path: "/:pathMatch(.*)*",

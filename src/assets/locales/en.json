@@ -384,6 +384,18 @@
       "title": "Vacancies"
     }
   },
+  "blogPage": {
+    "hero": {
+      "title": "Welcome to ",
+      "subtitle": "Explore insightful articles on Hypedriven`s latest news, cutting-edge technologies, artificial intelligence, and other innovations crucial for your business success."
+    },
+    "ourPosts": {
+      "title": "Our Posts"
+    }
+  },
+  "recommendedArticles": {
+    "title": "Recommended "
+  },
   "404": {
     "hero": {
       "title": "404",

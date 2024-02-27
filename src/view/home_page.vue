@@ -9,6 +9,7 @@
       <IndustriesSection class="bg-secondary-bg"/>
       <OurGoals class="bg-primary-bg"/>
       <AboutUsSection />
+      <RecommendedArticles />
       <TestimonialSection />
       <HiringSection id="careers" />
       <ContactUsSection class="bg-primary-bg"/>
@@ -25,6 +26,7 @@ import ServicesSection from "../components/sections/home-page/services";
 import IndustriesSection from "../components/sections/home-page/industries";
 import OurGoals from "../components/sections/home-page/our-goals.vue"
 import AboutUsSection from "../components/sections/home-page/about-us";
+import RecommendedArticles from "@/components/sections/recommended-articles/recommended-articles.vue";
 import TestimonialSection from "../components/sections/home-page/testimonial";
 import HiringSection from "../components/sections/home-page/hiring";
 import ContactUsSection from "../components/sections/home-page/contact-us.vue";
@@ -38,6 +40,7 @@ export default {
     IndustriesSection,
     OurGoals,
     AboutUsSection,
+    RecommendedArticles,
     TestimonialSection,
     HiringSection,
     ContactUsSection
