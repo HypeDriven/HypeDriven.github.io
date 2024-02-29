@@ -54,17 +54,33 @@
                             <Button @click.stop="editPost(post)" class="mr-2">
                                 Edit Post <i class="fas fa-pencil-alt"></i>
                             </Button>
-                            <Button :disabled="isDeleting" @click.stop="deletePost(post.id, post.img)"
+                            <Button :disabled="isDeleting" @click.stop="tryToDeletePost(post.id, post.img)"
                                 :style="{ backgroundColor: 'red' }">Delete Post <i class="fas fa-minus"></i></Button>
                         </div>
                         <div class="xxs:block xs:block sm:block md:block lg:hidden">
                             <i @click.stop="editPost(post)" class="mr-6 fas fa-pencil-alt"
                                 :style="{ color: '#150DCE' }"></i>
-                            <i @click.stop="deletePost(post.id, post.img)" class="fas fa-minus"
+                            <i @click.stop="tryToDeletePost(post.id, post.img)" class="fas fa-minus"
                                 :style="{ color: 'red' }"></i>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div v-if="areYouSureYouWantToDeletePost" class="modal">
+                <div class="modal-content" @click.stop>
+                    <div class="mb-10">
+                        <span class="modal-content-title ">Are you sure, you want to delete this post ?</span>
+                    </div>
+                    <div class="flex">
+                        <div class="flex-grow"></div>
+                        <Button @click.stop="closeModalForPostDeleting"
+                            :style="{ backgroundColor: 'blue' }">Close</Button>
+                        <Button v-if="!isDeleting" @click.stop="deletePost(this.postIdToDelete, this.postImgToDelete)"
+                            :style="{ backgroundColor: 'red' }" class="ml-2">Delete Post</Button>
+                        <div v-else-if="isDeleting" class="loading-animation-small ml-5"></div>
+                    </div>
+                </div>
+
             </div>
             <Button v-if="showLoadMoreButton && !isLoading" @click="loadMorePosts" class="xxs:mb-5 xs:mb-5 md:mt-10">See
                 more</Button>
@@ -116,6 +132,9 @@ export default {
             isUpdating: false,
             runStringImg: require('../../../assets/img/images/aboutpage-whyus-star.svg'),
             runningLineContent: ['Get in touch', 'Let`s cooperate', 'Get in touch', 'Let`s cooperate'],
+            areYouSureYouWantToDeletePost: false,
+            postIdToDelete: null,
+            postImgToDelete: null
         };
     },
     mounted() {
@@ -170,6 +189,16 @@ export default {
             this.addPostForm = false;
             this.editPostForm = false;
         },
+        tryToDeletePost(postId, imageURL) {
+            this.areYouSureYouWantToDeletePost = true;
+            this.postIdToDelete = postId;
+            this.postImgToDelete = imageURL;
+        },
+        closeModalForPostDeleting() {
+            this.areYouSureYouWantToDeletePost = false;
+            this.postIdToDelete = null;
+            this.postImgToDelete = null;
+        },
         async deletePost(postId, imageURL) {
             const db = getFirestore();
             const storage = getStorage();
@@ -183,6 +212,10 @@ export default {
                 const imageRef = ref(storage, imageURL);
                 await deleteObject(imageRef);
                 console.log('Image successfully deleted!');
+
+                this.areYouSureYouWantToDeletePost = false;
+                this.postIdToDelete = null;
+                this.postImgToDelete = null;
 
                 await this.fetchPosts();
             } catch (e) {
@@ -218,6 +251,32 @@ export default {
 </script>
 
 <style scoped>
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.modal-content-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
 .post-img {
     width: 55%;
 }
@@ -262,6 +321,16 @@ export default {
     height: 80px;
     border: 6px solid #e4e4e4;
     border-top: 6px solid #150DCE;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    margin: 0 auto;
+}
+
+.loading-animation-small {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e4e4e4;
+    border-top: 4px solid #150DCE;
     border-radius: 50%;
     animation: spin 1s infinite linear;
     margin: 0 auto;
@@ -497,6 +566,7 @@ export default {
     .post-container {
         max-height: 520px;
     }
+
     .post-img {
         width: 100%;
     }

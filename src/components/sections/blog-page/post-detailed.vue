@@ -196,6 +196,15 @@ blockquote p::after {
     font-size: 18px;
 }
 
+.article-wrapper-article a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.article-wrapper-article a:hover {
+    text-decoration: none;
+}
+
 .post-detailed-date {
     font-size: 20px;
     font-weight: 700;
