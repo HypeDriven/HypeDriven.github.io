@@ -35,10 +35,10 @@
                 <div class="flex gap-4">
                     <Socials/>
                 </div>
-                <div class="text-white flex gap-2 xxs:text-base">
+                <!-- <div class="text-white flex gap-2 xxs:text-base">
                     <img :src="mapIcon" />
                     <span>Dubai, UAE</span>
-                </div>
+                </div> -->
             </div>
 
         </div>

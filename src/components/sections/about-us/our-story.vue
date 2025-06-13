@@ -54,7 +54,7 @@
                         <img :src="ourStoryImg1" class="pt-5 w-[100%]"/>
                     </div>
                     <div class="max-w-[24%] flex flex-col justify-between">
-                        <span class="3xl:text-lg 1xl:text-base lg:text-sm md:text-xs sm:text-xs xs:text-xs  xxs:text-xs">Grew to 20 employees. Adapted to remote-first work model due to COVID-19 pandemic.</span>
+                        <span class="3xl:text-lg 1xl:text-base lg:text-sm md:text-xs sm:text-xs xs:text-xs  xxs:text-xs">Grew to 20 employees. Adapted to remote-first work model.</span>
                         <img :src="ourStoryImg2" class="pt-5 w-[100%]"/>
                     </div>
                     <div class="max-w-[24%] flex flex-col justify-between">
