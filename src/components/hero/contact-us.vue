@@ -14,7 +14,13 @@
                 </div>
             </div>
             <div class="w-[50%] xxs:w-[100%] xs:w-[100%] sm:w-[100%]">
-                <ContactUsForm/>
+                <div class="flex h-full items-center">
+                    <div class="bg-white/90 rounded-3xl shadow-xl p-12 xxs:p-8 w-full text-center">
+                        <Header1 class="text-[#00007E] font-bold uppercase tracking-wide">Email Our Team</Header1>
+                        <BodyText class="mt-6">We respond within one business day. Reach out at</BodyText>
+                        <a class="mt-8 inline-block text-2xl font-semibold text-[#00007E] underline" href="mailto:info@hypedriven.com">info@hypedriven.com</a>
+                    </div>
+                </div>
             </div>
         </div>
     </SectionContainer>
@@ -25,15 +31,13 @@ import Header1 from "../text/header/header_1.vue";
 import BodyText from "../text/body/body.vue";
 import SectionContainer from "../sections/container.vue";
 import Socials from "../socials/index.vue";
-import ContactUsForm from "../sections/contact-us-form/contact-us-from.vue";
 export default {
     name: "ContactUsPageCoponent",
     components: {
         Header1,
         BodyText,
         SectionContainer,
-        Socials,
-        ContactUsForm
+        Socials
     },  
     data: () => {
         return {

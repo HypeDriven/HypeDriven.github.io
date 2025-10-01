@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+/.vs/HypeDriven.github.io/CopilotIndices/17.14.1091.29919
+/.vs/HypeDriven.github.io/FileContentIndex
+/.vs

@@ -14,7 +14,6 @@
     "@ckeditor/ckeditor5-editor-classic": "^41.0.0",
     "@ckeditor/ckeditor5-essentials": "^41.0.0",
     "@ckeditor/ckeditor5-vue": "^5.1.0",
-    "@emailjs/browser": "^4.1.0",
     "@sendgrid/mail": "^8.1.0",
     "ckeditor-tailwind-reset": "^1.0.5",
     "core-js": "^3.8.3",

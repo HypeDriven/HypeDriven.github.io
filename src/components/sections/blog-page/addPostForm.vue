@@ -96,8 +96,6 @@
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import Button from "../../buttons";
-import { getSubscribersEmails } from '../../../api/subscribe-api';
-import emailjs from '@emailjs/browser';
 import { v4 as uuidv4 } from 'uuid';
 import { mapGetters } from 'vuex';
 
@@ -155,7 +153,6 @@ export default {
     },
     mounted() {
         this.$store.dispatch('fetchTags');
-        emailjs.init('wWlvtBR3g0e9BpolR');
     },
     methods: {
         closeModal() {
@@ -202,11 +199,6 @@ export default {
                     const docRef = await addDoc(postsCollection, postData);
                     console.log('Document added with ID: ', docRef.id);
 
-                    // const link = `http://localhost:8080/detailed-post/${docRef.id}`;
-                    const link = `https://hypedriven.com/detailed-post/${docRef.id}`;
-
-                    await this.sendEmailNotification(postData.title, postData.content, postData.img, link, postData.readTime, postData.tags);
-
                     this.newPost = {
                         title: '',
                         content: '',
@@ -225,36 +217,6 @@ export default {
                     this.$emit('updateIsSending', false);
                 }
             }
-        },
-        async sendEmailNotification(title, content, img, link, readTime, tags) {
-            const recipients = await getSubscribersEmails();
-            console.log(recipients);
-            for (const recipient of recipients) {
-                // Формуємо об'єкт з параметрами для відправки листа
-                const emailParams = {
-                    to: recipient.email, // Встановлюємо електронну адресу одержувача
-                    toname: recipient.email, // Встановлюємо ім'я одержувача (може бути електронною адресою)
-                    title: title,
-                    fromname: 'Hypedriven',
-                    readTime: readTime,
-                    tags: tags,
-                    message: content,
-                    img: img,
-                    link: link,
-                    subject: 'New Post',
-                    subscriptionid: recipient.uniqueId
-                };
-
-                // Відправляємо лист з обраними параметрами
-                emailjs.send('service_opg09ln', 'template_4waxz6a', emailParams)
-                    .then(function (response) {
-                        console.log('Email sent successfully:', response);
-                    })
-                    .catch(function (error) {
-                        console.error('Error sending email:', error);
-                    });
-            }
-
         },
         addOption() {
             if (this.searchText && !this.newPost.selectedTags.includes(this.searchText)) {

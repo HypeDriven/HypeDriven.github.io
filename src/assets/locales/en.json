@@ -344,11 +344,12 @@
       "text": "Would you like to join our friendly team of specialists. Check out our vacancies, maybe you are the one we need!"
     },
     "runningline": {
-      "text1": "Ceo",
-      "text2": "Managers",
-      "text3": "Assistants",
-      "text4": "Backend",
-      "text5": ""
+      "ceo": "CEO",
+      "managers": "Managers",
+      "backend": "Backend",
+      "qa": "QA",
+      "frontend": "Frontend",
+      "designer": "Designer"
     }
   },
   "careersPage": {

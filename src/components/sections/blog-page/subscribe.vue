@@ -48,7 +48,6 @@ import Button from "../../buttons";
 import CustomAlert from "../custom-alert/custom-alert.vue";
 import { saveSubscriptionToFirestore, checkIfEmailExistsInFirestore } from '../../../api/subscribe-api';
 import RunningLine from "../../sections/running-line/running-line.vue";
-import emailjs from '@emailjs/browser';
 import { mapFields } from "vuex-map-fields";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -78,9 +77,6 @@ export default {
         ...mapFields({
             privatePolicyContactUs: 'privatePolicyContactUs'
         })
-    },
-    mounted() {
-        emailjs.init('wWlvtBR3g0e9BpolR');
     },
     methods: {
         async subscribe() {
@@ -115,7 +111,6 @@ export default {
 
                 this.showAlert('success', 'You have successfully subscribed!');
 
-                await this.sendEmailNotification();
                 this.email = '';
                 // this.privatePolicy = false;
             } catch (error) {
@@ -124,20 +119,6 @@ export default {
             } finally {
                 this.isSubscribing = false;
             }
-        },
-        async sendEmailNotification() {
-            const recipient = this.email;
-            emailjs.send('service_opg09ln', 'template_6avbgpx', {
-                to: recipient,
-                toname: recipient,
-                fromname: 'Hypedriven',
-                subject: 'Thanks for subscribing!'
-            }).then(function (response) {
-                console.log('Email sent successfully:', response);
-            }, function (error) {
-                console.error('Error sending email:', error);
-            });
-
         },
         showAlert(type, message) {
             this.isAlertVisible = true;
