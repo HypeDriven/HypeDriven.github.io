@@ -1,9 +1,9 @@
 <template>
-    <v-card elevation="4" class="w-72 h-72 industry_card text-white flex relative" :style="{ backgroundImage: 'url(' + img + ')' }">
+    <div class="w-72 h-72 industry_card text-white flex relative shadow-lg" :style="{ backgroundImage: 'url(' + img + ')' }">
         <div class="bottom-5 left-5 absolute font-bold text-lg">
             {{ title }}
         </div>
-    </v-card>
+    </div>
 </template>
 
 <script>

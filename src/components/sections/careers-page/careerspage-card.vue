@@ -1,7 +1,7 @@
 <template>
-     <v-card class="">
+     <div class="shadow-lg rounded-3xl">
         <slot></slot>
-    </v-card>
+    </div>
 </template>
 
 <script> 

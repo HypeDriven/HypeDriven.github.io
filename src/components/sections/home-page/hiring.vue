@@ -1,4 +1,5 @@
 <template>
+    <section v-bind="$attrs">
         <div class="flex gap-10 flex-wrap justify-between flex-row home-hiring-bg xs:pt-10">
             <Card class="w-full" :reverse="true" :url1="screenFrame" :url2="hiringPersons" :url3="flyElements" :url4="cloud"> 
                 <div class="flex flex-col xl:gap-6 lg:gap-4 self-center xl:px-14 lg:px-10 sm:m-auto">
@@ -31,6 +32,7 @@
                     </div>
                 </TechnologiesCard>
         </Carousel>
+    </section>
 </template>
 
 <script>

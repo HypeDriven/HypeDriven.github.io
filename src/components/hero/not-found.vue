@@ -1,6 +1,6 @@
 <template>
     <SectionContainer class="relative mt-16">
-        <v-card elevation="4" class="card flex gap-8 p-6 sm:p-16 lg:p-36 justify-center flex-col card-bg">
+        <div class="card flex gap-8 p-6 sm:p-16 lg:p-36 justify-center flex-col card-bg shadow-lg rounded-3xl">
             <div class="m-auto">
                 <Header1 class="text-red-600 text-center text-9xl font-extrabold">
                     {{ $t('404.hero.title') }}
@@ -9,7 +9,7 @@
                     {{ $t('404.hero.subtitle') }}
                 </BodyText>
             </div>
-        </v-card>
+        </div>
     </SectionContainer>
 </template>
 

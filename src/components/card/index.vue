@@ -1,6 +1,6 @@
 <template>
-    <v-card elevation="4"
-        class="flex gap-10 md:gap-6 lg:gap-16 p-6 xxs:px-1 xs:px-2 sm:px-2 md:px-0 lg:py-10 lg:px-0 xl:p-16 xs:h-[360px] md:h-[420px] lg:h-[550px] xl:h-[680px] 2xl:h-[740px] 3xl:h-[900px] md:flex-nowrap"
+    <div
+        class="shadow-lg rounded-3xl flex gap-10 md:gap-6 lg:gap-16 p-6 xxs:px-1 xs:px-2 sm:px-2 md:px-0 lg:py-10 lg:px-0 xl:p-16 xs:h-[360px] md:h-[420px] lg:h-[550px] xl:h-[680px] 2xl:h-[740px] 3xl:h-[900px] md:flex-nowrap"
         :class="reverse ? 'flex-row-reverse' : ''">
         <div class="w-[50%] md:w-1/2 imgsWrapper xs:hidden xxs:hidden">   
             <img class="animation-layer image1 border-b-2 border-white" :src="url1" /> 
@@ -10,7 +10,7 @@
         <div class="w-[50%] md:w-1/2 flex xs:w-[100%] xxs:w-[100%]">
             <slot></slot>
         </div>
-    </v-card>
+    </div>
 </template>
 
 <script>
