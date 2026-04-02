@@ -1,6 +1,4 @@
 (function() {
-  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   var container = document.getElementById("webgl-bg");
   if (!container) return;
 
@@ -113,20 +111,13 @@
   resize();
   window.addEventListener("resize", resize);
 
-  if (reducedMotion) {
-    // Render a single static frame at t=100 (nice star positions, no animation)
-    gl.uniform1f(tLoc, 100.0);
+  var start = performance.now();
+  function render() {
+    var t = (performance.now() - start) / 1000;
+    gl.uniform1f(tLoc, t);
     gl.uniform2f(rLoc, canvas.width, canvas.height);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
-  } else {
-    var start = performance.now();
-    function render() {
-      var t = (performance.now() - start) / 1000;
-      gl.uniform1f(tLoc, t);
-      gl.uniform2f(rLoc, canvas.width, canvas.height);
-      gl.drawArrays(gl.TRIANGLES, 0, 6);
-      requestAnimationFrame(render);
-    }
-    render();
+    requestAnimationFrame(render);
   }
+  render();
 })();
