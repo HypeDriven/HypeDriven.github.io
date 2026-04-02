@@ -1,5 +1,5 @@
 (function() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var container = document.getElementById("webgl-bg");
   if (!container) return;
@@ -105,21 +105,28 @@
 
   function resize() {
     var dpr = Math.min(window.devicePixelRatio, 1.5);
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = window.innerHeight * dpr;
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
     gl.viewport(0, 0, canvas.width, canvas.height);
   }
 
   resize();
   window.addEventListener("resize", resize);
 
-  var start = performance.now();
-  function render() {
-    var t = (performance.now() - start) / 1000;
-    gl.uniform1f(tLoc, t);
+  if (reducedMotion) {
+    // Render a single static frame at t=100 (nice star positions, no animation)
+    gl.uniform1f(tLoc, 100.0);
     gl.uniform2f(rLoc, canvas.width, canvas.height);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
-    requestAnimationFrame(render);
+  } else {
+    var start = performance.now();
+    function render() {
+      var t = (performance.now() - start) / 1000;
+      gl.uniform1f(tLoc, t);
+      gl.uniform2f(rLoc, canvas.width, canvas.height);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+      requestAnimationFrame(render);
+    }
+    render();
   }
-  render();
 })();
