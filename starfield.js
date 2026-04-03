@@ -124,11 +124,10 @@
     return true;
   }
 
-  // Try immediately
-  if (init()) return;
+  var initialized = init();
 
   // If container not found yet, wait for DOM and retry
-  if (document.readyState === "loading") {
+  if (!initialized && document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function() { init(); });
   }
 
