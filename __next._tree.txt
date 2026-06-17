@@ -1,3 +1,3 @@
-:HL["/_next/static/chunks/0fkn2wbubxk2c.css","style"]
+:HL["/_next/static/chunks/11v.b_qp3mp2j.css","style"]
 :HC["/",""]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"CKz0P5lXHUp6qViqttIF3"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"xZrVF-pUYdbZmyh1-yqQ9"}
