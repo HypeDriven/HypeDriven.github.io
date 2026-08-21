@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yuruyurau WebGPU</title>
+  <style>
+    body { margin: 0; background: #090909; overflow: hidden; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <script type="module">
+    const canvas = document.getElementById('c');
+    const adapter = await navigator.gpu.requestAdapter();
+    const device = await adapter.requestDevice();
+    const context = canvas.getContext('webgpu');
+    const format = navigator.gpu.getPreferredCanvasFormat();
+
+    function resize() {
+      const dpr = Math.min(devicePixelRatio, 2);
+      canvas.width  = canvas.clientWidth  * dpr;
+      canvas.height = canvas.clientHeight * dpr;
+      context.configure({ device, format, alphaMode: 'premultiplied' });
+    }
+    resize();
+    addEventListener('resize', resize);
+
+    // ---------- WGSL ----------
+    const shaderCode = /* wgsl */ `
+struct Uniforms {
+  time  : f32,
+  size  : f32,   // canvas size (we keep it square)
+  _pad  : vec2f,
+}
+
+@group(0) @binding(0) var<uniform> u : Uniforms;
+
+struct VSOut {
+  @builtin(position) pos : vec4f,
+  @location(0) alpha : f32,
+}
+
+@vertex
+fn vs_main(@builtin(vertex_index) idx : u32) -> VSOut {
+  let i = f32(idx);                     // 0 … 9999
+  let m = (i % 16.0) * 13.0;
+
+  let k = 9.0 * cos(i * 5.0) * sin(i);
+  let e = cos(i * 3.0) * cos(i * 2.0) * 9.0;
+  var d = length(vec2f(k, e));
+  d = pow(d, 3.0) / 1999.0 + 1.5 - pow(sin(u.time * 0.5 + m), 3.0) / 3.0;
+
+  let p = pow(d, sin(d * d - u.time + m));
+  let c = d / 16.0 - u.time / 48.0 + m;
+
+  // original coordinate system is 0…400, centre 200
+  let scale = u.size / 400.0;
+  let x = (99.0 * sin(c) + k * p + 200.0) * scale;
+  let y = (99.0 * sin(c * 4.0) + e * p + 200.0) * scale;
+
+  // NDC (-1 … +1), Y flipped for WebGPU
+  let ndc = vec2f(
+    (x / u.size) * 2.0 - 1.0,
+    1.0 - (y / u.size) * 2.0
+  );
+
+  var out : VSOut;
+  out.pos   = vec4f(ndc, 0.0, 1.0);
+  out.alpha = 96.0 / 255.0;             // same alpha as stroke(255,96)
+  return out;
+}
+
+@fragment
+fn fs_main(in : VSOut) -> @location(0) vec4f {
+  return vec4f(1.0, 1.0, 1.0, in.alpha);
+}
+`;
+
+    const module = device.createShaderModule({ code: shaderCode });
+
+    const pipeline = device.createRenderPipeline({
+      layout: 'auto',
+      vertex: {
+        module,
+        entryPoint: 'vs_main',
+      },
+      fragment: {
+        module,
+        entryPoint: 'fs_main',
+        targets: [{
+          format,
+          blend: {
+            color: {
+              srcFactor: 'src-alpha',
+              dstFactor: 'one-minus-src-alpha',
+              operation: 'add',
+            },
+            alpha: {
+              srcFactor: 'one',
+              dstFactor: 'one-minus-src-alpha',
+              operation: 'add',
+            },
+          },
+        }],
+      },
+      primitive: {
+        topology: 'point-list',
+      },
+    });
+
+    // Uniform buffer (time + size)
+    const uniformBuffer = device.createBuffer({
+      size: 16,
+      usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+    });
+
+    const bindGroup = device.createBindGroup({
+      layout: pipeline.getBindGroupLayout(0),
+      entries: [{ binding: 0, resource: { buffer: uniformBuffer } }],
+    });
+
+    let t = 0;
+    function frame(now) {
+      t += Math.PI / 20;                 // same step as original
+
+      // keep canvas square (matches the 400×400 sketch)
+      const size = Math.min(canvas.width, canvas.height);
+      const offsetX = (canvas.width  - size) / 2;
+      const offsetY = (canvas.height - size) / 2;
+
+      device.queue.writeBuffer(uniformBuffer, 0, new Float32Array([t, size, 0, 0]));
+
+      const encoder = device.createCommandEncoder();
+      const pass = encoder.beginRenderPass({
+        colorAttachments: [{
+          view: context.getCurrentTexture().createView(),
+          clearValue: { r: 9/255, g: 9/255, b: 9/255, a: 1 },
+          loadOp: 'clear',
+          storeOp: 'store',
+        }],
+      });
+
+      // scissor to the centred square so the pattern never stretches
+      pass.setScissorRect(offsetX, offsetY, size, size);
+      pass.setPipeline(pipeline);
+      pass.setBindGroup(0, bindGroup);
+      pass.draw(10000);                 // exactly the original 1e4 points
+      pass.end();
+
+      device.queue.submit([encoder.finish()]);
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  </script>
+</body>
+</html>
